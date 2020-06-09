@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta property="og:title" content="Speare, an ultra lightweight code editor and a small IDE that provides debugging environment for C, C++, Ruby, mruby, Lua, Python, PHP, Perl and Tcl.">
+<meta property="og:type" content="product">
+<meta property="og:url" content="http://www.sevenuc.com/">
+<meta property="og:image" content="http://www.sevenuc.com/favicon.ico">
+<meta property="og:site_name" content="Sevenuc Consulting">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1">
+<meta name="description" content="Speare, an ultra lightweight code editor and a small IDE that provides debugging environment for C, C++, Ruby, mruby, Lua, Python, PHP, Perl and Tcl.">
+<meta name="service" content="Product development and independent consulting services">
+<meta name="author" content="http://www.sevenuc.com/">
+<meta name="keywords" content="Speare,IDE,Code Editor,Text Editor,Ruby Debugger,mruby Debugger,Lua Debugger,Python Debugger,PHP Debugger,Syntax Highlighting,Lex,Parser,Compiler,Interpreter,Programming Language,TextEdit,TextMate,CotEditor,Textadept,Android Studio,ActiveState,Komodo,Xcode,Visual Studio Code,Eclipse,Scrpting Language,Lua,Scheme,Python,Ruby,C,C++,SQL,Objective-C,Swift,Kotlin,Haxe,Haskell,TCL,Javascript,Lisp,Perl,PHP,GO,Markdown,Node">
+<link rel="stylesheet" type="text/css" media="screen" href="../css/stylesheet.css">
+<style type="text/css">
+.warning {color:#cce619;}
+th { background:#333; color:#f0f0f0;text-align: center;}
+.strike {text-decoration: line-through;}
+.screen {width:480px;height:auto;max-width:100%;}
+.smallicon { height:24px;width:auto;vertical-align:middle;margin-right:10px;}
+.donate { font-style: italic; font-size: small; color:#007f00;}
+.greenbig {color: #007f00;font-size:1.2em;}
+.green, gr, lt{color: #007f00;}
+.dark {color:#b397db; font-size: 12px;}
+ltab { margin-left: 20px; }
+lt {color:#007f00;}
+</style>
+<title> Speare Code Editor</title>
+</head>
+<body>
+
+<!-- HEADER -->
+<!--div id="header_wrap" class="outer">
+    <header class="inner">
+      <h1 id="project_title"> Speare </h1>
+      <h2 id="project_tagline">The designedly ultra lightweight code editor developed to coding happy for everyone.</h2>
+    </header>
+</div-->
+
+<!-- MAIN CONTENT -->
+<div id="main_content_wrap" class="outer">
+<section id="main_content" class="inner">
+
+<div class="smallscreen">
+<img src="../images/Speare/logo.png" style="height: 110px;width:auto" /><br>
+<!--h2>Speare Code Editor<br><em> Version 1.2.74 </em><br><em class="green">The free small IDE for scripting languages.</em></h2-->
+<div><pre class="green">
+Speare v1.2.80
+The free small IDE for scripting languages.
+(c) 2020 http://sevenuc.com
+</pre></div>
+
+<p><a href="http://sevenuc.com/en/Speare.html">Speare </a>code editor is a small, free and friendly code editor, and a really ultra light IDE. You can use it to edit all kinds of text file, programming and debugging with almost all common programming languages. It designed to make programming feels light, simple and free. Speare code editor not only has an efficient code navigation and call routines tracing ability but also has flexibility to extend the IDE to support special developing requirements and easily to add a new programming language in it. Speare code editor includes <a href="debugger.html" target="_blank">builtin debugging environment</a> for C, C++, Ruby, mruby, Lua, Python, PHP, Perl and Tcl, and give you complete freedom to control and customise a debugging environment for any programming language.</p>
+
+
+<p>The offline document: <a target="_blank" href="http://sevenuc.com/download/Speare_quick_reference.pdf">Speare_quick_reference.pdf</a></p>
+
+
+<p class="greenbig">It's free!</p>
+<p><a href="https://apps.apple.com/us/app/speare/id1473902558?mt=12" target="_blank" class="appstore_download_link"><img src="../images/available_on_macappstore.png" style="margin-left:1em;"> </a></p><br><br><br>
+<p>If you can't open the link above, please launch App Store and found Speare by searching.<br>
+<span class="green">Please kindly donate the author</span> by purchasing <a href="debugger.html" target="_blank">the pro version</a>, your donation will drive us to continually improve it, or please recommend this app on your blog or rate this app so that helping other people can more easily find it. </p>
+
+<h2 class="dark">What's new</h2>
+<p class="dark">1. Improvement of "Lite Mode", i.e. hide toolbar and left side TreeView, this is useful and feels more light when open and edit several file but not work on a project that has large number of files. This function turn Speare to a TextEdit-like text editor but has more features, such as line number display, syntax highlighting etc.<br>
+2. Highlighting files that has no extension name by recognise its Shebang, i.s. the first line of the text file.
+</p>
+
+<h2>Code editor and IDE on macOS</h2>
+<p class="small">Terminal based on text editors such as GNU Emacs and Vim, although they are very cool, but their limitations are also obvious, the elephant in the room. TextMate is my favourite code editor long years ago and until today, but it still lack some features. As a programmer, so many IDE and text editors I've used in the past years, such as the bulky cargos, Visual Studio Code, Atom, Android Studio, Eclipse, ActiveState Komodo, Xcode, and some light cargos, e.g Textadept, CotEditor and TextMate. I never like the bulky cargos, e.g desktop applications that built with NodeJS, React and Electron, Eclipse and Java or .NET and C# based big stuffs. Speare code editor is a small, free and friendly code editor which implements the most important missing features in common code editors, e.g bookmark management and fast locate code lines between multiple files, code block live parsing etc.
+</p>
+
+
+<table><tr><td>No.</td><td> Code Editor </td><td> Size </td> <td>No.</td><td> IDE </td><td> Size </td>  </tr>
+<tr><td>1</td><td>Speare    1.2.56 </td><td> 5.6MB </td> <td>5</td> <td>Visual Studio Code (bare system) 1.36.1 </td><td> 211MB </td></tr>
+<tr><td>2</td><td>TextMate  1.5.7 </td><td> 23.3MB </td> <td>6</td> <td>ActiveState Komodo 11.1 </td><td> 334MB </td></tr> 
+<tr><td>3</td><td>Textadept 10.4  </td><td> 35MB  </td> <td>7</td><td>Atom 1.38.2           </td><td> 558MB </td></tr> 
+<tr><td>4</td><td>CotEditor 3.3   </td><td> 47MB  </td>  <td>8</td> <td>Android Studio 3.1 </td><td> 1.37GB </td></tr>
+<tr><td></td><td>                     </td><td>   </td> <td>9</td> <td>Eclipse IDE   4.12 </td><td> 400MB~5GB </td></tr>
+<tr><td> </td><td>                    </td><td>    </td> <td>10</td> <td>Xcode      10.0 </td><td> 12GB </td></tr>
+</table>
+
+
+<h2>The technology choices to make a code editor and IDE on macOS</h2>
+<table><tr><th>No.</th><th>Name</th><th>Pros</th><th>Cons</th></tr>
+<tr><td>1</td><td>Vim/Emacs</td><td>Fav of big community</td><td>User experience is not so friendly</td></tr>
+<tr><td>2</td><td>HTML5 + Electron</td><td>Mature code base open sourced</td><td>Low performance with huge run-time</td></tr>
+<tr><td>3</td><td>Qt</td><td>Mature cross-platform GUI kit</td><td>Best for Linux, Windows but not suitable for macOS GUI app</td></tr>
+<tr><td>4</td><td>GTK+</td><td>Mature cross-platform GUI framework</td><td>Best for Linux but not suitable for macOS GUI app</td></tr>
+<tr><td>5</td><td>Tcl/Tk</td><td>Rapid GUI app development kit</td><td>Lack low level native OS support features</td></tr>
+<tr><td>6</td><td>Java Swing</td><td>Rapid development, mature cross-platform GUI kit</td><td>Low performance with huge run-time</td></tr>
+<tr><td>7</td><td>C# + .NET</td><td>Fast implementing GUI app</td><td>Best for Windows but not suitable for macOS GUI app</td></tr>
+<tr><td>8</td><td>Native Cocoa</td><td>Mature, reliable, high performance</td><td>Best frameworks to build macOS app</td></tr>
+</table>
+<p>Speare code editor was developing based on the native pure Cocoa frameworks with leveraging several C library results a very small footprint, high performance, small memory and storage runtime consuming, and ultra small distribution. Only 1.1MB executable!</p>
+
+
+<h2>Why not big software?</h2>
+<p>Waste time to maintain, wast big storage and runtime memory, waste power, waste time to upload and download. It's waste people's life! Every desktop developer should known one thing, the embedded system developers sometime even fighting for one byte of storage in some situation. They never think about memory and storage like embedded system developers, so more and more big monster there. In today's software industry, Unix philosophy has been throw away completely!</p>
+
+<p class="green">They make software as big as possible, as complex as possible, but I believe in the opposite philosophy. </p>
+
+
+<h2>Why another code editor and IDE on macOS?</h2>
+<p>Although there are so many code editor and IDE available on macOS, but three feature of Speare code editor can make it unique:<br>
+<ol><li><lt>Lightweight.</lt> Most of them are very heavy, bulky, but Speare code editor is really really ultra light. Only 6.2MB!</li>
+<li><lt>Cost.</lt> Most of them are very expensive, but Speare code editor is free! Of course, you can kindly purchase the pro version to donate some money to the author, but that is not mandatory.</li>
+<li><lt>Freedom.</lt> Feels light, simple and free, high performance code editor, flexibility to extend the IDE to support special developing requirements and easily add a new programming language to it, most of the IDE on macOS can't give you such ability and freedom. In fact, Speare code editor give you very flexible control to extend it and add a debugging environment for any programming language.
+</li>
+</ol></p>
+
+
+<p class="green">Crafting software as small as possible.  →  <a href="debugger.html#whyc" target="_blank">Why C is the returned king of programming languages.</a></p>
+
+
+<h2>Screenshot</h2>
+<a href="../images/Speare/9.png" target="_blank"><img src="../images/Speare/9.png" class="screenshots"/></a><br>
+<a href="../images/Speare/1.png" target="_blank"><img src="../images/Speare/1.png" class="screenshots"/></a><br>
+<a href="../images/Speare/2.png" target="_blank"><img src="../images/Speare/2.png" class="screenshots"/></a><br>
+<a href="../images/Speare/3.png" target="_blank"><img src="../images/Speare/3.png" class="screenshots"/></a>
+<br>
+
+
+<h2>Features</h2>
+<p><ul>
+<li>Well designed user operation interface. Intuitive and simple.</li>
+<li>High performance of managing large amount of files and big files.</li>
+<li>Fast search and replace in current document, selected folder, opened files and entire project.</li>
+<li>Smoothly edit multiple files that written in different programming languages simultaneously.</li>
+<li>Supports almost all common programming languages syntax highlighting and parsing.</li>
+<li>Auto-completion, sensitively typing with keywords, live parsing symbol definition with priority.</li>
+<li>Jump to definition and fast locate code lines between editing files by symbol index, bookmark or searching.</li>
+<li>Unlimited go back and forward, automatically remember jump location and current editing locations.</li>
+<li>Keeping entire state after quit, the opened files, selection of each file and the cursor location.</li>
+<li>Fonts and colours customisation, supports self-defined schemes.</li>
+<li>Full featured markdown editor, run Javascript code instantly, well support Web development.</li>
+<li>Code block selection by double clicking the begin symbol of code block.</li>
+<li>Run syntax checking and editing code instantly.</li>
+<li>Preview all kinds of files, image, pdf, office documents, audio and video etc.</li>
+<li>Ultra lightweight.</li>
+</ul></p>
+
+
+<h2>Code browser, call routines tracing and code analysis</h2>
+<p>Speare code editor helps end user to understand an existing code base by powerful code browser and call routines tracing functions. Speare code editor parses source code files and maintains the database of symbol definitions instantly while user editing, and presents useful contextual information to user automatically. It also use persistent bookmarks to remember key locations within functions or classes and their references. End user can quickly navigate function calls and callers and find references to variable, function or class instantly.</p>
+
+
+<h2>File Organisation</h2>
+<p><b>1. Add File or Folder in Workspace</b><br><br>
+a. Drag file or folder from Finder into Treeview directly.<br>
+b. Click "+" symbol on the bottom of Treeview.<br>
+c. Create temporary document:<br>
+<ltab>Click menu: File → New</ltab><br>
+<ltab>Click "+" symbol on the top of tabs view.</ltab><br>
+d. Click menu: File → Open Recent.<br>
+e. Add file or folder in a particular folder: right click the folder, on the popup menu → "Add File or Folder". <br>
+f. Create a new file or folder in a particular folder: right click the folder, on the popup menu → "New File" or "New Folder". 
+(<span class="green"><i>Input file or folder name and then click anywhere outside of the input box to close it.</i></span>)<br>
+g. Reload a particular folder: right click the folder, on the popup menu → "Relod".<br>
+<br>
+<b>2. Remove File or Folder from Workspace</b><br><br>
+a. Select a file or folder, click "-" symbol on the bottom of the Treeview.<br>
+b. Right click a file or folder, on the popup menu → "Remove". <br>
+c. Use shortcut key "Option + Shift + R"  to do the removing.<br>
+d. Click menu: File → Remove. <br><br>
+<b>3. Delete File or Folder to Trash/Bin (<lt>Careful!</lt>)</b><br><br>
+a. Click menu: File → Delete.<br>
+b. Right click a particular file or folder: on the popup menu → "Delete".<br>
+c. Use shortcut key "Command + D"  to do the deleting.<br>
+</p>
+
+<h2>Refresh Symbol List or Bookmark (Breakpoint) List</h2>
+<p>Click toolbar "Functions": function definitions of current file will be re-parsed and represented in left side Treeview. <br>
+Click toolbar "Breakpoints": all breakpoint (bookmark) of current file will be re-loaded in the left side Treeview.
+</p>
+
+<h2>Auto-completion Selection</h2>
+<p>Type in class name, function name, or variable name or anything else, wait one to three seconds and use Up and Down arrow key to move selection in the candidates and click "Return" key to select one.</p>
+
+<h2>SPP File</h2>
+<p><b>SPP File</b> is the abbreviation of "Speare Project Plist" file, it is the project file type of Speare that has an .spp file extension, it packs variant of project meta information together, including project folder and its bookmark/breakpoints, watches, opened tabs, selection of each tab, current selected tab etc.<br>
+<ol><li><b>Create SPP File</b><br>
+	 Click menu: File → Save as Speare Project file. This operation will store the root path of the nodes in the left side Treeview as a .spp file.<br><br></li>
+<li><b>Open SPP File</b><br>
+	Directly dragging the .spp file into Treeview, or select menu "File"  →  "Open",  will load all indexed file and folder stored in the .spp file into the left side Treeview (Workspace Explorer).</li>
+</ol></p>
+<!--p><i><lt>Warning: when load a SPP File, current project will be removed!</i></lt></p-->
+<p class="green"><span><img src="../images/Speare/tips.png" class="tips" /></span>When switch to another project, it is necessarily required to save current project so that the project meta information stored in .spp file and can be restore later otherwise these information will lost!</p>
+
+<h2>Search and Replace</h2>
+<ol><li><b>Search Current Document:</b><br>a. Use the shortcut key "Control + F" to do the searching just like in TextEdit.<br>
+b. Click <img src="../images/Speare/search.png" class="button" /> search button on the toolbar and on the prompt dialog select "Current File".<br><br></li>
+<li><b>Search Current Folder:</b><br>Click <img src="../images/Speare/search.png" class="button" /> search button on the toolbar and on the prompt dialog select "Current Folder".<br><br></li>
+<li><b>Search Opened Files:</b><br>Click <img src="../images/Speare/search.png" class="button" /> search button on the toolbar and on the prompt dialog select "In Opened Tabs".<br><br></li>
+<li><b>Search Entire Project Folders:</b><br>Click <img src="../images/Speare/search.png" class="button" /> search button on the toolbar and on the prompt dialog select "In Entire Project".<br><br></li>
+<li><b>Searching by Index:</b><br><br>
+<ltab>a. Click <img src="../images/Speare/class.png" class="button" /> symbol button on the toolbar and select items that parsed by the build-in syntax parsers.</ltab><br><br>
+<ltab>b. Click <img src="../images/Speare/break.png" class="button" /> breakpoint button on the toolbar and select items that placed as bookmark or breakpoint.</ltab><br><br>
+</li>
+<li><b>Searching items in left side Treeview:</b><br>Input the item name (or prefix or suffix, or contained word) in the search field which located in the bottom of the left side Treeview and then enter "Return" key, click up and down arrow right side of the search field to iterate items.</li></ol></p>
+<p><ltab><b>Brief &amp; History</b>: each search result has brief of the source line and all be classified, and the history of search words remembered automatically, click the down arrow of the search field will allow to select the searched items in history.</ltab></p>
+
+<h2>Tab Selection and Dragging</h2>
+<p><b>Speare</b> use tabs to manage multiple opened files on the right side, continuously click on the leftmost or rightmost tab can quickly scroll tabs to left side or right side so that opened files can be quickly switched. Dragging special tabs together will also can help simultaneously editing multiple files.<br><br>
+<em class="green">Tips: click tab can fast select the node of left side Treeview when it loaded or reloaded end.</em><br>
+</p>
+
+<h2>File Rename and Save</h2>
+<p><b>1. File Rename</b><br>
+Click the item in the left side Treeview and input a new file name just like in Finder, and then click the left side icon to end editing.<br><br>
+<b>2. File Save</b><br>
+a). Speare can save file automatically whenever it be edited but the temporary "Untitled files" will be asked to save when quit the app or load a .spp file, because load a .spp file will remove current project.<br><br>
+<i>In addition, Speare will change the icon colour of the item in the left side Treeview to indicate that it has been edited  whenever it be edited, and will restore to default state when click the "Save" or "Save All" button on the toolbar.</i><br><br>
+b). Speare can save file with user selected text encoding and compatible with Windows line endings (i.e "\r\n").
+</p>
+
+<h2>Jump To Definition</h2>
+<p>Ensure the keyword selected and then right click one of the popup menu items. Speare provides all location where the symbol defined including header file and implement file.</p>
+
+<h2>Bookmark &amp; Breakpoint</h2>
+<p><b>1. Add</b>: click the line number. <br>
+<b>2. Toggle</b>: click on the marker, its colour will changed to dark or light, dark colour means breakpoint in debug mode. <br>
+<b>3. Delete</b>: right click on the marker  → on the prompt menu, select <b>"Remove"</b>.</p>
+
+<h2>Show in Finder</h2>
+<p>Right click the item in the left side Treeview (Workspace Explorer) and then click the prompt menu.</p>
+
+<h2>Insert full path of current file</h2>
+<p>a. Click menu: File → Insert Full Path.<br>
+b. Use shortcut key "Option + Shift + I"  to do the work.
+</p>
+
+<h2>Back and Forward</h2>
+<p>Just click the "Back" or "Forward" button on the toolbar to switch different edited location in a same file or switch between the files that was being editing.</p>
+
+<h2>File OverWrite and Refresh</h2>
+<p><span class="strike">When you overwrite a file in Finder, Speare will ask you to reload it, you should save this file manually if you click "Cancel". You can also click the "Refresh" button on the bottom of the left site TreeView to reload the entire project, it may take a while to complete the loading for big project.</span> When you overwrite, rename, add or delete a file or folder in Finder, please right click its parent folder in the left side TreeView and click "Reload" on the popup menu. 
+</p>
+
+<h2>Syntax highlighting without file extension name</h2>
+<p>Speare can recognise the programming language of a text file without file extension name by <a href="http://en.wikipedia.org/wiki/Shebang_(Unix)"> Shebang</a>, i.e, the first line of the text file. The configure file for this function is <span class="green">"/Applications/Speare.app/Contents/Resources/shebang.json"</span>, the default language includes Shell, Ruby, Python, Perl, Lua, PHP and Tcl, you can edit it to support more programming languages directly.
+</p>
+
+<h2>Colour Picker</h2>
+<p>Right click current editing file → select "Colour Picker" on the prompt menu, then a HTML colour will be inserted when pick a colour.</p>
+
+<h2>Customise Font and Colour</h2>
+<p>Click menu item "Preferences" and then set font and colour of editor background etc.<br>
+<b>Note: </b>Change cursor colour requires restarting the application to take effect.<br><br>
+<b>Add a new colour scheme:</b><br>
+Put you customised colour scheme in the following directory:<br>
+<span class="green">~/Library/Application Scripts/com.sevenuc.SpeareHelper/colorschemes</span><br>
+<span class="warning">Please create the directory if it is not exists.</span>
+</p>
+
+<h2>Markdown &amp; HTML</h2>
+<p>1. <b>Preview</b>: select menu "View"  →  "Preview", see html or markdown file rendered in builtin web browser instantly.<br>
+2. <b>Close Preview</b>: select menu "View"  →  "Close Preview", close the opened builtin web browser.<br>
+3. <b>Save Markdown</b>: select menu "View"  →  "Save Markdown", save the generated html to local file, Speare has a builtin converter that can convert markdown to html instantly.</p>
+<p class="green"><span><img src="../images/Speare/tips.png" class="tips" /><b>Note:</b> a. supported file extensions: .htm, .html, .md, .mdown, .markdown.<br>
+<span style="margin-left:68px;"> b. click any file item in the left side Treeview will also close preview automatically.</span></p>
+
+<h2>Code Formatter</h2>
+<p><lt>Click menu:</lt> Format → Re-Indent Selection.<br><br>
+<b>Supported languages</b>:<br>
+a. C, C++, Objective‑C, C#, Java (builtin support).<br>
+b. Ruby, Lua, Python, Perl, PHP, Tcl, JavaScript, Shell scripts, Dart, Go, Rust.<br>
+  (located in the formatters directory, and requires some modification to correctly working.)<br><br>
+<b>Location of formatters:</b><br>
+<lt>~/Library/Application Scripts/com.sevenuc.SpeareHelper/formatters</lt><br>
+<lt>Please create the directory if it is not exists.</lt><br><br>
+<i>If the formatters has not installed, in the prompt dialog, select subfolder "com.sevenuc.SpeareHelper" and then click "Install Code Formatters" button. This directory contains various code formatter (aka. code beautifier) that used to indent and format code block for Speare code editor. </i><br><br>
+<b>The rule of formatter is</b>:<br>
+Speare code editor will give up formatted code block if there's something printed in stderr or nothing printed in stdout otherwise anything printed in stdout will be used to replace the selected code block.<br><br>
+Ensure the formatters correctly working, you should take a look at above directory, especially modify the shell script to match the path of executables (install interpreter or missing component), including: <br><br>
+<lt>a. js.sh:</lt> check Node.js installed and can be accessed from command line.<br>
+<lt>b. go.sh:</lt> check Go installed and can be accessed from command line.<br>
+<lt>c. php.sh:</lt> check PHP installed and can be accessed from command line.<br>
+<lt>d. rust.sh:</lt> check Rust and rustfmt installed and can be accessed from command line.<br>
+<lt>e. tcl.sh:</lt> check Tcl installed and can be accessed from command line.<br>
+<lt>f. dart.sh:</lt> check Dart and dartfmt installed and can be accessed from command line.<br><br>
+<b>Note: </b>The selected code block is complete or has logical begin and end border then the formatter can generate better output.
+</p>
+
+<h2>Lite Mode</h2>
+<p>Click <span><img src="../images/Speare/left.png" class="button" /></span> siding button on toolbar and then click menu "View → Hide Toolbar".<br>
+"Lite Mode" can turn Speare to be a TextEdit-like text editor but has more features, such as line number display, syntax highlighting etc. "Lite Mode" can be remembered and continually keeping, it can be turned off by click menu "View → Show Toolbar". This function is useful and feels more light when open and edit several files but not work on a project that has large number of files.
+</p>
+
+<h2>Debug Mode</h2>
+<p>Speare seamlessly support debugging C, C++, Ruby, mruby, Lua, Python, PHP, Perl and Tcl script, more info see here: <a href="debugger.html" target="_blank" > → Speare debugger architecture</a>.</p>
+
+<h2>File and Folder Filter</h2>
+<p>1. Click menu: View → Don't Show Hidden Files. Hide or display all hidden files.</p>
+<p>2. Speare code editor uses a file named as <lt>".speareignore"</lt> to hidden directory and file that you don't want it displayed in the left side Treeview (Workspace Explorer).</p>
+<p><div class="small">
+# 1. exclude directories by folder name (<gr>must end with /</gr>).<br>
+dist/<br>
+build/<br>
+.git/<br>
+.svn/<br>
+.hg/<br>
+CVS/<br>
+.deps/<br>
+.libs/<br>
+prefix+*/ (ignore directory name with prefix)<br>
+*+suffix/ (ignore directory name with suffix)<br>
+*+word+*/ (ignore directory name contains word)<br>
+...<br>
+<br>
+# 2. exclude directories by full path (<gr>must end with /</gr>).<br>
+/xxxx/xxx/xxx/data/<br>
+/xxxx/xxx/xxx/xxx/resource/<br>
+...<br>
+<br>
+# 3. exclude files by specified extension.<br>
+*.o<br>
+*.lo<br>
+*.la<br>
+*.so<br>
+*.class<br>
+*.gz<br>
+*.tar<br>
+*.zip<br>
+*.7z<br>
+*.iso<br>
+*.jar<br>
+...<br>
+(<gr>must starts with *.</gr>)
+<br><br>
+# 4. exclude files by file name.<br>
+.DS_Store (already ignored by builtin function)<br>
+someFile<br>
+someOtherFile<br>
+prefix+* (ignore file name with prefix)<br>
+*+suffix (ignore file name with suffix)<br>
+*+word+* (ignore file name contains word)<br>
+...<br>
+<br>
+# 5. exclude files by full path.<br>
+/xxxx/xxx/xxx/someFile<br>
+/xxxx/xxx/xxx/xxx/someOtherFile<br>
+...<br>
+</div><br>
+a. Line starts with '#' is comment. <br>
+b. Each line contains a match rule to ignore directory or file.<br><br>
+3. Create or edit <lt>.speareignore</lt>:<br>
+<ltab><lt>$ touch ~/Desktop/speareignore.txt</lt></ltab><br>
+<ltab><lt>$ cp ~/Desktop/speareignore.txt /xxxx/xxxx/.speareignore</lt></ltab>:<br>
+<ltab>Put the file in your root of source code folder.</ltab><br>
+<ltab><lt>$ cp /xxxx/xxxx/.speareignore ~/Desktop/speareignore.txt</lt></ltab>:<br>
+<ltab>Edit the filter again.</ltab><br>
+<ltab><lt>$ cp ~/Desktop/speareignore.txt /xxxx/xxxx/.speareignore</lt></ltab>:<br>
+<ltab>Save it back again.</ltab><br>
+</p>
+<p>Download this sample ignore file from here: <a href="http://sevenuc.com/download/speareignore.txt" target="_blank"> → speareignore.txt</a>.</p>
+
+<p><b>Note:</b><br>
+a. The ignored directory and files will not be parsed and their symbol definitions will not be indexed in background.<br>
+b. <span class="strike">When overwrite file or folder in Finder, they will not be asked to reload if they were set to be ignored </span> (deprecated).<br>
+c. You can directly edit file .speareignore in Speare code editor and right click the project folder and then click "Reload" on the popup menu.<br><br>
+<span class="warning">Warning:</span> File system monitor have been removed from version 1.2.38, please right click the particular folder to "Reload" it when you made file system changes in Finder.
+</p>
+
+
+<h2>About MATLAB source code</h2>
+<p>Please convert file extension name from .m to .mat to prevent conflict with objective-c files, to accomplish that, please download a simple perl script from here: <a href="http://sevenuc.com/download/rename.pl" target="_blank">rename.pl</a> (2KB), and execute:<br>
+<lt>$ perl rename.pl /full/path/of/your/source/code/directory</lt>.
+</p>
+
+<h2>About Dart programming language</h2>
+<p>Speare code editor uses extra component to parse and index Dart source code and format code block, please download the parser from here: <a href="http://sevenuc.com/download/dart_parser.tar.gz">dart_parser.tar.gz</a> (2.8MB), and following readme.txt in it to configure it to working with the editor.<br>
+<em>SHA256: c7499102bce7ae36ceb6679e858a059ce7b2c927428569667139c6cc4da9fee3</em>
+</p>
+
+<h2>About Praat scripting</h2>
+<p>1. Please download the syntax highlighting file <a href="http://sevenuc.com/download/Praat.plist.zip">(Praat.plist.zip)</a> for <a href="https://www.fon.hum.uva.nl/praat/" target="_blank">Praat scripts</a>, and put it under  <lt>"/Applications/Speare.app/Contents/Resources/Languages/"</lt>. <br>
+2. Open <lt>"/Applications/Speare.app/Contents/Resources/FileExtensions.plist"</lt>, and carefully append the file extension name of Praat scripts in it, the end of the file is like the following:<br>
+<pre>
+...
+       &lt;key&gt;Swift&lt;/key&gt;
+&lt;array&gt;
+	&lt;string&gt;swift&lt;/string&gt;
+&lt;/array&gt;
+<span class="warning">
+&lt;key&gt;Praat&lt;/key&gt; &lt;---- Praat.plist (file name for syntax highlighting)
+&lt;array&gt;
+	&lt;string&gt;praat&lt;/string&gt; &lt;---- file extension name
+&lt;/array&gt;</span>
+&lt;/dict&gt;
+&lt;/plist&gt;
+</pre>
+</p>
+
+<h2>Add a New Programming Language</h2>
+<p>Download the guide from here: <a href="http://sevenuc.com/download/language_extension_protocol.pdf" target="_blank">language_extension_protocol.pdf</a>, and following the description to add a new programming language code runner, parser, syntax highlighting, code formatter and debugger in Speare code editor.</p>
+
+<h2>Syntax Checking and Run Code Instantly</h2>
+<p>a. Press shortcut key "Command + R".<br>
+ b. Click menu: File → Run External Command.<br><br>
+<b>Location of the shell scripts for the external commands:</b><br>
+<span class="green">~/Library/Application Scripts/com.sevenuc.SpeareHelper/commands</span><br>
+<lt>Please create the directory if it is not exists.</lt><br><br>
+<i><span class="green">This is a common interface that enables end user to run code for various of tasks immediately, usually includes syntax checking, unit test, and run code snippets.</span><br><br>
+You can put different of shell scripts in this directory to instantly run other tasks, such as automatic compile (run makefile or CMake etc), building and packing, or run static code analysis tool (source code analyzer, such as PC-Lint, clang-analyzer, PHPLint etc), and any other tasks. Speare code editor determine which shell script should be called by the extension name of the source code files. One shell script service for one programming language. Every script can accept two input parameters, the full path of the current selected file and the selected code block, and the last parameter is optional and can be empty string.</i><br>
+<pre class="green">
+#!/bin/bash
+# $1 is the path of the current selected file
+# $2 is the selected code block (optional)
+ruby $1
+</pre></p>
+<p><i>The above is a sample shell script that accepts a file as input parameter and run it, if there's some syntax error, the error message will be printed in the debug output (the black area on bottom right ). Please execute "chmod +x" to ensure the script is executable. Speare code editor will merge stderr and stdout together and print them in the debug output.</i><br><br>
+The map between the source code file extension names and the entry shell script name:<br>
+<pre class="green">
+c.sh: *.c 
+cc.sh: *.cc, *.cxx, *.cpp, *.c++
+ruby.sh: *.rb
+lua.sh: *.lua
+python.sh: *.py
+perl.sh: *.pl
+php.sh: *.php
+tcl.sh: *.tcl
+js.sh: *.js
+sh.sh: *.sh (shell script)
+go.sh: *.go
+rust.sh: *.rs
+dart.sh: *.dart
+</pre><br>
+TO add a new programming language and associate its source code file extension names with an entry shell script, please refer this document: <a href="http://sevenuc.com/download/language_extension_protocol.pdf" target="_blank">language_extension_protocol.pdf</a>.
+</p>
+<p><b>Note: </b>Don't use this approach to run long running tasks but should launch Terminal.app to do such works.</p>
+
+<h2 class="warning">Important Tips</h2>
+<p class="green">
+1. Please wait a while when loading very big project into Workspace.<br>
+2. Use ESC key or arrow key or 'Control+Z' to get out of suggested words list selection.<br>
+3. Please ensure all source code file and resource files have been dragged in the left side Treeview (Workspace Explorer) before start a debug session, because macOS app can't be allowed to access files outside of its sandbox.<br>
+4. When your project sub folder moved to another place, please drag the project folder in Speare again to ensure the debugging can correctly work.</p>
+
+<h2>FAQ</h2>
+<p><b>1. How to add keywords highlighting to support a new document type?</b><br>
+a). Open <lt>"/Applications/Speare.app/Contents/Resources/FileExtensions.plist"</lt>, and carefully add the file extension name of the new document type in it, e.g highlighting all keywords for the <a href="https://graphite.sil.org"> SIL GDL (Graphite Description Language)</a> files:<br>
+
+
+<pre>
+...
+       &lt;key&gt;Swift&lt;/key&gt;
+&lt;array&gt;
+	&lt;string&gt;swift&lt;/string&gt;
+&lt;/array&gt;
+<span class="warning">
+&lt;key&gt;GDL&lt;/key&gt;  &lt;---- GDL.plist (file name for syntax highlighting)
+&lt;array&gt;
+	&lt;string&gt;gdl&lt;/string&gt; &lt;---- file extension name
+&lt;/array&gt;</span>
+&lt;/dict&gt;
+&lt;/plist&gt;
+</pre>
+b). Download <a href="http://sevenuc.com/download/GDL.plist" target="_blank">GDL.plist</a> and put it under the following folder:<br>
+<lt>/Applications/Speare.app/Contents/Resources/Languages/</lt><br><br>
+</p>
+
+
+<p><b>2. How to add syntax highlighting to support a new file type?</b><br>
+Open <lt>"/Applications/Speare.app/Contents/Resources/FileExtensions.plist"</lt>, and carefully add the file extension name in it, e.g syntax highlighting all <span class="warning">.mli</span> as Ocaml source code file:<br>
+<pre>
+  &lt;key&gt;F# - OCaml&lt;/key&gt;   &lt;---- file name for syntax highlighting
+  &lt;array&gt;
+  &lt;string&gt;ml&lt;/string&gt; &lt;---- file extension name
+  &lt;string&gt;<span class="warning">mli</span>&lt;/string&gt; &lt;---- file extension name
+  &lt;/array&gt;
+</pre>
+</p>
+
+
+<p><b>3. Syntax highlighting for a new programming language:</b><br>
+a). Append the file extension names of the programming language in the "FileExtensions.plist" as described in the above section.<br>
+b). Put the syntax highlighting definition file in the following directory:</b><br>
+<lt>~/Library/Application Scripts/com.sevenuc.SpeareHelper/languages</lt><br>
+<span class="warning">Please create the directory if it is not exists.</span>
+</p>
+
+
+<p><b>4. How to add a missing keyword to enable syntax highlighting in Speare?</b><br>
+Open <lt>"/Applications/Speare.app/Contents/Resources/Languages/<span class="warning">xxlang.plist</span>"</lt>, and carefully insert the missing keyword in the "keywords" section.<br>
+<pre>
+&lt;key&gt;keywords&lt;/key&gt;
+&lt;array&gt;
+&lt;string&gt;<span class="warning">missing keyword</span>&lt;/string&gt;
+...
+</pre></p>
+
+<p><b>5. How to add "Open With" in Finder to support open a file type with Speare?</b><br>
+Right click the file in Finder  →  Get Info  →  Open With: Other..., find Speare.app and select, and then Click <lt>"Change All..."</lt> button.<br><br></p>
+
+<p><b>6. How to clean hidden file and folders used by version control systems?</b><br>
+download a simple python script from here: <a href="http://sevenuc.com/download/cleanfolder.py" target="_blank">cleanfolder.py</a> (5KB), and execute:<br>
+<lt>$ python cleanfolder.py -d "/full/path/of/your/source/code/directory"</lt>.<br><br></p>
+
+<p><b>7. How to do file compare and directory compare?</b><br>
+<lt>$ diff -rNu /source/code/directory/before /source/code/directory/after > changes.diff</lt><br> 
+Generate a diffs file with two directory or two file that allow you compare changes line by line and then open the generated changes.diff in Speare Code editor.
+<br><br></p>
+
+
+<h2>Programming Languages and Document Types</h2>
+<p class="small">
+AMPL ASM ASP <gr>AWK</gr> Ada <gr>ActionScript</gr> Active4D AnsiblePlaybook Ant Apache <gr>Applescript</gr> Asciidoc AutoIt Autoconf Automake <gr>Basic</gr> Batch Beta Bibtex <gr>C</gr> C# <gr>C++</gr> CMake CPrePro <gr>CSS</gr> Scss CUDA Clojure Cobol <gr>CoffeeScript</gr> ColdFusion Csound Ctags D DTS DbusIntrospect <gr>Diff</gr> DosBatch PowerShell Dtd Dylan <gr>Eiffel</gr> Elixir Elm <gr>Erlang</gr> eZ Publish F-Script Falcon Flex <gr>Forth</gr> <gr>Fortran</gr> FreeFem++ Fypp GEDCOM Gdbinit Glade <gr>Go</gr> Gradle GraphViz Groovy <gr>Haskell</gr> <gr>HTML</gr> <gr>Haxe</gr> Header IDL ITcl Iniconf Inko JSP Java JavaFX JavaProperties <gr>JavaScript</gr> Json <gr>Julia</gr> Kotlin Kuin LSL LaTeX LdScript Lilypond <gr>Lisp</gr> Logtalk <gr>Lua</gr> M4 MEL Makefile Man <gr>Markdown</gr> <gr>MATLAB</gr> Maven2 MetaPost Metaslang Moose MySQL Myrddin NASL NEURON Nemerle <gr>Objective-C</gr> Octave <gr>Ocaml</gr> Ox PDF <gr>PHP</gr> Parrot <gr>Pascal</gr> Passwd <gr>Perl</gr> <gr>Perl6</gr> Pig Plist Pod PostScript <gr>Prolog</gr> <gr>Processing</gr> Protobuf Puppet PuppetManifest <gr>Python</gr> PythonLoggingConfig QemuHX QtMoc <gr>R</gr> R/S-PLUS RHTML RSpec RelaxNG Rexx Robot <gr>Racket</gr> RpmSpec Rst <gr>Ruby</gr> <gr>mruby</gr> <gr>Rust</gr> SGML SML <gr>SQL</gr> Scala <gr>Scheme</gr> Sedona <gr>Shell</gr> Slang Smalltalk Snippets Stata SuperCollider SVG <gr>Swift</gr> SystemTap SystemdUnit TTCN <gr>Tcl</gr> Tcl/Tk Tex TorqueScript <gr>TypeScript</gr> Udo VB VB.NET VHDL Vera <gr>Verilog</gr> <gr>SystemVerilog</gr> Vim WSDL WindRes <gr>XML</gr> XSD Xquery Xslt Yacc <gr>YAML</gr> YumRepo Zephir</p>
+
+
+<!--
+<h2>Techniques Inside</h2>
+<p><b>Speare is very fast!</b><br> Speare developed with pure Cocoa and C components that made it completely different with Javascript & Chromium based on IDE that large number of junk filled inside them, pure native frameworks and C modules made it small, efficient and has ability to leverage all native platform builtin features, e.g. Spell and grammar check, font and text format, unlimited undo, text to speak etc.</p>
+-->
+
+<br><br>
+<h2>Support</h2>
+<p>If your special programming language, compiler, interpreter or special document type requires Spear syntax highlighting or debugging support, please drop us a message. </p>
+<p>Please kindly report your feature request or issue on OSDN or Github: <br>
+<img src="../images/OSDN_logo.png" style="height:auto;width: 24px;">&nbsp;<a href="https://osdn.net/projects/speare/" target="_blank">https://osdn.net/projects/speare.</a><br>
+<img src="../images/github-logo.png" style="height:24px;width: auto;"><a href="https://github.com/chengdu/Speare" target="_blank">https://github.com/chengdu/Speare.</a></p>
+
+
+<br><br>
+</div>
+
+</div>
+<p><br></p>
+</section>
+</div>
+
+<p><audio autoplay loop preload="none"><source src="../audio/bamboo.mp3" type="audio/mpeg" /></audio></p>
+
+<!-- FOOTER  -->
+<div id="footer_wrap" class="outer">
+ <footer class="inner">
+   <a href="http://sevenuc.com"><img src="http://sevenuc.com/images/logo.svg" class="logo"></a><span><p class="copyright">
+   <span class="copyright"> © 2020 Sevenuc Consulting <br>All rights reserved.</span>
+      <a href="http://sevenuc.com/en/about.html"> About </a>|
+      <a href="http://sevenuc.com/en/service.html"> Services </a>|
+      <a href="http://sevenuc.com/en/apps.html"> Apps </a>|
+      <a href="http://sevenuc.com/en/contact.html"> Contact </a></p></span>
+ </footer>
+</div>
+
+</body></html>
+

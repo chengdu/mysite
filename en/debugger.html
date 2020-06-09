@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta property="og:title" content="Speare, an ultra lightweight code editor and a small IDE that provides debugging environment for C, C++, Ruby, mruby, Lua, Python, PHP, Perl and Tcl.">
+<meta property="og:type" content="product">
+<meta property="og:url" content="http://www.sevenuc.com/">
+<meta property="og:image" content="http://www.sevenuc.com/favicon.ico">
+<meta property="og:site_name" content="Sevenuc Consulting">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1">
+<meta name="description" content="Speare, an ultra lightweight code editor and a small IDE that provides debugging environment for C, C++, Ruby, mruby, Lua, Python, PHP, Perl and Tcl.">
+<meta name="service" content="Product development and independent consulting services">
+<meta name="author" content="http://www.sevenuc.com/">
+<meta name="keywords" content="Speare,IDE,Text Editor,Code Editor,Ruby Debugger,mruby Debugger,Lua Debugger,Python Debugger,PHP Debugger,Syntax Highlighting,Lex,Parser,Compiler,Interpreter,Programming Language,IDE,TextEdit,TextMate,CotEditor,Textadept,ZeroBraneStudio,Android Studio,ActiveState,Komodo,Xcode,Visual Studio Code,Eclipse,Scrpting Language,Scheme,Python,C,C++,SQL,Objective-C,Swift,Kotlin,Haxe,Haskell,TCL,Javascript,Lisp,Perl,PHP,GO,Markdown,Node">
+<link rel="stylesheet" type="text/css" media="screen" href="../css/stylesheet.css">
+<style type="text/css">
+.logo {  height:42px;  width: auto; }
+.none {  padding:0;  margin: 0; }
+.warning {color:#cce619;}
+.yell {color:#cce619;}
+.green {color: #007f00;}
+.treasure { color: rgba(0, 0, 0, 0.7); font-style: italic; font-weight: bold; background: none; }
+</style>
+<title>Debugging code with Speare Code Editor</title>
+</head>
+<body>
+
+<!-- HEADER -->
+<!--div id="header_wrap" class="outer">
+    <header class="inner">
+      <h1 id="project_title"> Speare </h1>
+      <h2 id="project_tagline">The designedly ultra lightweight code editor developed to coding happy for everyone.</h2>
+    </header>
+</div-->
+
+<!-- MAIN CONTENT -->
+<div id="main_content_wrap" class="outer">
+<section id="main_content" class="inner">
+<div class="smallscreen">
+
+<!--
+<img src="../images/Speare/logo.png" style="height: 110px;width:auto" /><br>
+<h2> Speare <br><em> Version 1.0 </em></h2>
+-->
+
+<div><pre class="green">
+   ____
+  / __/ __  ___ ___  ___ ___
+  _\ \/ _ \/ -_) _ `/ __/ -_)
+ /___/ .__/\__/\_,_/_/  \__/
+    /_/
+Speare Pro v1.2.80
+The free small IDE for scripting languages.
+(c) 2020 http://sevenuc.com
+</pre></div>
+
+<p><a href="Speare.html" target="_blank">Speare</a> code editor is a small, free and friendly code editor, and a really ultra light IDE. You can use it to edit all kinds of text file, programming and debugging with almost all common programming languages. It designed to make programming feels light, simple and free. Speare code editor not only has an efficient code navigation and call routines tracing ability but also has flexibility to extend the IDE to support special developing requirements and easily to add a new programming language in it. Speare code editor includes builtin debugging environment for C, C++, Ruby, mruby, Lua, Python, PHP, Perl and Tcl, and give you complete freedom to control and customise a debugging environment for any programming language.</p>
+
+<!--
+<p class="yell">Speare currently is in the market promotion stage. Please purchase it ASAP because the product price will increase to at least about $500 when the promotion stage ended.</p>
+-->
+
+<p>The offline document: <a target="_blank" href="http://sevenuc.com/download/Speare_debugger_quick_reference.pdf">Speare_debugger_quick_reference.pdf.</a></p>
+
+<p><b>Debugger Index:</b><br><br>
+<ltab><a href="#lldb">C and C++ Debugger</a></ltab><br>
+<ltab><a href="#mruby">mruby Debugger</a></ltab><br>
+<ltab><a href="#ruby">Ruby Debugger</a></ltab><br>
+<ltab><a href="#lua">Lua Debugger</a></ltab><br>
+<ltab><a href="#python">Python Debugger</a></ltab><br>
+<ltab><a href="#php">PHP Debugger</a></ltab><br>
+<ltab><a href="#perl">Perl Debugger</a></ltab><br>
+<ltab><a href="#tcl">Tcl Debugger</a></ltab><br>
+<ltab><a href="#node">Node.js Debugger</a></ltab><br>
+</p>
+
+<p><a href="https://apps.apple.com/us/app/speare-pro/id1477773605?mt=12" target="_blank" class="appstore_download_link"><img src="../images/available_on_macappstore.png" style="margin-left:1em;"> </a></p><br><br><br>
+<p>If you can't open the link above, please launch App Store and found <lt>"Speare - Donate version"</lt> by searching.</p>
+<p><span><a href="../images/Speare/4.png" target="_blank"><img src="../images/Speare/4.png" style="width:480px;height:auto;"/></a></span><br>
+<span><a href="../images/Speare/5.png" target="_blank"><img src="../images/Speare/5.png" style="width:480px;height:auto;"/></a></span><br>
+<span><a href="../images/Speare/6.png" target="_blank"><img src="../images/Speare/6.png" style="width:480px;height:auto;"/></a></span><br>
+<span><a href="../images/Speare/7.png" target="_blank"><img src="../images/Speare/7.png" style="width:480px;height:auto;"/></a></span><br>
+<span><a href="../images/Speare/10.png" target="_blank"><img src="../images/Speare/10.png" style="width:480px;height:auto;"/></a></span>
+</p>
+
+
+<h2>Debug Mode</h2>
+<p>1. Click <span><img src="../images/Speare/bottom.png" class="button" /></span> siding bottom button to show the debug toolbar.</p>
+<p>2. Debug toolbar:<br><br>
+<a href="../images/Speare/debug_toolbar.png" target="_blank"><span><img src="../images/Speare/debug_toolbar.png" /></span></a><br><br>
+From left to right, Start, Stop, Step Into, Step Out, Run To, Step Over, Show Watches. The "Step Over" is equals to "Step next", and "Step To" is equals to "Continue" in common debugging words, and the "Step To" is the command that tell the debugger run to meet a breakpoint or an exception occurred or the program meet exit. On the rightmost there are three other function units, they are, search items in the stackview, siding stackview, and clean debug output. <br><br>
+<b>Search in the debug output:</b> click in the output area and use the shortcut key "Control + F" to do the searching.
+</p>
+
+<p>3. Socket port:<br>
+You can set the socket communication port number both used by Debug Server and the Speare code editor. Open the Preferences of Speare and select the "Debug Settings" tab then input your number.<br><br>
+<span class="yell">Please remember to empty the port number when you switched to debugging with the default builtin programming languages with default port number.</span>
+</p>
+<p>4. Watches:<br>
+Watches used to evaluate variable or expression and their values can be realtime showing in stackview when debugging session paused, the nodes normally has a green colour and always placed on the top of stackview.
+</p>
+
+<span class="warning">Caution: </span><br>
+<ul><li><span class="warning">a.</span><lt> Please ensure all source files have been dragged in the left side Treeview (Workspace Explorer) before start a debug session, because macOS app can't be allowed to access files outside of its sandbox.</lt></li>
+<li><span class="warning">b.</span><lt> When your source code file moved to another folder, you must drag the source code folder in Speare again then the debugging can correctly work.</lt></li></ul>
+
+
+<h2>Debugger Architecture</h2>
+<a href="../images/Speare/debugger.png" target="_blank"><img src="../images/Speare/debugger.png" class="screenshots"/></a><br>
+<p><lt>An free small IDE for C, C++, Ruby, mruby, Lua, Python, PHP, Perl and Tcl.</lt></p>
+<p>Proposed debugging environment support in Speare code editor are: GDB, LLDB, Ruby, mruby, Lua, Python, Perl, PHP, Tcl, Node.js, Dart, AWK and shell. Speare code editor provides very concise and simple interface to add new programming language in it, end user can very easily write a new programming language parser, syntax highlighting, code formatter and debugger for it, please refer this guide: <a href="http://sevenuc.com/download/language_extension_protocol.pdf" target="_blank">language_extension_protocol.pdf</a>.</p>
+
+<h2>Debugging code with Speare code editor</h2>
+<p>Speare code editor provides an intuitive debugging environment allows adding breakpoints and the execution flow can be viewed and controlled and has the abilities that an IDE debugger will give you over trace execution in code, view the call stack at any point in time, giving you a context for your current stack frame, step into libraries or sub modules that you want to tracing the debug symbols, and change variable values while the program is running. It provides simple interfaces that can be integrated with any command line tools without boring configuration, giving you the flexibility you need to debug code at hand. The debuggers of Speare code editor, the source-level debuggers, helps you step through the code line by line and observe the runtime behaviour of your program and got a better understanding of your code.</p>
+
+<a name="lldb"></a><br>
+<h2>C and C++ Debugger</h2>
+<p>The C and C++ debugger of Speare code editor implemented as a script client of <a href="http://lldb.llvm.org" target="_blank">LLDB</a>, and support extend it by yourself. The builtin module supports parsing modern C++ source code files including C++11 and C++14 syntax, e.g effectively name and index namespace and anonymous class, function and many other new features of the C++ programming language. You can enjoy debugging almost any type of C and C++ applications under the lightweight debugging environment of Speare code editor. </p>
+<p><b>Start Debugging Steps:</b><br>
+1. Download Speare Debug Server: → <a href="http://sevenuc.com/download/c_debugger.tar.gz">  http://sevenuc.com/download/c_debugger.tar.gz</a> <em>(10KB)</em><br>
+<ltab><em>SHA256: c9e4d8615335d92eae7d2162b1d44b777e32e687fbf8c48d4ddfbbed0c18d4e6</em></ltab><br>
+<ltab>The source code of the C and C++ debugger can be view online here: </ltab><br>
+<ltab><a href="https://github.com/chengdu/Speare" target="_blank">https://github.com/chengdu/Speare</a> or here: <a href="https://sourceforge.net/projects/speare" target="_blank">https://sourceforge.net/projects/speare</a></ltab><br><br>
+2. Uncompress the tarball to your local directory. e.g ~/Desktop and take a look at the readme.txt in it.<br><br>
+3. Start the debug server: <br>
+<ltab>Please refer the readme.txt file.</ltab><br><br>
+4. Debug session start: click "Start" button on the debug toolbar of Speare code editor.<br>
+<ltab>Add breakpoint, step in, step out, step next, watch stack trace ...</ltab><br><br>
+5. Run extra commands:<br>
+<ltab>Right click in the stackview (bottom left side) and then input any lldb command when the debugging session paused. Left click anywhere outside of the input box to close it and the command will be directly send to the debug server.</ltab><br>
+<b>a. Add function breakpoints</b><br>
+. <lt>breakpoint set --name functioname</lt>: add a C function breakpoint.<br>
+. <lt>breakpoint set --name classname::functioname</lt>: add a C++ function breakpoint.<br>
+<b>b. Process operation</b><br>
+. <lt>process attach --name xxx --waitfor</lt>: attach another process by name.<br>
+. <lt>process attach --pid xxx</lt>: attach another process by pid #xxx.<br>
+<b>c. Thread operation</b><br>
+. <lt>thread list</lt>: show all thread of current process.<br>
+. <lt>thread select 2</lt>: select thread #2.<br>
+. <lt>thread backtrace all</lt>: show thread info.<br>
+. <lt>register read</lt>: read all CPU registers.<br>
+. <lt>thread step-inst</lt>: step one machine instruction.<br>
+. <lt>thread step-over-inst</lt>: step return one machine instruction.<br>
+<b>d. Watchpoint operation</b><br>
+. <lt>watch list -v</lt>: list watchpoints.<br>
+. <lt>watchpoint set variable x</lt>: add a watchpoint x.<br>
+<b>e. Frame operation</b><br>
+. <lt>frame list</lt>: print all frame of the current thread.<br>
+. <lt>frame select 9</lt>: select frame #9.<br>
+<b>f. Display variable value </b><br>
+. <lt>frame variable x</lt>: print x value.<br>
+<b><lt>...</lt></b><br><br>
+<i><b>Tips: </b>Run to (run to meet a breakpoint), the source file that you want debugger stopped in it must already opened and has at least one breakpoint before run the command.</i><br><br>
+6. Modify the C and C++ debugger: <br>
+<ltab>You can directly modify the script client of lldb to satisfy your requirements.</ltab>
+</p>
+
+<h2>How to compile and install GCC on macOS?</h2>
+<p> This page described how to compile GCC on macOS step by step in details: → <a target="_blank" href="gcc_on_macos.html">compile a stable version of GCC on macOS.</a></p>
+
+<a name="whyc"></a><br>
+<h2>About the C programming language</h2>
+<p>C is not safe but it is the strongest programming language and the most strongest softwares were written with it, including operation system and the most important infrastructure of internet and software industry, think about BIND, Apache, Nginx, MySQL, PostgreSQL, SQLite, Berkeley DB, Redis, Memcached, PHP, Perl, Ruby, Python, Lua, Git, FFmpeg and other countless excellent softwares. If sqlite and git were written with C++ or Java, I'll throw them away immediately. C is top professionals' language, most developer have never written a real C software in their life, a mature developer may needs ten years to really write software with it. The product quality of the software industry is directly proportional to the number of experienced C programming experts.</p>
+
+
+<h2>The Tao and Kung Fu of Programming</h2>
+<p><i><b>Why all attempts failed?</b> They want to create new programming language to resolve problem in software industry, but all attempts failed. Any new programming language that intended to achieve a seamless translation from Lisp (or Lisp like language, e.g Javascript) to native executable code will failed at final. The product quality of the software industry is directly proportional to the number of experienced C programming experts, but experienced C developer and C ninja are rare and rare, because only a few people can walk on this difficult way. C is really unsafe and really difficult to master, to be a mature C developer or an C expert, a developer may needs about ten years to continually experience it. Programming is difficult, there is no shortcuts for programming, programming language itself can't resolve it. Only the honest and continuous improving of the C programming skills is the reliable way.<br><br>
+<span class="yell">"C + elegant scripting language" is the reliable, efficient and flexible extending solution.</span><br><br>
+Most developer have never written a real C software in their life, <gr>I wish more and more developer use Speare code editor to develop efficient and excellent software with C instead of current popular bloated programming languages.</gr></i></p>
+
+
+<a name="mruby"></a><br>
+<h2>mruby Debugger</h2>
+<p>The mruby debugger of Speare is a patched version of <a href="http://mruby.org">mruby</a> that support remote debugging mruby project, currently support mruby version 2.0.1 and 2.1.0.<br>
+<p>1. <b>Install mruby debugging server</b><br><br>
+<ltab>Download mruby remote debugger: → <a href="http://sevenuc.com/download/mruby_debugger.tar.gz">  http://sevenuc.com/download/mruby_debugger.tar.gz</a> <em>(733KB)</em></ltab><br>
+<ltab><em>SHA256: 44646d3f13f8840843795b533043e42fd18a239e480b548c92c3e8029ea03a84</em></ltab><br>
+<ltab>Download mruby-2.0.1.tar.gz <em>(518KB)</em> or mruby-2.1.0.tar.gz <em>(585KB)</em> from <a href="https://github.com/mruby/mruby">https://github.com/mruby/mruby</a></ltab><br>
+<ltab><lt>$ cd mruby-2.0.1 or mruby-2.1.0</lt></ltab><br>
+<ltab><lt>$ make</lt>: compile mruby and replace mrdb under bin directory with the corresponding version.</ltab><br>
+<ltab><lt>$ cd bin </lt></ltab><br>
+<ltab><lt>$ ./mrdb </lt>: start the mruby remote debugger.</ltab><br><br>
+2. <b>Configuring Speare code editor</b><br><br>
+Launch Speare and open the Preferences of Speare and select the tab of "Debug Settings" then check on "Enable mruby debugging". <span class="yell">Please remember to turn the option off when you switched to debug common Ruby applications.</span><br><br>
+3. <b>Debug Session Start</b><br><br>
+<ltab>Click "Start" button on the debug toolbar of Speare Pro</ltab>.<br>
+<ltab>Add breakpoint, step in, step out, step next, watch stack trace ...</ltab><br><br>
+<em class="green"><b>Tips:</b> Separate modules of your app with mruby gems instead of using require.</em><br>
+</p>
+
+<a name="ruby"></a><br>
+<h2>Ruby Debugger</h2>
+<p>The Ruby debugger of Speare code editor implemented as a client of <a href="https://rubygems.org/gems/ruby-debug-ide/">rdebug-ide</a>, and Ruby interpreter that has a rdebug-ide installed will be running as the debug server.</p>
+<p><em class="green">Ruby debugging environment support all kinds of Ruby interpreters, the version includes: 1.8.x, 1.9.x, 2.x, and JRuby.</em></p>
+<p><b>Steps of start debugging session:</b><br><br>
+1. Download and install debug gems:<br><br>
+For Ruby 1.8.x: download: <a href="https://rubygems.org/gems/ruby-debug-base/">ruby-debug-base (0.10.4)</a><br>
+<ltab><lt>$ gem install --force --local ruby-debug-base-0.10.4.gem</lt></ltab><br>
+<ltab><lt>$ gem install ruby-debug-ide</lt></ltab><br><br>
+For Ruby 1.9.x: download: <a href="https://rubygems.org/gems/ruby-debug-base19/">ruby-debug-base19 (0.11.25)</a><br>
+<ltab><lt>$ gem install --force --local ruby-debug-base19x-0.11.32.gem</lt></ltab><br>
+<ltab><lt>$ gem install ruby-debug-ide</lt></ltab><br><br>
+For Ruby 2.x:<br>
+<ltab><lt>$ gem install debase</lt></ltab><br>
+<ltab><lt>$ gem install ruby-debug-ide</lt></ltab><br><br>
+2. Start the debug server: <br><br>
+<ltab><lt>$ rdebug-ide --host 127.0.0.1 --port 1234 --dispatcher-port 1234 -- main.rb</lt></ltab><br>
+	<em>(please replace the main.rb file with your script file.)</em><br>
+	For Rails: <lt>$ rdebug-ide --host 0.0.0.0 --port 1234 --dispatcher-port 1234 -- bin/rails s</lt><br><br>
+3. Debug session start: <br>
+<ltab>click "Start" button on the debug toolbar of Speare code editor.</ltab><br>
+<ltab><b>Add breakpoint, step in, step out, step next, watch stack trace ...</b></ltab><br><br>
+4. Add condition breakpoint:<br>
+<ltab>Right click on the breakpoint, on the prompt menu, → select <b>"Condition"</b> and then input expression or use empty string to remove the condition, left click outside of the input box to close it and execute the command.</ltab> e.g.  x>5 means: Pause on the breakpoint only if x>5 is true.</p>
+5. Run Extra Commands:<br>
+Right click in the stackview (bottom left side) and then input extra command when the debugging session paused. Left click anywhere outside of the input box to close it and the command will be directly send to the debug server.<br><br>
+<b>a. Variables</b><br>
+. <lt>var const object</lt>: show constants of object.<br>
+. <lt>var instance object</lt>: show instance variables of object, object can be given by its id or an expression.<br>
+. <lt>var inspect</lt>: reference inspection results in order to save them from the GC.<br><br>
+<b>b. Expression</b><br>
+. <lt>p expression</lt>: evaluate expression and print its value.<br>
+. <lt>pp expression</lt>: evaluate expression and print its value.<br>
+. <lt>eval expression</lt>: evaluate expression and print its value, alias for p.<br>
+. <lt>expression_info</lt> expression: returns parser-related information for the expression given 'incomplete'=true | false indicates whether expression is a complete ruby expression and can be evaluated without getting syntax errors.<br><br>
+<b>c. Backtrace</b><br>
+. <lt>where</lt>: display frames.<br>
+. <lt>bt | backtrace</lt>: alias for where.<br>
+. <lt>up | down [count]</lt>: move to higher or lower frame.<br>
+. <lt>frame [frame-number]</lt>: Move the current frame to the specified frame number. <em>(A negative number indicates position from the other end. So 'frame -1' moves to the oldest frame, and 'frame 0' moves to the newest frame.)</em><br><br>
+<b>d. Jump</b><br>
+<em>Change the next line of code to be executed.</em><br>
+. <lt>jump line</lt>: jump to line number (absolute).<br>
+. <lt>jump -line</lt>: jump back to line (relative).<br>
+. <lt>jump +line</lt>: jump ahead to line (relative).<br><br>
+<b>e. Thread</b><br>
+. <lt>thread list</lt>: list all threads.<br>
+. <lt>thread current</lt>: show current thread.<br>
+. <lt>thread switch &lt;nnn&gt;</lt>: switch thread context to nnn.<br>
+. <lt>thread inspect &lt;nnn&gt;</lt>: switch thread context to nnn but don't resume any threads.<br>
+. <lt>thread resume &lt;nnn&gt;</lt>: resume thread nnn.<br>
+. <lt>thread stop &lt;nnn&gt;</lt>: stop thread nnn.<br><br>
+<b>f. Type Set</b><br>
+. <lt>set_type &lt;var&gt; &lt;type&gt;</lt>: Change the type of &lt;var&gt; to &lt;type&gt;.<br><br>
+<b>g. File Operation</b><br>
+. <lt>load file</lt>: read and parse file every time instead of require.<br>
+. <lt>file-filter on | off</lt>: enable or disable file filtering.<br>
+. <lt>include file | dir</lt>: adds file or dir to file filter (either remove already excluded or add as included).<br>
+. <lt>exclude file | dir</lt>: exclude file or dir from file filter (either remove already included or add as exclude).<br><br>
+6. Switch Ruby interpreter: <br>
+	You can directly switch between any Ruby interpreter or your own version of Ruby and then config it to support rdebug-ide.</p>
+
+<h2>Appendix: make a fresh Ruby debugging environment</h2>
+<p><block><pre>
+Step 1. build an openssl library
+$ download https://www.openssl.org/source/openssl-1.0.2t.tar.gz
+$ tar -zxvf openssl-1.0.2t.tar.gz
+$ cd openssl-1.0.2t
+$ <lt>export KERNEL_BITS=64</lt>
+$ ./config no-ssl2 no-ssl3 no-shared enable-ec_nistp_64_gcc_128 \
+  --prefix=/Users/yeung/Public/Rdebug/openssl \
+  --openssldir=/Users/yeung/Public/Rdebug/openssl
+$ make && make install
+
+Step 2. build a ruby interpreter
+$ download https://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.2.tar.bz2
+$ tar -jxvf ruby-2.1.2.tar.bz2
+$ <lt>export LDFLAGS=-L/Users/yeung/Public/Rdebug/openssl/lib -lcrypto -lssl</lt>
+$ export CFLAGS=-I/Users/yeung/Public/Rdebug/openssl/include
+$ export PKG_CONFIG_PATH=/Users/yeung/Public/Rdebug/openssl/pkgconfig
+$ cd ruby-2.1.2
+$ ./configure --prefix=/Users/yeung/Public/Rdebug/2.x/ruby2 \
+  --with-openssl-dir=/Users/yeung/Public/Rdebug/openssl
+Alternative: directly modify Makefile to add openssl library link options
+<lt>LDFLAGS =  $(CFLAGS) -L. -fstack-protector -L/usr/local/lib -L/Users/yeung/Public/Rdebug/openssl -lcrypto -lssl</lt>
+$ make && make install
+
+Step 3. install debug gems
+$ download https://rubygems.org/downloads/debase-ruby_core_source-0.10.5.gem
+$ download https://rubygems.org/downloads/debase-0.2.5.beta1.gem
+$ download https://rubygems.org/downloads/ruby-debug-ide-0.7.0.gem
+$ <lt>export PATH=/Users/yeung/Public/Rdebug/2.x/ruby2/bin:$PATH</lt>
+$ gem install --force --local debase-ruby_core_source-0.10.5.gem
+$ gem install --force --local debase-0.2.5.beta1.gem
+$ gem install --force --local ruby-debug-ide-0.7.0.gem
+
+Step 4. start debugging session
+$ <lt>rdebug-ide --host 127.0.0.1 --port 1234 --dispatcher-port 1234 -- xxx/xxx/xxx/main.rb</lt>
+add breakpoints in Speare code editor.
+click "Start" button on the debug toolbar of Speare code editor.
+step in, step out, step next ...
+</pre></block></p>
+
+<a name="lua"></a><br>
+<h2>Lua Debugger</h2>
+<p>The Lua debugger of Speare code editor implemented as a module of <a href="https://www.lua.org">Lua</a>, and support all common versions of Lua. You can conveniently enjoy debugging with any kinds of customised Lua interpreter and LuaJIT.<br><br>
+<em class="green">Tested Lua version includes: 5.1.4, 5.1.5, 5.2.4, 5.3.5 5.4.0-alpha</em><br>
+</p>
+
+<p><b>Start Debugging Steps:</b><br><br>
+1. Download Speare Debug Server: → <a href="http://sevenuc.com/download/lua_debugger.tar.gz">  http://sevenuc.com/download/lua_debugger.tar.gz</a> <em>(518KB)</em><br>
+<ltab><em>SHA256: a9447cedd668553f0b0eb5c2f5221b6af349dd6cf73602513f98e9b366022c94</em></ltab><br>
+2. Uncompress the tarball to your local directory. e.g ~/Desktop and take a look at the readme.txt in it.<br>
+3. Start the debug server: <br><br>
+<ltab><lt>$ cd ~/Desktop/debugger/5.1</lt></ltab><br>
+<ltab><lt>$ ./lua_514 server.lua</lt></ltab><br><br>
+4. Debug session start: click "Start" button on the debug toolbar of Speare code editor.<br>
+<ltab><b>Add breakpoint, step in, step out, step next, watch stack trace ...</b></ltab><br><br>
+5. Replace Lua interpreter: <br>
+<ltab>You can directly replace the Lua interpreter with your own customised version under the debugger directory.</ltab><br>
+</p>
+
+
+<a name="python"></a><br>
+<h2>Python Debugger</h2>
+<p>The Python debugger of Speare Pro supports Python version 2.5, 2.6, 2.7 and 3.x, and MicroPython. You can enjoy debugging Python scripts as same as debugging web applications that based on web frameworks such as Flask and Django under the lightweight environment of Speare code editor. <br></p>
+<p><b>Steps of Start Debugging Session:</b><br><br>
+1. Download Speare Debug Server: → <a href="http://sevenuc.com/download/python_debugger.tar.gz">  http://sevenuc.com/download/python_debugger.tar.gz (30KB)</a><br>
+<ltab><em>SHA256: 74cc8544671eed3de317305573cc9f1f95ae395533d1f08ce84b248cee883250</em></ltab><br>
+<ltab>The source code of the Python debugger can be view online here: </ltab><br>
+<ltab><a href="https://github.com/chengdu/Speare" target="_blank">https://github.com/chengdu/Speare</a> or here: <a href="https://sourceforge.net/projects/speare" target="_blank">https://sourceforge.net/projects/speare</a></ltab><br>
+2. Uncompress the tarball to your local directory. e.g ~/Desktop and take a look at the readme.txt in it.<br>
+3. Start the debug server: <br><br>
+<ltab><lt>$ cd ~/Desktop/debugger/2.x</lt></ltab><br>
+<ltab><lt>$ python server.py</lt></ltab><br><br>
+4. Debug session start: click "Start" button on the debug toolbar of Speare code editor.<br>
+<ltab><b>Add breakpoint, step in, step out, step next, watch stack trace ...</b></ltab><br><br>
+5. Add condition breakpoint<br>
+<ltab>Described in the Ruby debug section of this page.</ltab><br><br>
+6. Run Extra Commands:<br><br>
+<b>a. Remove all breakpoints</b><br>
+. <lt>clear</lt>: clear all breakpoints of current file.<br><br>
+<b>b. Stack trace and frame operation</b><br>
+. <lt>where</lt>: Print stack trace, an arrow indicates the "current frame".<br>
+. <lt>up [count]</lt>: Move stack trace to older frame.<br>
+. <lt>down [count]</lt>: Move stack trace to newer frame.<br><br>
+<b>c. Display argument list</b><br>
+. <lt>args</lt>: Print the argument list of the current function.<br><br>
+<b>d. Display return value </b><br>
+. <lt>retval</lt>: Print the return value for the last return of a function.<br><br>
+<b>e. Display value of expression</b><br>
+. <lt>p expression</lt>: Print the value of the expression.<br>
+. <lt>pp expression</lt>: Pretty-print the value of the expression.<br>
+. <lt>display expression</lt>: Display the value of the expression, Python 3.x only.<br>
+. <lt>undisplay</lt>: Clear all display expressions for the current frame, Python 3.x only.<br>
+. <lt>undisplay expression</lt>: Do not display the expression any more in the current frame, Python 3.x only.<br><br>
+<b>f. Display argument type </b><br>
+. <lt>whatis argument</lt>: Print the type of the argument.<br><br>
+<b>g. Display source code of object</b><br>
+. <lt>source expression</lt>: Python 3.x only.<br><br>
+<b>h. Continue execution</b><br>
+. <lt>until</lt>: continue execution until the line number greater than the current is reached.<br>
+. <lt>until [lineno]</lt>: continue execution until line number greater or equal to the lineno is reached.<br><br>
+<b>i. Add module search path</b><br>
+. <lt>basedir directory</lt>: insert a directory in sys.path.<br>
+</p>
+7. Switch Python interpreter: <br>
+<ltab>You can directly switch CPython interpreter to MicroPython or your own self-compiled version of Python, or others such as PyPy, Jython and IronPython.</ltab><br>
+</p>
+
+<a name="php"></a><br>
+<h2>PHP Debugger</h2>
+<p>The PHP debugger of Speare code editor supports all kinds debugging of PHP applications and any version of PHP interpreter that has Xdebug support from PHP 5.x to PHP 7.x. Different with Lua, Ruby and Python debugging, this time Speare acts as debug server and Xdebug as the client.</p>
+
+<p><b>Setting up Xdebug for PHP Debugging</b>:<br><br>
+1. Download Xdebug:<br>
+https://xdebug.org/files/xdebug-2.6.0.tgz<br><br>
+2. Compile and install Xdebug:<br>
+<lt>$ rm configure.in (optional)</lt><br>
+<lt>$ rm configure.ac (optional)</lt><br>
+<lt>$ phpize &amp;&amp; ./configure --enable-xdebug &amp;&amp; make clean &amp;&amp; make all</lt><br>
+<lt>$ sudo make install</lt><br>
+At this step Terminal will report: <br><br>
+<em class="small">/usr/lib/php/extensions Operation not permitted. </em><br><br>
+This is because SIP default set to be enabled by macOS, even you execute sudo operation, the system protected directories still can't be writable.<br>
+</p>
+<p><span class="warning">WARNING: THE FOLLOWING OPERATION IS VERY DANGERS.</span><br>
+Assuming that you know what you’re doing, here is how to change SIP (System Integrity Protection) settings on your Mac. Turn off your Mac (Apple  →  Shut Down...), hold down Command-R and press the Power button. Keep holding Command-R until the Apple logo appears and wait for OS X to boot into the "OS X Utility" window and then choose Utilities  →  Terminal.<br>
+<br>
+<b>Turn off SIP:</b><br>
+<lt>$ csrutil disable</lt><br>
+<lt>$ csrutil status</lt><br>
+<lt>$ reboot</lt><br>
+<br>
+<b>Turn on SIP:</b><br>
+<lt>$ csrutil enable</lt><br>
+<lt>$ csrutil status</lt><br>
+<lt>$ reboot</lt><br>
+</p>
+
+<p>After you turn off SIP and execute "$ sudo make install" again, Xdebug should be successfully installed on you system, you can check it by this command:<br>
+<lt>$ php -v</lt><br>
+It should print something like the following:<br>
+<div class="block">
+PHP 7.1.23 (cli) (built: Nov 27 2018 16:59:25) ( NTS )<br>
+Copyright (c) 1997-2018 The PHP Group<br>
+Zend Engine v3.1.0, Copyright (c) 1998-2018 Zend Technologies<br>
+    with Xdebug v2.6.0, Copyright (c) 2002-2018, by Derick Rethans<br>
+</div>
+</p>
+
+<p>3. Configuring web server:<br>
+<lt>$ cp /etc/apache2/httpd.conf ~/Desktop/</lt><br>
+<div class="block">
+LoadModule userdir_module libexec/apache2/mod_userdir.so<br>
+LoadModule alias_module libexec/apache2/mod_alias.so<br>
+LoadModule rewrite_module libexec/apache2/mod_rewrite.so<br>
+LoadModule php7_module libexec/apache2/libphp7.so<br>
+Include /private/etc/apache2/other/*.conf<br>
+</div>
+<br>
+Edit file http.conf and ensure the above lines not be commented.<br>
+<lt>$ sudo cp ~/Desktop/httpd.conf /etc/apache2/</lt><br>
+Save back the settings file.<br>
+<lt>$ apachectl configtest</lt><br>
+Check there syntax is legal (optional).<br>
+</p>
+
+<p>4. Configuring PHP interpreter:<br>
+<lt>$ cp /etc/php.ini.default ~/Desktop/</lt><br>
+<div class="block">
+enable_dl = On<br>
+[xdebug]<br>
+zend_extension = /usr/lib/php/extensions/no-debug-non-zts-20160303/xdebug.so<br>
+xdebug.remote_enable = 1<br>
+xdebug.remote_host = "127.0.0.1"<br>
+xdebug.remote_port = 9000<br>
+xdebug.remote_handler = "dbgp"<br>
+xdebug.remote_mode = req<br>
+xdebug.remote_connect_back = 1<br>
+<span class="warning">xdebug.remote_autostart=1</span><br>
+</div>
+<br>
+Edit file php.ini.default and carefully check the above content have been written in it.<br>
+<b>Note:</b> xdebug.remote_autostart=1 should be removed at product environment.<br>
+<lt>$ sudo cp ~/Desktop/php.ini.default /etc/</lt><br>
+Save back the settings file.<br>
+<lt>$ sudo mv /etc/php.ini.default /etc/php.ini</lt><br>
+Rename the settings file to take effect.<br>
+</p>
+
+<p>5. Run PHP test with Xdebug:<br>
+<div class="block"><em>
+&lt;?php<br>
+echo phpinfo();<br>
+?&gt;</em></div><br>
+
+Save the above content in a file named test.php and put it under /Library/WebServer/Documents/<br>
+<lt>$ sudo launchctl unload -w /System/Library/LaunchDaemons/org.apache.httpd.plist</lt><br>
+<lt>$ sudo launchctl load -w /System/Library/LaunchDaemons/org.apache.httpd.plist</lt><br>
+Restart apache, launch Safari and request: http://127.0.0.1/test.php.<br>
+There're some text in zend engine section should be as same as printed by execute the command "$ php -v" on command line.<br>
+</p>
+
+<p><b>Steps of PHP Debugging with Speare code editor</b>:<br><br>
+<ltab>1. Launch Speare and dragging the PHP source code folder into the "Workspace Explorer".</ltab><br>
+<ltab>2. Select the startup php script and Click <span><img src="../images/Speare/bottom.png" class="button" /></span> siding bottom button to show the debug toolbar and then click "Start" button.</ltab><br>
+<ltab>3. Launch Safari and request: http://127.0.0.1/xxx/xxx/index.php</ltab><br><br>
+<ltab><em class="green"><b>Note:</b> Don't use localhost but should use 127.0.0.1 instead.</em></ltab><br><br>
+<ltab>4. After Speare paused and highlighting at a special line of your startup PHP script there that means the debugging session started, you can execute the common debugging command now:</ltab><br><br>
+<ltab><b>Add breakpoint, step in, step out, step next, watch stack trace ...</b></ltab><br>
+</p>
+
+<p>6. Switch PHP interpreter:<br>
+You can switch any version of PHP interpreter directly, it does not affect the server side Speare code editor. PHP is an excellent programming language to develop Web Applications based on frameworks such as Drupal, Zend Framework, CodeIgniter, Symfony and Yii framework etc, but not limited that, in fact PHP is also very suitable to develop command line applications.</p>
+
+
+<a name="perl"></a><br>
+<h2>Perl Debugger</h2>
+<p>The Perl debugger of Speare code editor implemented as a patched version of perl5db.pl, and support extend it by yourself. The debugger was based on the builtin debugger of Perl, so it can work with all versions of Perl interpreter that perl5db.pl supported. <br><br>
+<p><b>Start Debugging Steps:</b><br>
+1. Download Speare Debug Server: → <a href="http://sevenuc.com/download/perl_debugger.tar.gz">  http://sevenuc.com/download/perl_debugger.tar.gz</a><em>(104KB)</em><br>
+<ltab><em>SHA256: 83f8674ee4dfdf8e8155551d2d8483942ee80b634dd90e362e62c2222744b6b6</em></ltab><br>
+<ltab>The source code of the Perl debugger can be view online here: </ltab><br>
+<ltab><a href="https://github.com/chengdu/Speare" target="_blank">https://github.com/chengdu/Speare</a> or here: <a href="https://sourceforge.net/projects/speare" target="_blank">https://sourceforge.net/projects/speare</a></ltab><br><br>
+2. Uncompress the tarball to your local directory. e.g ~/Desktop and take a look at the readme.txt in it.<br>
+3. Start the debug server: <br><br>
+<ltab><lt>$ cd ~/Desktop/debugger</lt></ltab><br>
+<ltab><lt>$ perl -I ~/Desktop/debugger/Speare -d:Debugger fullpath.pl</lt></ltab><br>
+<ltab><span class="warning">* Warning</b>: fullpath.pl the file must input with full path.</span></ltab><br><br>
+4. Debug session start: click "Start" button on the debug toolbar of Speare code editor.<br>
+<ltab>Add breakpoint, step in, step out, step next, watch stack trace ...</ltab><br><br>
+5. Run extra commands:<br>
+<ltab>Right click in the stackview (bottom left side) and then input any Perl debug command when the debugging session paused. Left click anywhere outside of the input box to close it and the command will be directly send to the debug server.</ltab><br>
+<b>a. Add function breakpoints</b><br>
+. <lt>b functionname</lt>: add a function breakpoint.<br>
+<b>b. Add condition breakpoints</b><br>
+. <lt>via breakpoint marker</lt>: Right click on the breakpoint, on the prompt menu, → select <b>"Condition"</b> and then input expression or use empty string to remove the condition, left click outside of the input box to close it and execute the command. e.g.  x > 5 means: Pause on the breakpoint only if x > 5 is true.<br>
+. <lt>b fullpath.pl condition</lt>: e.g. b /xxx/xxx/code.pl 6 $x > 5.<br>
+<ltab>/xxx/xxx/code.pl: fullpath of the script file. (do the same thing, optional)</ltab><br>
+<b>c. Watchpoint operation</b><br>
+. <lt>w expr</lt>: add a watchpoint expr.<br>
+. <lt>W expr</lt>: delete watchpoint expr.<br>
+. <lt>W *</lt>: delete all watchpoints.<br>
+<b>d. Evaluate express</b><br>
+. <lt>e expr</lt>: e.g. "e $x+$y".<br>
+<b>e. Display variable value </b><br>
+. <lt>p $x</lt>: print value of variable x.<br>
+. <lt>p expr</lt>: print value of expression expr.<br>
+<b><lt>...</lt></b><br><br>
+6. Switch Perl interpreter: <br>
+<ltab>You can directly switch the Perl interpreter on the command line or debugging with your own self-compiled version of Perl.</ltab><br>
+</p>
+
+
+<h2>About Perl</h2>
+<p>There exists huge number of mature and reliable Perl modules in cpan, as a general-purpose Unix scripting language, Perl is the most suitable programming language to resolve your problem at some situation, from the server side powerful tool such as load balancer to web applications, and large scale enterprise applications.</p>
+
+<a name="tcl"></a><br>
+<h2>Tcl Debugger</h2>
+<p>The Tcl debugger of Speare code editor implemented with Tcl scripts and an extension written with C to parse Tcl source code, and support extend it by yourself. You can enjoy debugging almost all kinds of Tcl applications under the lightweight debugging environment of Speare code editor. </p>
+<p><b>Start Debugging Steps:</b><br>
+1. Download Speare Debug Server: → <a href="http://sevenuc.com/download/tcl_debugger.tar.gz">  http://sevenuc.com/download/tcl_debugger.tar.gz (223KB)</a><br>
+<ltab><em>SHA256: 289aebaa433bd6acc46eaf6b0a347b474cc534427968e66e1740503e3f6f90d2</em></ltab><br>
+<ltab>The source code of the Tcl debugger can be view online here: </ltab><br>
+<ltab><a href="https://github.com/chengdu/Speare" target="_blank">https://github.com/chengdu/Speare</a> or here: <a href="https://sourceforge.net/projects/speare" target="_blank">https://sourceforge.net/projects/speare</a></ltab><br><br>
+2. Uncompress the tarball to your local directory. e.g ~/Desktop and take a look at the readme.txt in it.<br><br>
+3. Start the debug server: <br>
+<ltab>Please refer the readme.txt file.</ltab><br><br>
+4. Debug session start: click "Start" button on the debug toolbar of Speare code editor.<br>
+<ltab>Add breakpoint, step in, step out, step next, watch stack trace ...</ltab><br><br>
+5. Modify the Tcl debugger: <br>
+<ltab>You can directly modify the source code of the Tcl Debugger to satisfy your requirements.</ltab><br><br>
+6. Switch Tcl interpreter: <br>
+<ltab>You can directly switch the Tcl interpreter on the command line or debugging with your own self-compiled version of Tcl.</ltab><br>
+</p>
+
+
+<a name="node"></a><br>
+<h2>Debug Node.js applications</h2>
+<p>1. <lt>node --inspect-brk index.js </lt>: run Node.js application with the <lt>--inspect-brk</lt> option on command line. <br>
+2. <lt>chrome://inspect</lt>: input this url in Google Chrome browser, click "Inspect" to start the debugger.<br>
+Above is the simplest approach to debug Javascript scripts or Node.js application with <a href="https://developers.google.com/web/tools/chrome-devtools/">Chrome Developer Tools</a>.<br><br>
+</p>
+
+
+<br><br>
+</div>
+
+</div>
+<p><br></p>
+</section>
+</div>
+
+<p><audio autoplay loop preload="none"><source src="../audio/bamboo.mp3" type="audio/mpeg" /></audio></p>
+
+<!-- FOOTER  -->
+<div id="footer_wrap" class="outer">
+ <footer class="inner">
+   <a href="http://sevenuc.com"><img src="http://sevenuc.com/images/logo.svg" class="logo"></a><span><p class="copyright">
+   <span class="copyright"> © 2020 Sevenuc Consulting <br>All rights reserved.</span>
+      <a href="http://sevenuc.com/en/about.html"> About </a>|
+      <a href="http://sevenuc.com/en/service.html"> Services </a>|
+      <a href="http://sevenuc.com/en/apps.html"> Apps </a>|
+      <a href="http://sevenuc.com/en/contact.html"> Contact </a></p></span>
+ </footer>
+</div>
+
+</body></html>
+
