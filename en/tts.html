@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta property="og:title" content="Yuet - Tiny Cantonese TTS engine, Cantonese speech synthesis engine for offline embedded system.">
+<meta property="og:type" content="product">
+<meta property="og:url" content="http://www.sevenuc.com/">
+<meta property="og:image" content="http://www.sevenuc.com/favicon.ico">
+<meta property="og:site_name" content="Sevenuc Consulting">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1">
+<meta name="description" content="Yuet - Tiny Cantonese TTS engine, Cantonese speech synthesis engine for offline embedded system.">
+<meta name="service" content="Product development and independent consulting services">
+<meta name="author" content="http://www.sevenuc.com/">
+<meta name="keywords" content="Strategy Consultant,McKinsey,Bain,Boston Consulting Group,BCG,Booz,Oliver Wyman,A.T.Kearney,L.E.K. Consulting,PwC Consulting,Deloitte,Roland Berger,Accenture,Andersen Consulting,Gartner,BearingPoint,KPMG Consulting,Gallup,MYON Management &amp; Consultancy,HP,SAP,Clarkston,Newzoo,Hiragana,Katakana,Pebble,Samsung,Optical Character Recognition,OCR,Arabic,Persian,Khmer,Thai,Tibetan,Tamil,Devanagari,Pali,Sanskrit,Literacy,Machine Translation,Computational Linguistics,Grammar,Pronunciation,Romanisation,Text to Speech,TTS,Canto,Chinese,Cantonese,Yale,Jyutping,Speech Synthesis,Chinese Speech Synthesis,Text Classification,Text Categorisation,Data Mining,ASR,Automatic Speech Recognition,Natural Language Understanding,NLU,NLP,Natural Language Processing,Intelligent Information Retrieval,Machine Learning,Animation Synthesis,Knowledge Translation,Dictionary,AI,Robot,Artificial Intelligence,iPhone,iPad,Android,iOS,Embedded Linux,Real Time System,RTOS,JVM,単語分割エンジン,単語分割,斷詞,分詞,中文斷詞,中文分詞,文本分類,人工智能,人工智慧,模式識別,機器學習,機械学習,自然語言處理,自然言語処理,機器翻譯,機械翻訳,動畫合成,語音合成,音聲合成,語音識別,音聲認識,Embedded System,RTOS,eCos,μC/OS-II,VxWorks,QNX,FreeRTOS,NuttX,ThreadX,RTEMS">
+<link rel="stylesheet" type="text/css" media="screen" href="../css/stylesheet.css">
+<script src="../js/twitter.js"></script>
+<style type="text/css">
+.screen {width:320px;height:auto;max-width:100%;}
+</style>
+<title> Cantonese Speech Synthesis </title>
+</head>
+<body>
+
+<!-- HEADER -->
+<div id="header_wrap" class="outer">
+    <header class="inner">
+      <h1 id="project_title">Yuet - Tiny Cantonese TTS engine</h1>
+      <h2 id="project_tagline">Cantonese speech synthesis engine for offline embedded system.</h2>
+    </header>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="main_content_wrap" class="outer">
+<section id="main_content" class="inner">
+
+<a href="../images/canto.png" target="_blank"><img src="../images/canto.png" class="screen"></a>
+
+<h2>Features</h2>
+<ol>
+<li><b>*Accuracy</b>, high precision, accurate <a href="ai.html"> Chinese word segmentation</a> based on natural language understanding, accurate pronunciation of the variants of character pronunciation in different words with text contextual analysis.<br><br>
+</li>
+<li><b> Naturalness</b>, tone changes with prosody conversion, appropriate breaks for words in long sentences, and emphasis on the correct words. High naturalness of synthesised speech for mixed text input, the mixed content can be any Chinese, English, number, symbols and all other possible characters defined in Unicode 8.0, it was compatible with HKSCS-2004 (Big5, ISO 10646). The default encoding of text is UTF-8.<br><br></li>
+<li><b> Intelligent</b>, detect unknown words (unknown names of things, place, person and organisation etc) intelligently, handle all kinds of Chinese punctuations. Artificial intelligence for the pronunciation of "Chinese Number String" to translated "Chinese Readings", such as date time, price, units of measure, phone number, post code, money symbols, license plate, brand name, product model, etc.<br><br></li>
+<li><b> Tiny</b>, small memory footprint and storage, extremely small computing resource required. The precompiled binary (library, .dll, .so, .a) is about 200Kb and plus the compressed data, data + program binary &lt;4MB, extremely small space occupied.<br><br></li>
+<li><b> Offline</b>, platform independent, PCM audio output don't require a server or network connection. In-memory output or Wav format file will be produced by default.<br><br></li>
+<li><b> Self-contained</b>, instant, high speed, handle any length of text, the category of the text can be in any field, any industry, the engine is based on natural language processing, no require of any external dictionary or corpus. The compressed database can process any Chinese text of any industry. Reading news, speaking novels smoothly,  deal with text context intelligently, produce and playback voice continuously without time limit.<br><br></li>
+<li><b> Automatic translation</b>, true words and pure pronunciation of the language, speech synthesis for the entire file or paragraph of text, and output the corresponding Yale, or Jyutping romanisation text. Mandarin words will be automatically translated into Cantonese by default, see <a href="http://www.sevenuc.com/en/lecher.html"> some examples </a> in that page.<br><br></li>
+<li> Both female and male voice supported, and child voice supported by algorithm generating with female voice.<br><br></li>
+<li> Portable, cross platform, written in pure ANSI C from scratch without external dependancies.<br><br></li>
+<li> Anywhere, running on AVR, ARM, PIC, MIPS embedded systems such as toy, watch, robot and iPhone, Android, etc, mobile platforms, of course any normal desktops, and embedded in products, such as news paper or ebook reader, story teller, language learning tool, chat, help desk and game agent, translation assistant and so on.<br><br></li>
+<li> Embeddable, can be loaded into memory and embedded in other programs.<br><br></li>
+</ol>
+<h2>Why Another TTS Engine?</h2>
+<p>The features of Yuet is the reason to develop another Chinese TTS engine.</p>
+<ol>
+<li>Although there's so many TTS engine that can process Chinese text, but none of them can satisfy the requirements and generate speech based on <b>accurate pronunciation, clear word border</b>, emphasis on the appropriate words, including the engines from Google, Apple (Nuance), Microsoft, and NeoSpeech, iFLYTEK, PiTL etc. And there's some toy library such as eSpeak and Ekho, in fact they're useless because they lack serious correct pronunciation. The engine of Yuet is based on Chinese word segmentation and natural language understanding that differs compared to them.<br><br></li>
+<li><b>Minimising the size of Yuet to fit embedded system to an extremely small size</b> is the design goal to pursue, and also the design philosophy of the software. The engine of Cantonese all-in-one standalone is only 4MB, whereas common solutions mentioned above from the famous companies even requires well over 500~600MB of storage. For embedded system, ultra-small footprint can have many advantages, e.g. high flexibility for programming, performance and dramatically reduced the hardware costs, etc.<br><br></li>
+<li><b>Offline</b>, embedded TTS engine has the ability to avoid troubles caused by instability of network connection, and the high cost of the development and maintenance of the backend servers.<br><br></li>
+<li><b>Independent, complete</b>. Yuet can handle any content of text, detect unknown words intelligently, <b>no require of any extra dictionary</b>. The category of the content can be in any field, any industry, e.g. architecture, agriculture, biology, business, commerce, communications, computer, electronics, environment, education, finance, industry, mechanical, oil, mining, law &amp; polities, government, military, transport, engineering, medicine, physics &amp; chemistry, sports, news, etc.<br><br></li>
+<li>And other reasons to develop yet another Chinese TTS engine.<br><br></li>
+</ol>
+
+<h2>Usage</h2>
+
+<p>Yuet, as a serious, tiny, offline, high speed, embedded speech synthesis engine for Chinese text, because of its extremely small size, it is well suited to small memory footprint, resource constrained embedded systems and microelectronics systems, suitable for both board level and C level integration and porting, such as MCU, FPGA, DSP, SoC and embedded RTOS, Android/Java VM, iPhone, Flash Player and more. Chip level implementation can be developed with new donation or investment.<br><br>
+
+Yuet can be running as an standalone Chinese text segmenter (morphological and semantic analyser), an standalone translator between Cantonese and Mandarin, an standalone generator of Chinese text romanisation, and other usage of Chinese text processing, e.g. natural language processing, Chinese text information extraction, retrieval, machine learning and data mining, etc.<br><br>
+
+Tiny embedded Chinese speech synthesis engine, suitable to: intelligent Chinese text processing, natural language understanding, language teaching, language learning, education for children, screen reader, speech translation, watch, toy, book, robot, finance news, book reader, help desk and translation assistant, game, animation, multimedia publishing, mobile phone manufacturers and other products that needs real-time convert Chinese text to speech, including software and computer, consumer device, electronic equipment and so on.<br><br>
+
+Yuet can have bindings for many modern programming languages, such as JavaScript, Ruby, TCL, Lua, Python, Java, ActionScript, ErLang, Haskell, Perl, Objective-C, Swift, PHP, and Microsoft .Net platform, etc.<br><br>
+</p>
+
+<p>There is a very useful self-study tool demonstrates the features of the engine on App Store. The app was developed to help people to learn <a href="bc.html">the Business Chinese</a> in an efficient way, an speaker assistant with correct native pronunciation. Download the app on iTunes:<br><br>
+<a class="appstore_download_link" href="https://itunes.apple.com/us/app/business-chinese/id1001182831?mt=8"></a><br>
+<p><br><br></p>
+
+<h2>End User Option</h2>
+
+<p>
+1, <a href="javascript:void(0)"><img src="../images/download.png">&nbsp;µctts_0.2.26.tar.gz </a> (4MB, download deprecated, email required.)</p>
+<p>Standalone executable binary, the program is a command line tool that can segment Chinese text into words, generate Yale romanisation of the input text, and Cantonese speech synthesis of the input text. Try it, you'll be amazing at how accurate the engine is. It can segment any sentence of the attached material (2000 business sentences) into words with 100% correct output.</p>
+
+<div class="block"><pre><code>
+$./uctts -c -v "我們認為最好以投資的方式來進行技術轉移。"
+我們(ngo5 mun4)認為(jing6 wai4)最好(zeoi3 hou3)以(ji5)投資(tau4 zi1)的(dik1)
+方式(fong1 sik1)來(loi4)進行(zeon3 hang6)技術(gei6 seot6)轉移(zyun2 ji4)。
+
+$./uctts
+           __  __ 
+ __ ______/ /_/ /____ 
+/ // / __/ __/ __(_-< 
+\_,_/\__/\__/\__/___/
+
+Version: 0.2.26 
+Copyright (c) 2015 Sevenuc Consulting
+http://www.sevenuc.com
+
+Usage: uctts -[c|m] -[f|s|r|v] "text"
+-f format input text, translate Mandarin to Cantonese.
+-s word segmentation, -r romanisation generation, -v voice synthesise.
+"text" is the content to process.
+e.g: uctts -c -r "text".
+</code></pre></div>
+
+<div style="display:none;">Samples produced by the app: <br>
+<a href="../download/cantonese.wav"> Cantonese </a>&nbsp;(Text: 我們認為最好以投資的方式來進行技術轉移。)<br>
+<a href="../download/mandarin.wav"> Mandarin </a>&nbsp;(Text: 我們將不停地幫助你方更新現在和將來的產品技術。)<br>
+</div>
+
+<p>
+2, Develop product with the standard library (C shared dynamic library or static library), must have the legal certificate. 
+</p>
+
+<h2>References</h2>
+<ol><li>Download: &nbsp;<a href="javascript:void(0)"><img src="../images/download.png">&nbsp;v0.2.26 API document&nbsp;</a>(download deprecated, email required.)<br>
+<!--<br>
+<a href="http://www.sevenuc.com/download/traditional_simplified_table.pdf"><img src="../images/download.png">&nbsp;Traditional Chinese and Simplified Chinese Comparison Table&nbsp;</a>-->
+</li>
+
+<!--li>See the <a href="http://www.sevenuc.com/en/yuet.html"> screenshots </a> of the demo app. </li-->
+<!--li>Refer another app - <a href="http://www.sevenuc.com/en/cantonese.html"> Cantonese basic vocabulary and grammar </a> for more info. </li-->
+<li>Translation between Cantonese and Mandarin, see <a href="http://www.sevenuc.com/en/lecher.html">some samples</a>.</li>
+<li>In addition, as a bonus, the dictionary app have included all items in the book - A Dictionary of Cantonese Slang (俗語字典) - the language of Hong Kong movies, street gangs and city life, refer some <a href="http://www.sevenuc.com/en/proverbs.html">funny Cantonese idioms and proverbs</a>.</li>
+<li><a href="http://www.sevenuc.com/en/resources.html">Resources for learning Cantonese</a>, materials of book and audio.</li>
+</ol>
+<!--
+<br><br>
+<span class="title">Knowledge Transfer</span><br><br>
+ The engine will be sold to an appropriate organisation or individual, in order to better carry out the maintenance, continuous development and distribution of the product. For deeply research, the buyer have full and flexible control of the engine. More details please contact via <a href="mailto:info@sevenuc.com">info@sevenuc.com</a>.
+-->
+</p>
+
+<div style="display:none;">
+<p>The background music is Ripples by Danny Chan from Hong Kong, you can download <a href="../audio/ripples.mp3"> here </a>.</p>
+<h2>Donate</h2>
+<p><a href="donate.html"><img src="../images/donate-button.png" style="width:160px;height:auto;"> </a><br>
+The engine will be finally open source, but not now, please kindly donate me to make it better!
+</p></div>
+
+<p><br><br><br><br></p>
+
+</section>
+</div>
+
+<p><audio autoplay loop preload="none" id="myaudio">
+<source src="../audio/ripples.mp3" type="audio/mpeg" />
+<source src="../audio/ripples.ogg" type="audio/ogg">
+</audio></p>
+
+
+<!-- FOOTER  -->
+<div id="footer_wrap" class="outer">
+ <footer class="inner">
+   <a href="http://www.sevenuc.com"><img src="http://www.sevenuc.com/images/logo.svg" class="logo"></a><span><p class="copyright">
+   <span class="copyright"> © 2020 Sevenuc Consulting <br>All rights reserved.</span>
+      <a href="http://www.sevenuc.com/en/about.html"> About </a>|
+      <a href="http://www.sevenuc.com/en/service.html"> Services </a>|
+      <a href="http://www.sevenuc.com/en/apps.html"> Apps </a>|
+      <a href="http://www.sevenuc.com/en/contact.html"> Contact </a></p></span>
+ </footer>
+</div>
+</body></html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta property="og:title" content="The next generation intelligent microcomputer.">
+<meta property="og:type" content="product">
+<meta property="og:url" content="http://www.sevenuc.com/">
+<meta property="og:image" content="http://www.sevenuc.com/favicon.ico">
+<meta property="og:site_name" content="Sevenuc Consulting">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1">
+<meta name="description" content="Beak, the ultra small C and C++ obfuscator.">
+<meta name="service" content="Product development and independent consulting services">
+<meta name="author" content="http://www.sevenuc.com/">
+<meta name="keywords" content="Strategy Consultant,McKinsey,Bain,Boston Consulting Group,BCG,Booz,Oliver Wyman,A.T.Kearney,L.E.K. Consulting,PwC Consulting,Deloitte,Roland Berger,Accenture,Andersen Consulting,Gartner,BearingPoint,KPMG Consulting,Gallup,MYON Management &amp; Consultancy,HP,SAP,Clarkston,Newzoo,Hiragana,Katakana,Pebble,Samsung,Optical Character Recognition,OCR,Arabic,Persian,Khmer,Thai,Tibetan,Tamil,Devanagari,Pali,Sanskrit,Literacy,Machine Translation,Computational Linguistics,Grammar,Pronunciation,Romanisation,Text to Speech,TTS,Canto,Chinese,Cantonese,Yale,Jyutping,Speech Synthesis,Chinese Speech Synthesis,Text Classification,Text Categorisation,Data Mining,ASR,Automatic Speech Recognition,Natural Language Understanding,NLU,NLP,Natural Language Processing,Intelligent Information Retrieval,Machine Learning,Animation Synthesis,Knowledge Translation,Dictionary,AI,Robot,Artificial Intelligence,iPhone,iPad,Android,iOS,Embedded Linux,Real Time System,RTOS,JVM,単語分割エンジン,単語分割,斷詞,分詞,中文斷詞,中文分詞,文本分類,人工智能,人工智慧,模式識別,機器學習,機械学習,自然語言處理,自然言語処理,機器翻譯,機械翻訳,動畫合成,語音合成,音聲合成,語音識別,音聲認識,Embedded System,RTOS,eCos,μC/OS-II,VxWorks,QNX,FreeRTOS,NuttX,ThreadX,RTEMS">
+<link rel="stylesheet" type="text/css" media="screen" href="../css/stylesheet.css">
+<style type="text/css">
+.none {  padding:0;  margin: 0; }
+</style>
+
+<title> Beak </title>
+</head>
+<body>
+
+<!-- HEADER -->
+<div id="header_wrap" class="outer">
+    <header class="inner">
+      <h1 id="project_title">Beak</h1>
+      <h2 id="project_tagline">Ultra small C and C++ obfuscator.</h2>
+    </header>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="main_content_wrap" class="outer">
+<section id="main_content" class="inner">
+
+
+<div class="smallscreen">
+<img src="../images/beak/beak_logo.png" style="width: 120px;" /><br>
+<h2>Beak <br><em>Version 1.1 </em></h2>
+
+<p>
+<b>Beak</b> is a small tool that can be used to lose weight of your source code, and generate obfuscated C and C++ source code by default. All user defined symbols can be replaced by very short tokens results that the compiled final binary will be smaller than its normal compiling. Beak is very small and the obfuscator itself was written with ANSI C (C89) from scratch, cross-platform, operation system and processor independent. </li>
+
+<h2>Result</h2>
+<ul><li>Smaller binary</li>
+<li>Hide API call in binary, hide the concrete implementation, and what techniques used in your software.</li>
+<li>Add difficulty for reverse engineering (decompile).</li></ul>
+
+<h2>Screenshots:</h2>
+<p><a href="../images/beak/screenshot.png" target="_blank"><img src="../images/beak/screenshot.png" class="screenshots"></a></p>
+
+<h2>Convert Source Code</h2>
+<ol>
+     <li>Drag your project folder into <b>Beak</b> from Finder.</li>
+     <li>Click the folder icon to select a target directory where the output files will be placed in it. E.g:<br>
+      <b>Target directory</b>: /Users/username/Desktop.<br>
+      <b>Output directory</b>: /Users/username/Desktop/projectname-lt (lt means lite).
+     </li>
+     <li>Select one of the programming languages from the toolbar for your source code.</li>
+     <li>Click the <b>"Start"</b> button on the toolbar to start the conversion.</li>
+     <li>When the process completed, all replaced symbols will be listed in tokens.txt under the target directory.</li>
+</ol>
+
+<h2>General features</h2>
+<ul>
+<li>Parse all macros, global variables, constants, structure and member, class, and function definitions.</li>
+<li>The generated source code will still be located in its original line so that comparing to the original source code line by line become very easy.</li>
+<li>All comments kept in its original position to improve the readability.</li>
+<li>Fast parse large projects that have hundreds of files.</li>
+</ul>
+
+<h2>Example</h2>
+<p>Here, minimising the compiled size of SQLite as an example:<br>
+SQLite version: 3.20.1<br>
+Executable: 64-bit x86_64<br>
+Platform: macOS Sierra</p>
+
+<table style="width: 100%;">
+<tr><th>Version</th><th>Source size</th><th>Complied size</th><th>Note</th></tr>
+<tr><td>1</td><td>9.3 MB</td><td>1.4 MB</td><td>original version, shell executable without TCL extension.</td></tr>
+<tr><td>2</td><td>1.7 MB</td><td>741 KB</td><td>with C API wrapper, without TCL extension, without FTS, rtree, rbu, icu, session.</td></tr>
+<tr><td>3</td><td>1.6 MB</td><td>651 KB</td><td>optimised version by Beak, with full functional features, C API wrapper plus compressed BLOB, and SEE (SQLite Encryption Extension) support.</td></tr>
+</table>
+
+<p class="green">Excellent software should be elegant, reliable and small. Especially, building small software is very important for deeply-embedded systems. Lovingly crafting software as elegant and small as possible is the real programmer's cultivation.</p>
+
+<p><a href="https://itunes.apple.com/us/app/beak/id1337625630?mt=12" target="_blank" class="appstore_download_link"><img src="../images/available_on_macappstore.png" > </a></p><br><br><br>
+<p>If you can't open the link above, please launch App Store and found Beak by searching.</p>
+<br>
+
+<h2>Advanced Usage</h2>
+<!-- If you need to filter a large number of predefined symbols of a huge system (e.g Linux kernel) but can't handled by the current version -->
+<p>If you need to support a new programming language, please contact us.</p>
+
+</div>
+
+</div>
+<p><br></p>
+</section>
+</div>
+
+<!-- FOOTER  -->
+<div id="footer_wrap" class="outer">
+ <footer class="inner">
+   <a href="http://www.sevenuc.com"><img src="../images/logo.svg" class="logo"></a><span><p class="copyright">
+   <span class="copyright"> © 2020 Sevenuc Consulting <br>All rights reserved.</span>
+      <a href="http://www.sevenuc.com/en/about.html"> About </a>|
+      <a href="http://www.sevenuc.com/en/service.html"> Services </a>|
+      <a href="http://www.sevenuc.com/en/apps.html"> Apps </a>|
+      <a href="http://www.sevenuc.com/en/contact.html"> Contact </a></p></span>
+ </footer>
+</div>
+</body></html>

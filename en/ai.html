@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta property="og:title" content="Bamboo - Tiny Chinese word segmentation engine.">
+<meta property="og:type" content="product">
+<meta property="og:url" content="http://www.sevenuc.com/">
+<meta property="og:image" content="http://www.sevenuc.com/favicon.ico">
+<meta property="og:site_name" content="Sevenuc Consulting">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1">
+<meta name="description" content="Bamboo - Tiny Chinese word segmentation engine.">
+<meta name="service" content="Product development and independent consulting services">
+<meta name="author" content="http://www.sevenuc.com/">
+<meta name="keywords" content="Chinese text segmentation,Chinese Word segmentation,Chinese Text Tokenisation,Chinese Linguistics,Strategy Consultant,McKinsey,Bain,Boston Consulting Group,BCG,Booz,Oliver Wyman,A.T.Kearney,L.E.K. Consulting,PwC Consulting,Deloitte,Roland Berger,Accenture,Andersen Consulting,Gartner,BearingPoint,KPMG Consulting,Gallup,MYON Management &amp; Consultancy,HP,SAP,Clarkston,Newzoo,Hiragana,Katakana,Pebble,Samsung,Optical Character Recognition,OCR,Arabic,Persian,Khmer,Thai,Tibetan,Tamil,Devanagari,Pali,Sanskrit,Literacy,Machine Translation,Computational Linguistics,Grammar,Pronunciation,Romanisation,Text to Speech,TTS,Canto,Chinese,Cantonese,Yale,Jyutping,Speech Synthesis,Chinese Speech Synthesis,Text Classification,Text Categorisation,Data Mining,ASR,Chinese word segmentation,Morphological Analyzer,Automatic Speech Recognition,Natural Language Understanding,NLU,NLP,Natural Language Processing,Intelligent Information Retrieval,Machine Learning,Animation Synthesis,Knowledge Translation,Dictionary,AI,Robot,Artificial Intelligence,iPhone,iPad,Android,iOS,Embedded Linux,Real Time System,RTOS,JVM,単語分割エンジン,単語分割,斷詞,分詞,中文斷詞,中文分詞,文本分類,人工智能,人工智慧,模式識別,機器學習,機械学習,自然語言處理,自然言語処理,機器翻譯,機械翻訳,動畫合成,語音合成,音聲合成,語音識別,音聲認識,Embedded System,RTOS,eCos,μC/OS-II,VxWorks,QNX,FreeRTOS,NuttX,ThreadX,RTEMS">
+<link rel="stylesheet" type="text/css" media="screen" href="../css/stylesheet.css">
+<style type="text/css">
+.red {color:#cce619;}
+.screen {width:320px;height:auto;max-width:100%;}
+</style>
+<title> Chinese word segmentation </title>
+</head>
+<body>
+
+<!-- HEADER -->
+<div id="header_wrap" class="outer">
+    <header class="inner">
+      <h1 id="project_title">Chinese word segmentation</h1>
+      <h2 id="project_tagline">Bamboo - Tiny Chinese word segmentation engine.</h2>
+    </header>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="main_content_wrap" class="outer">
+<section id="main_content" class="inner">
+
+
+<p><a href="../images/bamboo.png" target="_blank"><img src="../images/bamboo.png" class="screen"></a><br><br>
+Chinese text segmentation, aka Chinese word segmentation, is the foundational technology of natural language processing, natural language understanding, especially search engine, speech synthesis (Text-to-speech system), automatic speech recognition, and machine translation. This process is called <a href="http://en.wikipedia.org/wiki/Tokenization_(lexical_analysis)">Tokenisation (Text-to-Token Conversion)</a>, because raw text usually contains number, name, abbreviation, symbol, punctuation etc which must be translated into meanful words. Yet there are so many different segment strategy and approach to optimise the tokenised result, but unfortunately the final results are still very poor until today. We find out many important factors that especially resolved the ambiguity in Chinese sentence and that can separate mixed Chinese text into words with very high precision, and established a sample computable model of natural language processing that have been integrated as the infrastructure of our in-developing embedded machine translation system. The sample sentential semantic model and engine can also be easily applied to other natural languages.</p>
+
+<p>The structure of Chinese sentence is very flexible. The accuracy of Chinese word segmentation heavily depends on the text context, and one sentence can always have several ambiguity results. Therefore, any good word segmentation algorithm must have the ability to handle such complexity. e.g:<br><br></p>
+
+<div class="small">
+我|方可|答應|你的|要求。 (then <span class="red">I</span> can promise your request.)<br>
+我方|可|答應|你的|要求。 (<span class="red">We</span> can promise you.)<br>
+...<br></div>
+
+
+<p>We developed an prototype engine that be designed to has an extremely small footprint, requires very small memory and storage so that it can be easily used in deeply embedded systems. The precompiled binary is about 190Kb and plus data is up to about 370KB, an extremely small space occupied. On the other side, the engine can also be easily used in server environment, including concurrent execution task, machine cluster, cloud service etc.</p>
+
+<p>In it, a small morphological and semantic prototype analyser used to improve the artificial intelligence, that can separate unknown words, unknown names of things, place, person and organisation more accurate. This feature enable the engine is independent with external dictionary or corpus and still keep the kernel very small. At the same time, it also attached an interface that allow the end user append external words manually.</p>
+
+<p>The engine is portable, cross platform, written with ANSI C from scratch without external dependencies, so it can be easily ported to all platform, binding with different programming languages, and run anywhere. The machine translation system based on it is under continuously developing, it was designed for deeply embedded system and completely different with the translation service from Google that based on server side architecture. The project needs your help, donation or investment to turn it to final product.</p>
+
+<h2>Demonstration</h2>
+<div class="block"><pre><code>
+$./bamboo -s "我們可以建議貴方在報價上定下限額嗎？"
+我們|可以|建議|貴方|在|報價|上|定|下限額|嗎|？
+
+$./bamboo
+
+ /_)_  _ _  /_ _  _ 
+/_)/_|/ / //_//_//_/
+
+Bamboo v0.2
+Copyright (c) 2015 sevenuc.com.
+Usage: bamboo [options] sentence
+
+Options:
+  -k convert mandarin characters to kanji.
+  -s separate sentence into words.
+  sentence: should be quoted.
+</code></pre></div>
+
+
+<h2>References</h2>
+<p><b>1. <a href="iq.html"> Raven's Standard IQ Test</a></b>, you might want to do some accurate and standard "IQ Test" for fun or serious things, this test suite is suitable from 5-year-old child to 95 year elders.</p>
+
+<p><b>2. About artificial intelligence</b>, you might be interested in the ancient strategy game which dates back more than 2000 years. The Chinese Chess, it contains the ancient oriental profound philosophy and wisdom, that results it very IQ challenge and very attractive unique style than any game you've been played, you can challenge it in your whole life, and it's suitable for both children and parents. <a href="https://chengdu.github.io/Chinese-Chess-for-Beginners/index.html">Chinese Chess for Beginners</a> explains the basic rules of the game clearly and in detail so that you can start playing right away. You can download the funny app from App store and enjoy it.<br><br>
+
+<a class="appstore_download_link" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=1293135726&mt=8">app store</a>
+</p>
+<p><br></p>
+<p><br></p>
+
+
+<h2>Links</h2>
+<p>
+	<ul>
+	<li><a href="http://www.sevenuc.com/en/tts.html">Tiny Cantonese TTS engine</a>.</li>
+	<li><a href="http://www.sevenuc.com/en/lecher.html">Translation between Cantonese and Mandarin</a>.</li>
+	<li><a href="https://en.wikipedia.org/wiki/Text_segmentation">Text segmentation on Wikipedia</a>.</li>
+	<li><a href="https://en.wikipedia.org/wiki/Natural_language_processing">Natural language processing on Wikipedia</a>.</li>
+	<li><a href="https://en.wikipedia.org/wiki/Natural_language_understanding">Natural language understanding on Wikipedia</a>.</li>
+	</ul>
+</p>
+<p><br></p>
+
+</section>
+</div>
+
+<p><audio autoplay loop preload="none"><source src="http://blog.sevenuc.com/music/chan/qEfRSe.mp3" type="audio/mpeg" /></audio></p>
+
+<!-- FOOTER  -->
+<div id="footer_wrap" class="outer">
+ <footer class="inner">
+   <a href="http://www.sevenuc.com"><img src="http://www.sevenuc.com/images/logo.svg" class="logo"></a><span><p class="copyright">
+   <span class="copyright"> © 2020 Sevenuc Consulting <br>All rights reserved.</span>
+      <a href="http://www.sevenuc.com/en/about.html"> About </a>|
+      <a href="http://www.sevenuc.com/en/service.html"> Services </a>|
+      <a href="http://www.sevenuc.com/en/apps.html"> Apps </a>|
+      <a href="http://www.sevenuc.com/en/contact.html"> Contact </a></p></span>
+ </footer>
+</div>
+</body></html>
