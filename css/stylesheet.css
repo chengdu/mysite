@@ -1,0 +1,57 @@
+/*!
+* stylesheet.css v0.0.2
+*
+* Copyright 2011 Sevenuc Consulting
+* Language technology solutions and consulting services.
+* http://www.sevenuc.com
+*
+*/
+@charset "UTF-8";
+
+body {background:#000000;color:#4b5b69;font-family:  'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic ProN', sans-serif, Helvetica Neue, Helvetica, Meiryo, 'MS PGothic', Arial, Tahoma, Verdana, Lucida Grande;max-width: 64rem;margin-left: auto;margin-right: auto;margin-bottom: 50px;}
+h1, h2, h3, h4, h5, h6 { font-weight: 700; text-shadow: 1px 1px #444; color: #687E91;}
+#project_tagline { color: #007f00;}
+a { color: #08c; text-decoration: none;}
+a:focus { color: #5f7333; }
+a:hover  { text-decoration: underline; }
+a:visited { color: #336699; }
+.logo {height:42px;width:auto;float:left;vertical-align:middle;margin-top:4px;margin-right:10px;border: 1px rgba(255,255,255,0.6) solid;}
+.logo:hover  { border: 1px #FFFFFF solid; }
+.headerimg { padding: 10px 10px 10px 10px;background: #f0f0f0;border: 1px rgba(255,255,255,0.6) solid; border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px;}
+pre {color: #687E91;}
+code { color:#000000; }
+lt {color:#007f00;}
+.none {  padding:0;  margin: 0; }
+.green { color: #007f00}
+ltab { margin-left: 20px; }
+.bigtitle { font-size: 17.0em;}
+.underline { border-bottom:1px solid #4b5b69;}
+.smallicon { height:32px; width:auto; vertical-align:middle;}
+b, strong, .hilight {font-weight: bold;color: #687E91;}
+i {font-style: italic; }
+hr { margin-bottom: 5px; border: 1px dotted #9fa8b5; }
+.screenshots { max-width:100%;height:auto;}
+.smallscreen { max-width: 64rem; }
+.tips { width:auto; height: 22px;}
+.note {color:#ffffff; background:#FF4081; border-radius: 4px; padding:2px 2px 2px 2px;}
+.button { width: auto; height: 16pt; vertical-align:middle;padding: 2px 2px 2px 2px;background: #f0f0f0;}
+.block b {color:#000000;}
+.block { background:#9fa8b5; color:#000000;font-style: italic; padding:10px 10px 10px 10px; border-radius: 4px; }
+.small b {color:#000000;}
+.small { font-style: italic; font-size: small; color:#000000; background: #9fa8b5; padding:4px 4px 4px 4px; border-radius: 2px; }
+.appstore_download_link { display: block; float: left; width:224px; height:70px; text-indent: -5000px; overflow: hidden; margin-left: 0px; background: url(../images/appstore.png) no-repeat bottom right; }
+.appstore_download_link:hover { background: url(../images/appstore.png) no-repeat top right; }
+table { border: 1px solid #9fa8b5; margin-bottom: 10px; text-align: left; border-spacing: 0; border-collapse: collapse;}
+th { text-align: center;font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif; padding: 10px; border: 1px solid #9fa8b5;}
+table td { max-width:200px; text-align: left; padding:10px; border: 1px solid #9fa8b5; vertical-align:top;}
+table img { display: block; width:auto;max-width:100%;}
+form { background: #f2f2f2; padding: 10px; }
+footer { color:#687E91;border-top:1px solid #9fa8b5;font-size:small; }
+footer img { padding-top: 4px; background: #13294b;}
+
+/*Small Device Styles*/
+@media screen and (max-width: 480px) {
+  .bigtitle { font-size: 11.0em;}
+  body { max-width: 32rem; margin-left: 10px;margin-right: 10px;}
+}
+
