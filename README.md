@@ -1,13 +1,3 @@
-
-Sevenuc Consulting
-
-
-#
-
-
-##
-
-
 ## Speare code editor
 
 
