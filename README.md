@@ -18,7 +18,7 @@ Sevenuc Consulting
 ## Anida Audio Codec
 
 
-[](http://www.sevenuc.com/en/anida.html) [](http://www.sevenuc.com/images/Anida/Anida_logo.png)
+[](http://www.sevenuc.com/en/anida.md) [](http://www.sevenuc.com/images/Anida/Anida_logo.png)
 [Anida Audio Codec](http://www.sevenuc.com/en/anida.html)
 is an audio codec and audio compression format that designed to reduce audio data size to reduce transfer time and save disk space. It can be easily applied to large number of technology and product.
 
