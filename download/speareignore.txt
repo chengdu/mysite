@@ -1,0 +1,47 @@
+#.speareignore
+
+# The folder and files defined in this file will not be displayed
+# in the left side TreeView (Source Explorer) of Speare code editor.
+
+# 1. exclude directories by folder name (must end with /)
+# someFoler/
+# someOtherfoler/
+build/
+DerivedData/
+
+.git/
+.svn/
+.hg/
+CVS/
+.deps/
+.libs/
+
+
+# 2. exclude directories with full path (must end with /)
+# /xxxx/xxx/xxx/someFolder/
+# /xxxx/xxx/xxx/xxx/someOtherfoler/
+
+# 3. exclude files by specified extension
+*.o
+*.lo
+*.la
+*.so
+*.class
+*.gz
+*.tar
+*.zip
+*.7z
+*.iso
+*.jar
+
+# 4. exclude files by file name
+.DS_Store (already ignored by builtin function)
+
+# 5. exclude files by full path
+# /xxxx/xxx/xxx/someFile
+# /xxxx/xxx/xxx/xxx/someOtherFile
+# /Users/henry/Desktop/raster/libSDL2.a
+
+
+
+
