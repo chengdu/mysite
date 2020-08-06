@@ -30,6 +30,7 @@ ltab { margin-left: 20px; }
 .smallicon { height:32px; width:auto; vertical-align:middle;}
 b, strong, .hilight {font-weight: bold;color: #687E91;}
 i {font-style: italic; }
+img { background: rgba(0, 0, 0, 0);}
 hr { margin-bottom: 5px; border: 1px dotted #9fa8b5; }
 .screenshots { max-width:100%;height:auto;}
 .smallscreen { max-width: 64rem; }
@@ -49,6 +50,7 @@ table img { display: block; width:auto;max-width:100%;}
 form { background: #f2f2f2; padding: 10px; }
 footer { color:#687E91;border-top:1px solid #9fa8b5;font-size:small; }
 footer img { padding-top: 4px; background: #13294b;}
+
 
 /*Small Device Styles*/
 @media screen and (max-width: 480px) {
