@@ -8,8 +8,8 @@
 */
 @charset "UTF-8";
 
-body {background:#ffffee;color:#4b5b69;font-family:  'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic ProN', sans-serif, Helvetica Neue, Helvetica, Meiryo, 'MS PGothic', Arial, Tahoma, Verdana, Lucida Grande;margin-left: auto;margin-right: auto;margin-bottom: 50px;font-size: small;max-width: 64rem;}
-.outer { margin-left: auto; margin-right: auto;margin-bottom: 50px;background:#fffff0;max-width: 64rem;}
+body {background:#ffffee;color:#4b5b69;font-family:  'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic ProN', sans-serif, Helvetica Neue, Helvetica, Meiryo, 'MS PGothic', Arial, Tahoma, Verdana, Lucida Grande;margin-left: auto;margin-right: auto;margin-bottom: 50px;font-size: small; max-width: 64rem;}
+.outer { margin-left: auto; margin-right: auto;margin-bottom: 50px;background:#fffff0; max-width: 64rem;}
 h1, h2, h3, h4, h5, h6 { font-weight: 700; text-shadow: 1px 1px #444; color: #687E91;}
 #project_tagline { color: #007f00;}
 a { color: #08c; text-decoration: none;}
