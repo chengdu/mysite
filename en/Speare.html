@@ -18,11 +18,10 @@
 /*.warning {color:#cce619;}*/
 th { background:#333; color:#f0f0f0;text-align: center;}
 .strike {text-decoration: line-through;}
-.screen {width:480px;height:auto;max-width:100%;}
+/*.screen {width:480px;height:auto;max-width:100%; }*/
 .smallicon { height:24px;width:auto;vertical-align:middle;margin-right:10px;}
 .donate { font-style: italic; font-size: small; color:#007f00;}
 .greenbig {color: #007f00;font-size:1.2em;}
-.green, gr, lt{color: #007f00; font-weight: bold;}
 .dark {color:#b397db; font-size: 12px;}
 ltab { margin-left: 20px; }
 lt {color:#007f00;}
@@ -178,7 +177,7 @@ Click toolbar "Breakpoints": all breakpoint (bookmark) of current file will be r
 </p>
 
 <h2>Auto-completion Selection</h2>
-<p>Type in class name, function name, or variable name or anything else, wait one to three seconds and use Up and Down arrow key to move selection in the candidates and click "Return" key to select one.</p>
+<p>Type in class name, function name, or variable name or anything else, wait one to three seconds and use Up and Down arrow key to move selection in the candidates and click "Return" key to select one. This function is something so-said "Code IntelliSense" in Visual Studio.</p>
 
 <h2>SPP File</h2>
 <p><b>SPP File</b> is the abbreviation of "Speare Project Plist" file, it is the project file type of Speare that has an .spp file extension, it packs variant of project meta information together, including project folder and its bookmark/breakpoints, watches, opened tabs, selection of each tab, current selected tab etc.<br>
@@ -441,8 +440,15 @@ TO add a new programming language and associate its source code file extension n
 4. When your project sub folder moved to another place, please drag the project folder in Speare again to ensure the debugging can correctly work.</p>
 
 <h2>FAQ</h2>
+
+<p><b>0. How can I let the clang compiler of Xcode on macOS recognise my windows C and C++ projects that written with Japanese text encoding cp932?</b><br><br>
+Please download a simple python script from here: <a href="http://www.sevenuc.com/download/cp932toutf8.py" target="_blank">cp932toutf8.py</a> (3KB), and execute:<br>
+	<lt>$ python3 cp932toutf8.py -d "/full/path/of/your/source/code/directory"</lt>, or<br>
+	<lt>$ python cp932toutf8.py -d "/full/path/of/your/source/code/directory"</lt>.<br><br></p>
+
+
 <p><b>1. How to add keywords highlighting to support a new document type?</b><br>
-a). Open <lt>"/Applications/Speare.app/Contents/Resources/FileExtensions.plist"</lt>, and carefully add the file extension name of the new document type in it, e.g highlighting all keywords for the <a href="https://graphite.sil.org"> SIL GDL (Graphite Description Language)</a> files:<br>
+a). Please open <lt>"/Applications/Speare.app/Contents/Resources/FileExtensions.plist"</lt>, and carefully add the file extension name of the new document type in it, e.g highlighting all keywords for the <a href="https://graphite.sil.org"> SIL GDL (Graphite Description Language)</a> files:<br>
 
 
 <pre>
@@ -465,7 +471,7 @@ b). Download <a href="http://www.sevenuc.com/download/GDL.plist" target="_blank"
 
 
 <p><b>2. How to add syntax highlighting to support a new file type?</b><br>
-Open <lt>"/Applications/Speare.app/Contents/Resources/FileExtensions.plist"</lt>, and carefully add the file extension name in it, e.g syntax highlighting all <span class="warning">.mli</span> as Ocaml source code file:<br>
+Please open <lt>"/Applications/Speare.app/Contents/Resources/FileExtensions.plist"</lt>, and carefully add the file extension name in it, e.g syntax highlighting all <span class="warning">.mli</span> as Ocaml source code file:<br>
 <pre>
   &lt;key&gt;F# - OCaml&lt;/key&gt;   &lt;---- file name for syntax highlighting
   &lt;array&gt;
@@ -477,7 +483,7 @@ Open <lt>"/Applications/Speare.app/Contents/Resources/FileExtensions.plist"</lt>
 
 
 <p><b>3. Syntax highlighting for a new programming language:</b><br>
-a). Append the file extension names of the programming language in the "FileExtensions.plist" as described in the above section.<br>
+a). Please append the file extension names of the programming language in the "FileExtensions.plist" as described in the above section.<br>
 b). Put the syntax highlighting definition file in the following directory:</b><br>
 <lt>~/Library/Application Scripts/com.sevenuc.SpeareHelper/languages</lt><br>
 <span class="warning">Please create the directory if it is not exists.</span>
@@ -485,7 +491,7 @@ b). Put the syntax highlighting definition file in the following directory:</b><
 
 
 <p><b>4. How to add a missing keyword to enable syntax highlighting in Speare?</b><br>
-Open <lt>"/Applications/Speare.app/Contents/Resources/Languages/<span class="warning">xxlang.plist</span>"</lt>, and carefully insert the missing keyword in the "keywords" section.<br>
+Please open <lt>"/Applications/Speare.app/Contents/Resources/Languages/<span class="warning">xxlang.plist</span>"</lt>, and carefully insert the missing keyword in the "keywords" section.<br>
 <pre>
 &lt;key&gt;keywords&lt;/key&gt;
 &lt;array&gt;
@@ -494,10 +500,10 @@ Open <lt>"/Applications/Speare.app/Contents/Resources/Languages/<span class="war
 </pre></p>
 
 <p><b>5. How to add "Open With" in Finder to support open a file type with Speare?</b><br>
-Right click the file in Finder  →  Get Info  →  Open With: Other..., find Speare.app and select, and then Click <lt>"Change All..."</lt> button.<br><br></p>
+Please right click the file in Finder  →  Get Info  →  Open With: Other..., find Speare.app and select, and then Click <lt>"Change All..."</lt> button.<br><br></p>
 
 <p><b>6. How to clean hidden file and folders used by version control systems?</b><br>
-download a simple python script from here: <a href="http://www.sevenuc.com/download/cleanfolder.py" target="_blank">cleanfolder.py</a> (5KB), and execute:<br>
+Please download a simple python script from here: <a href="http://www.sevenuc.com/download/cleanfolder.py" target="_blank">cleanfolder.py</a> (5KB), and execute:<br>
 <lt>$ python cleanfolder.py -d "/full/path/of/your/source/code/directory"</lt>.<br><br></p>
 
 <p><b>7. How to do file compare and directory compare?</b><br>

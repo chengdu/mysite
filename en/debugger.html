@@ -17,9 +17,8 @@
 <style type="text/css">
 .logo {  height:42px;  width: auto; }
 .none {  padding:0;  margin: 0; }
-/*.warning {color:#cce619;}*/
 .yell {color:#cce619;font-weight: bold;}
-.green {color: #007f00;font-weight: bold;}
+/*.green {color: #007f00;font-weight: bold;}*/
 .treasure { color: rgba(0, 0, 0, 0.7); font-style: italic; font-weight: bold; background: none; }
 </style>
 <title>Debugging code with Speare Code Editor</title>
@@ -63,16 +62,17 @@ The free small IDE for scripting languages.
 
 <p>The offline document: <a target="_blank" href="http://www.sevenuc.com/download/Speare_debugger_quick_reference.pdf">Speare_debugger_quick_reference.pdf.</a></p>
 
-<p><b>Debugger Index:</b><br><br>
-<ltab><a href="#lldb">C and C++ Debugger</a></ltab><br>
-<ltab><a href="#mruby">mruby Debugger</a></ltab><br>
-<ltab><a href="#ruby">Ruby Debugger</a></ltab><br>
-<ltab><a href="#lua">Lua Debugger</a></ltab><br>
-<ltab><a href="#python">Python Debugger</a></ltab><br>
-<ltab><a href="#php">PHP Debugger</a></ltab><br>
-<ltab><a href="#perl">Perl Debugger</a></ltab><br>
-<ltab><a href="#tcl">Tcl Debugger</a></ltab><br>
-<ltab><a href="#node">Node.js Debugger</a></ltab><br>
+<p><b>Debugger Index:</b><br>
+<ul><li><ltab><a href="#lldb">C and C++ Debugger</a></ltab></li>
+<li><ltab><a href="#mruby">mruby Debugger</a></ltab></li>
+<li><ltab><a href="#ruby">Ruby Debugger</a></ltab></li>
+<li><ltab><a href="#lua">Lua Debugger</a></ltab></li>
+<li><ltab><a href="#python">Python Debugger</a></ltab></li>
+<li><ltab><a href="#php">PHP Debugger</a></ltab></li>
+<li><ltab><a href="#perl">Perl Debugger</a></ltab></li>
+<li><ltab><a href="#tcl">Tcl Debugger</a></ltab></li>
+<li><ltab><a href="#node">Node.js Debugger</a></ltab></li></ul>
+<br>
 </p>
 
 <p><a href="https://apps.apple.com/us/app/speare-pro/id1477773605?mt=12" target="_blank" class="appstore_download_link"><img src="../images/available_on_macappstore.png" style="margin-left:1em;"> </a></p><br><br><br>
@@ -118,7 +118,7 @@ Watches used to evaluate variable or expression and their values can be realtime
 <h2>C and C++ Debugger</h2>
 <p>The C and C++ debugger of Speare code editor implemented as a script client of <a href="http://lldb.llvm.org" target="_blank">LLDB</a>, and support extend it by yourself. The builtin module supports parsing modern C++ source code files including C++11 and C++14 syntax, e.g effectively name and index namespace and anonymous class, function and many other new features of the C++ programming language. You can enjoy debugging almost any type of C and C++ applications under the lightweight debugging environment of Speare code editor. </p>
 <p><b>Start Debugging Steps:</b><br>
-1. Download Speare Debug Server: → <a href="http://www.sevenuc.com/download/c_debugger.tar.gz">  http://www.sevenuc.com/download/c_debugger.tar.gz</a> <em>(10KB)</em><br>
+1. Please download Speare Debug Server: → <a href="http://www.sevenuc.com/download/c_debugger.tar.gz">  http://www.sevenuc.com/download/c_debugger.tar.gz</a> <em>(10KB)</em><br>
 <ltab><em>SHA256: c9e4d8615335d92eae7d2162b1d44b777e32e687fbf8c48d4ddfbbed0c18d4e6</em></ltab><br>
 <ltab>The source code of the C and C++ debugger can be view online here: </ltab><br>
 <ltab><a href="https://github.com/chengdu/Speare" target="_blank">https://github.com/chengdu/Speare</a> or here: <a href="https://sourceforge.net/projects/speare" target="_blank">https://sourceforge.net/projects/speare</a></ltab><br><br>
@@ -174,7 +174,7 @@ Most developer have never written a real C software in their life, <gr>I wish mo
 <h2>mruby Debugger</h2>
 <p>The mruby debugger of Speare is a patched version of <a href="http://mruby.org">mruby</a> that support remote debugging mruby project, currently support mruby version 2.0.1 and 2.1.0.<br>
 <p>1. <b>Install mruby debugging server</b><br><br>
-<ltab>Download mruby remote debugger: → <a href="http://www.sevenuc.com/download/mruby_debugger.tar.gz">  http://www.sevenuc.com/download/mruby_debugger.tar.gz</a> <em>(733KB)</em></ltab><br>
+<ltab>Please download mruby remote debugger: → <a href="http://www.sevenuc.com/download/mruby_debugger.tar.gz">  http://www.sevenuc.com/download/mruby_debugger.tar.gz</a> <em>(733KB)</em></ltab><br>
 <ltab><em>SHA256: 44646d3f13f8840843795b533043e42fd18a239e480b548c92c3e8029ea03a84</em></ltab><br>
 <ltab>Download mruby-2.0.1.tar.gz <em>(518KB)</em> or mruby-2.1.0.tar.gz <em>(585KB)</em> from <a href="https://github.com/mruby/mruby">https://github.com/mruby/mruby</a></ltab><br>
 <ltab><lt>$ cd mruby-2.0.1 or mruby-2.1.0</lt></ltab><br>
@@ -194,7 +194,7 @@ Launch Speare and open the Preferences of Speare and select the tab of "Debug Se
 <p>The Ruby debugger of Speare code editor implemented as a client of <a href="https://rubygems.org/gems/ruby-debug-ide/">rdebug-ide</a>, and Ruby interpreter that has a rdebug-ide installed will be running as the debug server.</p>
 <p><em class="green">Ruby debugging environment support all kinds of Ruby interpreters, the version includes: 1.8.x, 1.9.x, 2.x, and JRuby.</em></p>
 <p><b>Steps of start debugging session:</b><br><br>
-1. Download and install debug gems:<br><br>
+1. Please download and install debug gems:<br><br>
 For Ruby 1.8.x: download: <a href="https://rubygems.org/gems/ruby-debug-base/">ruby-debug-base (0.10.4)</a><br>
 <ltab><lt>$ gem install --force --local ruby-debug-base-0.10.4.gem</lt></ltab><br>
 <ltab><lt>$ gem install ruby-debug-ide</lt></ltab><br><br>
@@ -273,7 +273,8 @@ $ cd ruby-2.1.2
 $ ./configure --prefix=/Users/yeung/Public/Rdebug/2.x/ruby2 \
   --with-openssl-dir=/Users/yeung/Public/Rdebug/openssl
 Alternative: directly modify Makefile to add openssl library link options
-<lt>LDFLAGS =  $(CFLAGS) -L. -fstack-protector -L/usr/local/lib -L/Users/yeung/Public/Rdebug/openssl -lcrypto -lssl</lt>
+<lt>LDFLAGS =  $(CFLAGS) -L. -fstack-protector -L/usr/local/lib 
+	-L/Users/yeung/Public/Rdebug/openssl -lcrypto -lssl</lt>
 $ make && make install
 
 Step 3. install debug gems
@@ -286,7 +287,8 @@ $ gem install --force --local debase-0.2.5.beta1.gem
 $ gem install --force --local ruby-debug-ide-0.7.0.gem
 
 Step 4. start debugging session
-$ <lt>rdebug-ide --host 127.0.0.1 --port 1234 --dispatcher-port 1234 -- xxx/xxx/xxx/main.rb</lt>
+$ <lt>rdebug-ide --host 127.0.0.1 --port 1234 --dispatcher-port 1234
+	  -- xxx/xxx/xxx/main.rb</lt>
 add breakpoints in Speare code editor.
 click "Start" button on the debug toolbar of Speare code editor.
 step in, step out, step next ...
@@ -299,7 +301,7 @@ step in, step out, step next ...
 </p>
 
 <p><b>Start Debugging Steps:</b><br><br>
-1. Download Speare Debug Server: → <a href="http://www.sevenuc.com/download/lua_debugger.tar.gz">  http://www.sevenuc.com/download/lua_debugger.tar.gz</a> <em>(518KB)</em><br>
+1. Please download Speare Debug Server: → <a href="http://www.sevenuc.com/download/lua_debugger.tar.gz">  http://www.sevenuc.com/download/lua_debugger.tar.gz</a> <em>(518KB)</em><br>
 <ltab><em>SHA256: a9447cedd668553f0b0eb5c2f5221b6af349dd6cf73602513f98e9b366022c94</em></ltab><br>
 2. Uncompress the tarball to your local directory. e.g ~/Desktop and take a look at the readme.txt in it.<br>
 3. Start the debug server: <br><br>
@@ -316,7 +318,7 @@ step in, step out, step next ...
 <h2>Python Debugger</h2>
 <p>The Python debugger of Speare Pro supports Python version 2.5, 2.6, 2.7 and 3.x, and MicroPython. You can enjoy debugging Python scripts as same as debugging web applications that based on web frameworks such as Flask and Django under the lightweight environment of Speare code editor. <br></p>
 <p><b>Steps of Start Debugging Session:</b><br><br>
-1. Download Speare Debug Server: → <a href="http://www.sevenuc.com/download/python_debugger.tar.gz">  http://www.sevenuc.com/download/python_debugger.tar.gz (30KB)</a><br>
+1. Please download Speare Debug Server: → <a href="http://www.sevenuc.com/download/python_debugger.tar.gz">  http://www.sevenuc.com/download/python_debugger.tar.gz (30KB)</a><br>
 <ltab><em>SHA256: 74cc8544671eed3de317305573cc9f1f95ae395533d1f08ce84b248cee883250</em></ltab><br>
 <ltab>The source code of the Python debugger can be view online here: </ltab><br>
 <ltab><a href="https://github.com/chengdu/Speare" target="_blank">https://github.com/chengdu/Speare</a> or here: <a href="https://sourceforge.net/projects/speare" target="_blank">https://sourceforge.net/projects/speare</a></ltab><br>
@@ -364,7 +366,7 @@ step in, step out, step next ...
 <p>The PHP debugger of Speare code editor supports all kinds debugging of PHP applications and any version of PHP interpreter that has Xdebug support from PHP 5.x to PHP 7.x. Different with Lua, Ruby and Python debugging, this time Speare acts as debug server and Xdebug as the client.</p>
 
 <p><b>Setting up Xdebug for PHP Debugging</b>:<br><br>
-1. Download Xdebug:<br>
+1. Please download Xdebug:<br>
 https://xdebug.org/files/xdebug-2.6.0.tgz<br><br>
 2. Compile and install Xdebug:<br>
 <lt>$ rm configure.in (optional)</lt><br>
@@ -470,7 +472,7 @@ You can switch any version of PHP interpreter directly, it does not affect the s
 <h2>Perl Debugger</h2>
 <p>The Perl debugger of Speare code editor implemented as a patched version of perl5db.pl, and support extend it by yourself. The debugger was based on the builtin debugger of Perl, so it can work with all versions of Perl interpreter that perl5db.pl supported. <br><br>
 <p><b>Start Debugging Steps:</b><br>
-1. Download Speare Debug Server: → <a href="http://www.sevenuc.com/download/perl_debugger.tar.gz">  http://www.sevenuc.com/download/perl_debugger.tar.gz</a><em>(104KB)</em><br>
+1. Please download Speare Debug Server: → <a href="http://www.sevenuc.com/download/perl_debugger.tar.gz">  http://www.sevenuc.com/download/perl_debugger.tar.gz</a><em>(104KB)</em><br>
 <ltab><em>SHA256: 83f8674ee4dfdf8e8155551d2d8483942ee80b634dd90e362e62c2222744b6b6</em></ltab><br>
 <ltab>The source code of the Perl debugger can be view online here: </ltab><br>
 <ltab><a href="https://github.com/chengdu/Speare" target="_blank">https://github.com/chengdu/Speare</a> or here: <a href="https://sourceforge.net/projects/speare" target="_blank">https://sourceforge.net/projects/speare</a></ltab><br><br>
@@ -511,7 +513,7 @@ You can switch any version of PHP interpreter directly, it does not affect the s
 <h2>Tcl Debugger</h2>
 <p>The Tcl debugger of Speare code editor implemented with Tcl scripts and an extension written with C to parse Tcl source code, and support extend it by yourself. You can enjoy debugging almost all kinds of Tcl applications under the lightweight debugging environment of Speare code editor. </p>
 <p><b>Start Debugging Steps:</b><br>
-1. Download Speare Debug Server: → <a href="http://www.sevenuc.com/download/tcl_debugger.tar.gz">  http://www.sevenuc.com/download/tcl_debugger.tar.gz (223KB)</a><br>
+1. Please download Speare Debug Server: → <a href="http://www.sevenuc.com/download/tcl_debugger.tar.gz">  http://www.sevenuc.com/download/tcl_debugger.tar.gz (223KB)</a><br>
 <ltab><em>SHA256: 289aebaa433bd6acc46eaf6b0a347b474cc534427968e66e1740503e3f6f90d2</em></ltab><br>
 <ltab>The source code of the Tcl debugger can be view online here: </ltab><br>
 <ltab><a href="https://github.com/chengdu/Speare" target="_blank">https://github.com/chengdu/Speare</a> or here: <a href="https://sourceforge.net/projects/speare" target="_blank">https://sourceforge.net/projects/speare</a></ltab><br><br>
