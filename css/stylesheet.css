@@ -9,8 +9,8 @@
 @charset "UTF-8";
 
 
-body {background: url(../images/bg-pattern.gif) repeat top left;font-family:  'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic ProN', sans-serif, Helvetica Neue, Helvetica, Meiryo, 'MS PGothic', Arial, Tahoma, Verdana, Lucida Grande;margin-left: auto;margin-right: auto;margin-bottom: 50px;font-size: small; max-width: 32rem;color: #ffffff;line-break: auto;}
-.outer { margin-left: auto; margin-right: auto; margin-bottom: 0px;background: url(../images/bg-pattern2.gif) repeat top left; max-width: 32rem; padding:4px 4px 4px 4px; border-radius: 4px;line-break: auto;}
+body {background: #000000;font-family:  'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic ProN', sans-serif, Helvetica Neue, Helvetica, Meiryo, 'MS PGothic', Arial, Tahoma, Verdana, Lucida Grande;margin-left: auto;margin-right: auto;margin-bottom: 50px;font-size: small; max-width: 32rem;color: #ffffff;line-break: auto;}
+.outer { margin-left: auto; margin-right: auto; margin-bottom: 0px;background:#000000; max-width: 32rem; padding:4px 4px 4px 4px; border-radius: 4px;line-break: auto;}
 h1, h2, h3, h4, h5, h6 { font-weight: 700; text-shadow: 1px 1px #444; color: #687E91;}
 #project_tagline { color: #007f00;}
 a { color: #FFFF00; text-decoration: none;}
@@ -23,7 +23,7 @@ a:visited { color: #FF00FF; }
 pre { max-width:100%; padding:4px 4px 4px 4px;line-break: auto;}
 lt {color:#007f00;}
 .none {  padding:0;  margin: 0; }
-.green, gr, lt { color: #fffff0;font-weight: bold;}
+.green, gr, lt { color: rgb(0,255,0);font-weight: bold;}
 ltab { margin-left: 20px; }
 .bigtitle { font-size: 17.0em;}
 .underline { border-bottom:1px solid #4b5b69;}
@@ -36,10 +36,10 @@ hr { margin-bottom: 5px; border: 1px dotted #9fa8b5; }
 .screenshots { max-width:100%;height:auto;}
 .smallscreen { max-width: 32rem; }
 .tips { width:auto; height: 22px;}
-.videobox {background:#000000;}
+.videobox {background:#666666;}
 .note {color:#ffffff; background:#FF4081; border-radius: 4px; padding:2px 2px 2px 2px;}
 .button { width: auto; height: 16pt; vertical-align:middle;padding: 2px 2px 2px 2px;background: #f0f0f0;}
-.block { background:#000000; font-style: italic; padding:10px 10px 10px 10px; border-radius: 4px; }
+.block { background:#333333; font-style: italic; padding:10px 10px 10px 10px; border-radius: 4px; }
 .small { font-style: italic; font-size: small; padding:4px 4px 4px 4px; border-radius: 2px; }
 .appstore_download_link { display: block; float: left; width:224px; height:70px; text-indent: -5000px; overflow: hidden; margin-left: 0px; background: url(../images/appstore.png) no-repeat bottom right; }
 .appstore_download_link:hover { background: url(../images/appstore.png) no-repeat top right; }
