@@ -16,12 +16,11 @@
 <link rel="stylesheet" type="text/css" media="screen" href="../css/stylesheet.css">
 <style type="text/css">
 /*.warning {color:#cce619;}*/
-th { background:#333; color:#f0f0f0;text-align: center;}
-.strike {text-decoration: line-through;}
+/*th { background:#333; color:#f0f0f0;text-align: center;}*/
 /*.screen {width:480px;height:auto;max-width:100%; }*/
 .smallicon { height:24px;width:auto;vertical-align:middle;margin-right:10px;}
 .donate { font-style: italic; font-size: small; color:#007f00;}
-.greenbig {color: #007f00;font-size:1.2em;}
+/*.greenbig {color: #007f00;font-size:1.2em;}*/
 .dark {color:#b397db; font-size: 12px;}
 ltab { margin-left: 20px; }
 lt {color:#007f00;}
@@ -58,8 +57,9 @@ The free small IDE for scripting languages.
 
 
 <p class="greenbig">It's free!</p>
-<p><a href="https://apps.apple.com/us/app/speare/id1473902558?mt=12" target="_blank" class="appstore_download_link"><img src="../images/available_on_macappstore.png" style="margin-left:1em;"> </a></p><br><br><br>
-<p>If you can't open the link above, please launch App Store and found Speare by searching.<br>
+<p><a href="https://apps.apple.com/us/app/speare/id1473902558?mt=12" target="_blank" class="appstore_download_link"><img src="../images/available_on_macappstore.png" style="margin-left:1em;"> </a><br><br><br></p>
+
+<p>If you can't open the link above, please launch App Store and found Speare by searching.<br><br>
 <span class="green">Please kindly donate the author</span> by purchasing <a href="debugger.html" target="_blank">the pro version</a>, your donation will drive me to continually improve it, or please recommend this app on your blog or rate this app so that helping other people can more easily find it.</p>
 
 
@@ -78,7 +78,7 @@ The free small IDE for scripting languages.
 <tr><td>2</td><td>TextMate  1.5.7 </td><td> 23.3MB </td> <td>8</td> <td>ActiveState Komodo 11.1 </td><td> 334MB </td></tr> 
 <tr><td>3</td><td>Textadept 10.4  </td><td> 35MB  </td> <td>9</td>  <td>Atom 1.38.2           </td><td> 558MB </td></tr> 
 <tr><td>4</td><td>CotEditor 3.3   </td><td> 47MB  </td>  <td>10</td> <td>Android Studio 3.1 </td><td> 1.37GB </td></tr>
-<tr><td>5</td><td>Lazarus (without FreePascal compiler and source packages) 2.0.8</td><td>200.9MB</td> <td>11</td><td>Eclipse IDE   4.12 </td><td>400MB~5GB</td></tr>
+<tr><td>5</td><td>Lazarus (without FreePascal compiler and source packages) 2.0.8</td><td>200.9MB</td> <td>11</td><td>Eclipse IDE   4.12 </td><td>400MB ~ 5GB</td></tr>
 <tr><td>6</td><td>ZeroBraneStudio  6.0</td><td> 602.1MB </td> <td>12</td><td>Xcode      10.0 </td><td> 12GB</td></tr>
 </table>
 
@@ -385,9 +385,10 @@ c. You can directly edit file .speareignore in Speare code editor and right clic
 	&lt;string&gt;swift&lt;/string&gt;
 &lt;/array&gt;
 <span class="warning">
-&lt;key&gt;Praat&lt;/key&gt; &lt;---- Praat.plist (file name for syntax highlighting)
+&lt;key&gt;Praat&lt;/key&gt; &lt;-- Praat.plist
+ (file name for syntax highlighting)
 &lt;array&gt;
-	&lt;string&gt;praat&lt;/string&gt; &lt;---- file extension name
+	&lt;string&gt;praat&lt;/string&gt; &lt;-- file extension name
 &lt;/array&gt;</span>
 &lt;/dict&gt;
 &lt;/plist&gt;
@@ -458,9 +459,10 @@ a). Please open <lt>"/Applications/Speare.app/Contents/Resources/FileExtensions.
 	&lt;string&gt;swift&lt;/string&gt;
 &lt;/array&gt;
 <span class="warning">
-&lt;key&gt;GDL&lt;/key&gt;  &lt;---- GDL.plist (file name for syntax highlighting)
+&lt;key&gt;GDL&lt;/key&gt;  &lt;-- GDL.plist
+ (file name for syntax highlighting)
 &lt;array&gt;
-	&lt;string&gt;gdl&lt;/string&gt; &lt;---- file extension name
+	&lt;string&gt;gdl&lt;/string&gt; &lt;-- file extension name
 &lt;/array&gt;</span>
 &lt;/dict&gt;
 &lt;/plist&gt;
@@ -473,10 +475,10 @@ b). Download <a href="http://www.sevenuc.com/download/GDL.plist" target="_blank"
 <p><b>2. How to add syntax highlighting to support a new file type?</b><br>
 Please open <lt>"/Applications/Speare.app/Contents/Resources/FileExtensions.plist"</lt>, and carefully add the file extension name in it, e.g syntax highlighting all <span class="warning">.mli</span> as Ocaml source code file:<br>
 <pre>
-  &lt;key&gt;F# - OCaml&lt;/key&gt;   &lt;---- file name for syntax highlighting
+  &lt;key&gt;F# - OCaml&lt;/key&gt;   &lt;-- file name for syntax highlighting
   &lt;array&gt;
-  &lt;string&gt;ml&lt;/string&gt; &lt;---- file extension name
-  &lt;string&gt;<span class="warning">mli</span>&lt;/string&gt; &lt;---- file extension name
+  &lt;string&gt;ml&lt;/string&gt; &lt;-- file extension name
+  &lt;string&gt;<span class="warning">mli</span>&lt;/string&gt; &lt;-- file extension name
   &lt;/array&gt;
 </pre>
 </p>
