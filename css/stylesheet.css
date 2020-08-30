@@ -24,7 +24,7 @@ pre { max-width:100%; padding:4px 4px 4px 4px;line-break: auto;}
 lt {color:#007f00;}
 .none {  padding:0;  margin: 0; }
 .greenbig {color: #007f00;font-size:1.2em;}
-.green, gr, lt { color: rgb(0,255,0);font-weight: bold;}
+.green, gr, lt { color: #007f00;font-weight: bold;} /*rgb(0,255,0);*/
 ltab { margin-left: 20px; }
 .bigtitle { font-size: 17.0em;}
 .underline { border-bottom:1px solid #4b5b69;}
