@@ -23,22 +23,28 @@ a:visited { color: #FF00FF; }
 pre { max-width:100%; padding:4px 4px 4px 4px;line-break: auto;}
 lt {color:#007f00;}
 .none {  padding:0;  margin: 0; }
+.dark {color:#b397db;/*#303000*/ font-size: 12px;}
+.red {color:#cce619;}
 .greenbig {color: #007f00;font-size:1.2em;}
 .green, gr, lt { color: #007f00;font-weight: bold;} /*rgb(0,255,0);*/
 ltab { margin-left: 20px; }
+.donate { font-style: italic; font-size: small; color:#007f00;}
 .bigtitle { font-size: 17.0em;}
 .strike {text-decoration: line-through;}
+/*.underline { text-decoration: underline; }*/
 .underline { border-bottom:1px solid #4b5b69;}
-.smallicon { height:32px; width:auto; vertical-align:middle;}
+.smallicon { height:32px;/*24px;*/ width:auto; vertical-align:middle;margin-right:10px;}
+.treasure { color: rgba(255, 0, 255, 0.5); font-size: 11px;font-style: italic; font-weight: bold; background: none; }
 b, strong, .hilight {color: #80FF80;font-weight: bold;}
 .warning {color:#cce619; font-weight: bold;}
 i, em {font-style: italic; }
 img { background: rgba(0, 0, 0, 0);border-width: 0px;}
 hr { margin-bottom: 5px; border: 1px dotted #9fa8b5; }
-.screenshots { max-width:100%;height:auto;}
-.smallscreen { max-width: 32rem; }
+.screenshots { max-width:100%; /*160px;*/ height:auto;}
 .tips { width:auto; height: 22px;}
-.videobox {background:#666666;}
+.videobox {background:#111160;}
+.smallscreen { max-width: 32rem; }
+.screen {width:320px;/*480px;*/ height:auto;max-width:100%;}
 .note {color:#ffffff; background:#FF4081; border-radius: 4px; padding:2px 2px 2px 2px;}
 .button { width: auto; height: 16pt; vertical-align:middle;padding: 2px 2px 2px 2px;background: #f0f0f0;}
 .block { background:#333333; font-style: italic; padding:10px 10px 10px 10px; border-radius: 4px; }
@@ -51,7 +57,7 @@ table td { max-width:200px; text-align: left; padding:10px; border: 1px solid #9
 table img { display: block; width:auto;max-width:100%;}
 form { background: #f2f2f2; padding: 10px; }
 footer { color:#687E91;border-top:1px solid #9fa8b5;font-size:small; }
-footer img { padding-top: 4px; background: #13294b;}
+footer img { padding-top: 4px; background: #111160;}
 /*Small Device Styles*/
 @media screen and (max-width: 480px) {.bigtitle { font-size: 11.0em;} body { max-width: 32rem; margin-left: 10px;margin-right: 10px;}}
 
