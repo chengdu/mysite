@@ -9,8 +9,8 @@
 @charset "UTF-8";
 
 
-body {background: #000000;font-family:  'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic ProN', sans-serif, Helvetica Neue, Helvetica, Meiryo, 'MS PGothic', Arial, Tahoma, Verdana, Lucida Grande;margin-left: auto;margin-right: auto;margin-bottom: 50px;font-size: small; max-width: 32rem;color: #ffffff;line-break: auto;}
-.outer { margin-left: auto; margin-right: auto; margin-bottom: 0px;background:#000000; max-width: 32rem; padding:4px 4px 4px 4px; border-radius: 4px;line-break: auto;}
+body {background: #000000;font-family:  'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic ProN', sans-serif, Helvetica Neue, Helvetica, Meiryo, 'MS PGothic', Arial, Tahoma, Verdana, Lucida Grande;margin-left: auto;margin-right: auto;margin-bottom: 50px;font-size: small; color: #ffffff;line-break: auto;}
+.outer { margin-left: auto; margin-right: auto; margin-bottom: 0px;background:#000000; padding:4px 4px 4px 4px; border-radius: 4px;line-break: auto;max-width:32rem;}
 h1, h2, h3, h4, h5, h6 { font-weight: 700; text-shadow: 1px 1px #444; color: #687E91;}
 #project_tagline { color: #007f00;}
 a { color: #FFFF00; text-decoration: none;}
@@ -33,18 +33,21 @@ ltab { margin-left: 20px; }
 .strike {text-decoration: line-through;}
 /*.underline { text-decoration: underline; }*/
 .underline { border-bottom:1px solid #4b5b69;}
-.smallicon { height:32px;/*24px;*/ width:auto; vertical-align:middle;margin-right:10px;}
+.floatleft {float:left; margin-top:0.2em;margin-right:0.5em;margin-bottom:0.5em;}
+.floatright {float:right; margin-top:0.2em;margin-left:0.5em;margin-bottom:0.5em;}
+.smallicon { height:32px; width:auto; vertical-align:middle;margin-right:10px;}
 .treasure { color: rgba(255, 0, 255, 0.5); font-size: 11px;font-style: italic; font-weight: bold; background: none; }
 b, strong, .hilight {color: #80FF80;font-weight: bold;}
 .warning {color:#cce619; font-weight: bold;}
 i, em {font-style: italic; }
 img { background: rgba(0, 0, 0, 0);border-width: 0px;}
 hr { margin-bottom: 5px; border: 1px dotted #9fa8b5; }
-.screenshots { max-width:100%; /*160px;*/ height:auto;}
+.screenshots { max-width:100%; height:auto;}
 .tips { width:auto; height: 22px;}
 .videobox {background:#111160;}
-.smallscreen { max-width: 32rem; }
-.screen {width:320px;/*480px;*/ height:auto;max-width:100%;}
+.smallscreen { max-width:16rem; }
+.mainscreen { max-width:32rem;}
+.screen {width:320px; height:auto;max-width:100%;}
 .note {color:#ffffff; background:#FF4081; border-radius: 4px; padding:2px 2px 2px 2px;}
 .button { width: auto; height: 16pt; vertical-align:middle;padding: 2px 2px 2px 2px;background: #f0f0f0;}
 .block { background:#333333; font-style: italic; padding:10px 10px 10px 10px; border-radius: 4px; }
