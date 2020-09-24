@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="utf-8">
 <meta property="og:title" content="LyricsMaker - make lyrics sheet for music easy.">
 <meta property="og:type" content="product">
 <meta property="og:url" content="http://www.sevenuc.com/">
@@ -8,43 +9,29 @@
 <meta property="og:site_name" content="Sevenuc Consulting">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="chrome=1">
-<meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1">
-<meta name="description" content="LyricsMaker, a small tool that was designed to make lyrics sheet for music easily on macOS.">
+<meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1,shrink-to-fit=no">
+<meta name="description" content="LyricsMaker - make lyrics sheet for music easy.">
 <meta name="service" content="Product development and independent consulting services">
 <meta name="author" content="http://www.sevenuc.com/">
-<meta name="keywords" content="LyricsMaker,Lyrics Maker,Lyrics Editor,Karaoke,song sheet generator,Strategy Consultant,McKinsey,Bain,Boston Consulting Group,BCG,Booz,Oliver Wyman,A.T.Kearney,L.E.K. Consulting,PwC Consulting,Deloitte,Roland Berger,Accenture,Andersen Consulting,Gartner,BearingPoint,KPMG Consulting,Gallup,MYON Management &amp; Consultancy,HP,SAP,Clarkston,Newzoo,Hiragana,Katakana,Pebble,Samsung,Optical Character Recognition,OCR,Arabic,Persian,Khmer,Thai,Tibetan,Tamil,Devanagari,Pali,Sanskrit,Literacy,Machine Translation,Computational Linguistics,Grammar,Pronunciation,Romanisation,Text to Speech,TTS,Canto,Chinese,Cantonese,Yale,Jyutping,Speech Synthesis,Chinese Speech Synthesis,Text Classification,Text Categorisation,Data Mining,ASR,Automatic Speech Recognition,Natural Language Understanding,NLU,NLP,Natural Language Processing,Intelligent Information Retrieval,Machine Learning,Animation Synthesis,Knowledge Translation,Dictionary,AI,Robot,Artificial Intelligence,iPhone,iPad,Android,iOS,Embedded Linux,Real Time System,RTOS,JVM,単語分割エンジン,単語分割,斷詞,分詞,中文斷詞,中文分詞,文本分類,人工智能,人工智慧,模式識別,機器學習,機械学習,自然語言處理,自然言語処理,機器翻譯,機械翻訳,動畫合成,語音合成,音聲合成,語音識別,音聲認識,Embedded System,RTOS,eCos,μC/OS-II,VxWorks,QNX,FreeRTOS,NuttX,ThreadX,RTEMS">
-<link rel="stylesheet" type="text/css" media="screen" href="../css/stylesheet.css">
-<style type="text/css">
-.none {  padding:0;  margin: 0; }
-.greenbig {color: #007f00;font-size:1.2em; font-weight: bold;}
-.strike {text-decoration: line-through;}
-.treasure { color: rgba(255, 0, 255, 0.5); font-size: 11px;font-style: italic; font-weight: bold; background: none; }
-.button { width: auto; height: 36pt; vertical-align:middle;background: rgba(0, 0, 0, 0);}
-/*body { background: #f9f9f9;}*/
-</style>
-
-<title> LyricsMaker </title>
+<meta name="keywords" content="Chinese text segmentation,Chinese Word segmentation,Chinese Text Tokenisation,Chinese Linguistics,Strategy Consultant,McKinsey,Bain,Boston Consulting Group,BCG,Booz,Oliver Wyman,A.T.Kearney,L.E.K. Consulting,PwC Consulting,Deloitte,Roland Berger,Accenture,Andersen Consulting,Gartner,BearingPoint,KPMG Consulting,Gallup,MYON Management &amp; Consultancy,HP,SAP,Clarkston,Newzoo,Hiragana,Katakana,Pebble,Samsung,Optical Character Recognition,OCR,Arabic,Persian,Khmer,Thai,Tibetan,Tamil,Devanagari,Pali,Sanskrit,Literacy,Machine Translation,Computational Linguistics,Grammar,Pronunciation,Romanisation,Text to Speech,TTS,Canto,Chinese,Cantonese,Yale,Jyutping,Speech Synthesis,Chinese Speech Synthesis,Text Classification,Text Categorisation,Data Mining,ASR,Chinese word segmentation,Morphological Analyzer,Automatic Speech Recognition,Natural Language Understanding,NLU,NLP,Natural Language Processing,Intelligent Information Retrieval,Machine Learning,Animation Synthesis,Knowledge Translation,Dictionary,AI,Robot,Artificial Intelligence,iPhone,iPad,Android,iOS,Embedded Linux,Real Time System,RTOS,JVM,単語分割エンジン,単語分割,斷詞,分詞,中文斷詞,中文分詞,文本分類,人工智能,人工智慧,模式識別,機器學習,機械学習,自然語言處理,自然言語処理,機器翻譯,機械翻訳,動畫合成,語音合成,音聲合成,語音識別,音聲認識,Embedded System,RTOS,eCos,μC/OS-II,VxWorks,QNX,FreeRTOS,NuttX,ThreadX,RTEMS">
+<title>LyricsMaker - make lyrics sheet for music easy.</title>
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/stylesheet.css">
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
 </head>
 <body>
 
-<!-- HEADER -->
-<!--div id="header_wrap" class="outer">
-    <header class="inner">
-      <h1 id="project_title">LyricsMaker</h1>
-      <h2 id="project_tagline">The designedly util to make lyrics sheets easy.</h2>
-    </header>
-</div-->
+<div class="container-fluid">
 
-<!-- MAIN CONTENT -->
-<div id="main_content_wrap" class="outer">
-<section id="main_content" class="inner">
+    <div class="jumbotron">
+        <p><img src="../images/littlefox/logo.png" style="width: 120px;" /></p>
+        <h1>LyricsMaker<br><em>Version 1.5.14</em></h1>
+        <p class="greenbig">The designedly util to make lyrics sheets easy.</p>
+        <p class="lead"><b>LyricsMaker</b> is a small util that was designed to conveniently make lyrics sheet for music or generate subtitle for movie, and later them can be easily synthesised by <a href="littlefox.html">LitterFox</a>. It do one thing in a simple way, i.e, listen audio or watch video and make time marks by simple clicks.</p>
+    </div>
+    
 
-
-<div class="mainscreen">
-<img src="../images/lyricsmaker/logo.png" style="width: 120px;" /><br>
-<h2>LyricsMaker <br><em>Version 1.2</em></h2>
-
-<p><b>LyricsMaker</b> is a small util that was designed to conveniently make lyrics sheet for music or generate subtitle for movie, and later them can be easily synthesised by <a href="littlefox.html">LitterFox</a>. It do one thing in a simple way, i.e, listen audio or watch video and make time marks by simple clicks.</p>
 
 <p>The app generate accurate lyrics sheet or subtitle file using two file, i.e, an audio or video file and a plain text file, so the text file required to be prepared to match the audio or video content before processing. The app was designed to simplify the work of synchronising subtitle with audio or video. In daily usage scenarios, you needs to listen audio or watch video only once.</p>
 
@@ -60,8 +47,11 @@ From May 2020, LyricsMaker turned to be a paid app, because thousands of people 
 
 
 <h2>Screenshot</h2>
-<a href="../images/lyricsmaker/screenshot.png" target="_blank"><img src="../images/lyricsmaker/screenshot.png" class="screenshots"/></a><br>
-<a href="../images/lyricsmaker/screenshot2.png" target="_blank"><img src="../images/lyricsmaker/screenshot2.png" class="screenshots"/></a><br>
+<p>
+<a href="../images/lyricsmaker/screenshot.png" target="_blank"><img src="../images/lyricsmaker/screenshot.png" class="screenshots"/></a><br><br>
+<a href="../images/lyricsmaker/screenshot2.png" target="_blank"><img src="../images/lyricsmaker/screenshot2.png" class="screenshots"/></a><br><br>
+</p>
+
 
 <h2>Steps</h2>
 <ul>
@@ -129,45 +119,33 @@ The lyrics sheet usually have a header like above, please refer the format here.
 </pre>
 </p>
 
-<div style="display:none;">
-<h2>♪ More Examples</h2>
-<p><b>Ripples of Yuet music </b><br>
-<span class="treasure">ETERNAL TREASURE</span>
-</p>
-<p>Listen the elegant pronunciation of Cantonese, the pure nature sounds of the language, realise the charm of the true pronunciation of pure Cantonese words from the several songs of Hong Kong Cantopop musicians:<br>
-Mr. 許冠傑/Samuel Hui Koon-Kit,<br>
-Mr. 陳百強/Danny Chan Pak-keung.<br>
-</p>
-</div>
-
-
-<p><div id="player1" class="aplayer" style="display:none;"></div></p>
-<p style="display:none;"><a href="http://blog.sevenuc.com/index.html" target="_blank" stlye="float:left; margin-right:1em;"><svg width="20" height="20" viewBox="0 0 20 20" style="float:left; fill:#f85625; color:#ffffff; position: relative; border: 0; margin-left:0;right: 0;">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M16,1H4C3.447,1,3,1.447,3,2v16c0,0.552,0.447,1,1,1h12c0.553,0,1-0.448,1-1V2
-	C17,1.448,16.553,1,16,1z M12.795,11.519c-0.185,0.382-0.373,0.402-0.291,0C12.715,10.48,12.572,8.248,11,8v4.75
-	c0,0.973-0.448,1.82-1.639,2.203c-1.156,0.369-2.449-0.016-2.752-0.846c-0.303-0.83,0.377-1.84,1.518-2.256
-	C8.764,11.619,9.502,11.559,10,11.75V5h1C11,7.355,15.065,6.839,12.795,11.519z"/></svg> listen the music online with your mobile phone.</a> 
-<br></p>
 
 <p><br></p>
-<p><audio autoplay loop preload="none"><source src="http://blog.sevenuc.com/music/chan/qEfRSe.mp3" type="audio/mpeg" /></audio></p>
-
-</div>
-</div>
-</section>
-</div>
 
 
 
-<!-- FOOTER  -->
-<div id="footer_wrap" class="outer">
- <footer class="inner">
-   <a href="http://www.sevenuc.com"><img src="http://www.sevenuc.com/images/logo.svg" class="logo"></a><span><p class="copyright">
+<footer>
+    <div class="row">
+        <div class="col-md-6">
+            <p>
+            <a href="http://www.sevenuc.com"><img src="http://www.sevenuc.com/images/logo.svg" class="logo"></a><span><p class="copyright">
    <span class="copyright"> © 2006-2020 Sevenuc Consulting <br>All rights reserved.</span>
-      <a href="http://www.sevenuc.com/en/about.html"> About </a>|
-      <a href="http://www.sevenuc.com/en/apps.html"> Apps </a>|
-      <a href="http://www.sevenuc.com/en/service.html"> Service </a>|
-      <a href="http://www.sevenuc.com/en/contact.html"> Contact </a></p></span>
- </footer>
-</div>
-</body></html>
+            </p>
+        </div>
+        <div class="col-md-6 text-md-right">
+            <a href="http://www.sevenuc.com/en/about.html" class="text-dark">About</a> 
+            <span class="text-muted mx-2">|</span> 
+            <a href="http://www.sevenuc.com/en/apps.html" class="text-dark">Apps</a>
+                <span class="text-muted mx-2">|</span>
+                <a href="http://www.sevenuc.com/en/service.html" class="text-dark">Service</a>
+                <span class="text-muted mx-2">|</span>
+                <a href="http://www.sevenuc.com/en/contact.html" class="text-dark">Contact</a>
+                
+        </div>
+    </div>
+</footer>
+	
+	
+</div><!-- container-fluid -->
+</body>
+</html>

@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta property="og:title" content="Guard7 - GUI frontend of GNU Privacy Guard on Mac OS X.">
+<meta charset="utf-8">
+<meta property="og:title" content="Guard7, the GUI frontend of GNU Privacy Guard for Mac OS X.">
 <meta property="og:type" content="product">
 <meta property="og:url" content="http://www.sevenuc.com/">
 <meta property="og:image" content="http://www.sevenuc.com/favicon.ico">
 <meta property="og:site_name" content="Sevenuc Consulting">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="chrome=1">
-<meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1">
-<meta name="description" content="Guard7, GUI frontend of GNU Privacy Guard on Mac OS X (macOS).">
+<meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1,shrink-to-fit=no">
+<meta name="description" content="Guard7, the GUI frontend of GNU Privacy Guard for Mac OS X.">
 <meta name="service" content="Product development and independent consulting services">
 <meta name="author" content="http://www.sevenuc.com/">
-<meta name="keywords" content="GnuPG,GPG,OpenPGP,GNU Privacy Guard,Strategy Consultant,McKinsey,Bain,Boston Consulting Group,BCG,Booz,Oliver Wyman,A.T.Kearney,L.E.K. Consulting,PwC Consulting,Deloitte,Roland Berger,Accenture,Andersen Consulting,Gartner,BearingPoint,KPMG Consulting,Gallup,MYON Management &amp; Consultancy,HP,SAP,Clarkston,Newzoo,Hiragana,Katakana,Pebble,Samsung,Optical Character Recognition,OCR,Arabic,Persian,Khmer,Thai,Tibetan,Tamil,Devanagari,Pali,Sanskrit,Literacy,Machine Translation,Computational Linguistics,Grammar,Pronunciation,Romanisation,Text to Speech,TTS,Canto,Chinese,Cantonese,Yale,Jyutping,Speech Synthesis,Chinese Speech Synthesis,Text Classification,Text Categorisation,Data Mining,ASR,Automatic Speech Recognition,Natural Language Understanding,NLU,NLP,Natural Language Processing,Intelligent Information Retrieval,Machine Learning,Animation Synthesis,Knowledge Translation,Dictionary,AI,Robot,Artificial Intelligence,iPhone,iPad,Android,iOS,Embedded Linux,Real Time System,RTOS,JVM,単語分割エンジン,単語分割,斷詞,分詞,中文斷詞,中文分詞,文本分類,人工智能,人工智慧,模式識別,機器學習,機械学習,自然語言處理,自然言語処理,機器翻譯,機械翻訳,動畫合成,語音合成,音聲合成,語音識別,音聲認識,Embedded System,RTOS,eCos,μC/OS-II,VxWorks,QNX,FreeRTOS,NuttX,ThreadX,RTEMS">
-<link rel="stylesheet" type="text/css" media="screen" href="../css/stylesheet.css">
+<meta name="keywords" content="Chinese text segmentation,Chinese Word segmentation,Chinese Text Tokenisation,Chinese Linguistics,Strategy Consultant,McKinsey,Bain,Boston Consulting Group,BCG,Booz,Oliver Wyman,A.T.Kearney,L.E.K. Consulting,PwC Consulting,Deloitte,Roland Berger,Accenture,Andersen Consulting,Gartner,BearingPoint,KPMG Consulting,Gallup,MYON Management &amp; Consultancy,HP,SAP,Clarkston,Newzoo,Hiragana,Katakana,Pebble,Samsung,Optical Character Recognition,OCR,Arabic,Persian,Khmer,Thai,Tibetan,Tamil,Devanagari,Pali,Sanskrit,Literacy,Machine Translation,Computational Linguistics,Grammar,Pronunciation,Romanisation,Text to Speech,TTS,Canto,Chinese,Cantonese,Yale,Jyutping,Speech Synthesis,Chinese Speech Synthesis,Text Classification,Text Categorisation,Data Mining,ASR,Chinese word segmentation,Morphological Analyzer,Automatic Speech Recognition,Natural Language Understanding,NLU,NLP,Natural Language Processing,Intelligent Information Retrieval,Machine Learning,Animation Synthesis,Knowledge Translation,Dictionary,AI,Robot,Artificial Intelligence,iPhone,iPad,Android,iOS,Embedded Linux,Real Time System,RTOS,JVM,単語分割エンジン,単語分割,斷詞,分詞,中文斷詞,中文分詞,文本分類,人工智能,人工智慧,模式識別,機器學習,機械学習,自然語言處理,自然言語処理,機器翻譯,機械翻訳,動畫合成,語音合成,音聲合成,語音識別,音聲認識,Embedded System,RTOS,eCos,μC/OS-II,VxWorks,QNX,FreeRTOS,NuttX,ThreadX,RTEMS">
+<title>Guard7, the GUI frontend of GNU Privacy Guard for Mac OS X.</title>
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/stylesheet.css">
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
 <style type="text/css">
 .none {  padding:0;  margin: 0; }
 .icon { height:22px; width: auto; padding: 2px 2px 2px 2px;background: #f0f0f0;}
@@ -21,40 +26,25 @@
 .evil {color:#ff0000; }
 .dark {color:#333; }
 .greenbig {color: #007f00;font-size:1.2em;font-weight: bold;}
-/*.block { color:#000000;background:#9fa8b5; padding:10px 10px 10px 10px;border-radius: 4px; }*/
 .tell { color:#000000; font-weight: bold; }
 .note { color:#f0f0f0; background:#007f00; border-radius: 4px; padding:2px 2px 2px 2px; }
 </style>
-
-<title> Guard7 - GUI frontend of GNU Privacy Guard on Mac OS X</title>
 </head>
 <body>
 
-<!-- HEADER -->
-<!--
-<div id="header_wrap" class="outer">
-    <header class="inner">
-      <h1 id="project_title">Guard7</h1>
-      <h2 id="project_tagline"><em>Protect your confidential information easy.</em></h2>
-    </header>
-</div>
--->
+<div class="container-fluid">
 
-<!-- MAIN CONTENT -->
-<div id="main_content_wrap" class="outer">
-<section id="main_content" class="inner">
+    <div class="jumbotron">
+        <p><img src="../images/guard/guard7_logo.png" style="width: 120px;" /></p>
+        <h1>Guard7<br><em>Version 1.1 </em></h1>
+        <p class="lead"><b>Guard7</b> is a general purpose cryptography tool that used to encrypt or decrypt email, file, sign and verify files. It is the graphical frontend for the GNU Privacy Guard (GnuPG or GPG, <a href="http://www.gnupg.org">http://www.gnupg.org</a>) on macOS (previously Mac OS X) with additional features. Guard7 is an encryption and decryption system based on industry standard that can ensure the complete security of business negotiations or personal messages. It was developed to make the daily work with GnuPG on <a href="https://www.apple.com/mac/">macOS</a> easy and simple.</p>
+    </div>
+    
 
-<div class="mainscreen">
-<img src="../images/guard/guard7_logo.png" style="width: 120px;" /><br>
-<h2>Guard7<br><em>Version 1.1</em></h2>
-<p><em class="green">Protect your confidential information easy.</em><br></p>
-
-<p><b>Guard7</b> is a general purpose cryptography tool that used to encrypt or decrypt email, file, sign and verify files. It is the graphical frontend for the GNU Privacy Guard (GnuPG or GPG, <a href="http://www.gnupg.org">http://www.gnupg.org</a>) on macOS (previously Mac OS X) with additional features. Guard7 is an encryption and decryption system based on industry standard that can ensure the complete security of business negotiations or personal messages. It was developed to make the daily work with GnuPG on <a href="https://www.apple.com/mac/">macOS</a> easy and simple. </p>
 
 <p class="greenbig">It's free!</p>
-<p><a href="https://itunes.apple.com/us/app/guard7/id1348667059?ls=1&mt=12" target="_blank" class="appstore_download_link"><img src="../images/available_on_macappstore.png" style="margin-left:1em;"> </a></p><br><br><br><br><br><br>
-<p><em>If you can't open the link above, please launch App Store and found Guard7 by searching.<br>
-Please kindly donate the author by purchasing other apps developed by the author or commend this app on your blog or rate this app so that helping other people can more easily find it.</em></p>
+<p><a href="https://itunes.apple.com/us/app/guard7/id1348667059?ls=1&mt=12" target="_blank" class="appstore_download_link"><img src="../images/available_on_macappstore.png" style="margin-left:1em;"> </a></p><br><br><br><br>
+<p><em>If you can't open the link above, please launch App Store and found Guard7 by searching. Please kindly donate the author by purchasing other apps developed by the author or commend this app on your blog or rate this app so that helping other people can more easily find it.</em></p>
 
 <h2>Why</h2>
 <p class="block">The most difference between "public key cryptography" and normal "password protected cryptography" is that the first approach don't ask you to distribute any password to anyone or any unsafe place, e.g. email, chat app, or internet. That is, you send an encrypted message or file to someone, but don't need send any password to him/her. And the most important point is, you need an encryption tool that has industrial strength to protect your confidential information.</p>
@@ -273,31 +263,6 @@ You need to import keyring from other system, e.g. Linux, and when backup or cha
 <span class="warning">The more they maliciously attack this software, the more their bad intention are exposed, and the more affirmation of this software.</span></p>
 
 
-<h2>Guard7 on Wikipedia</h2>
-<p>There's a reference of Guard7 on wikipedia from Feb 2018, but some shameless "gentleman" removed it viciously, again! again! and again! and again! Blocking edit again! again! and again! and again! They don't want this useful tool can be free used widely! Because they want control and make money! <br><br>
-<!--b>After a long fight with them, they are not shameless "gentleman" but bastard!</b><br><br-->
-<b>After a long fight with them, they are really shameless "gentleman"!</b><br><br>
-The reference have been removed by these guys, please kindly recover the content on that page to help others if you have permission. The page link is: <a href="https://en.wikipedia.org/wiki/GNU_Privacy_Guard" target="_blank">https://en.wikipedia.org/wiki/GNU_Privacy_Guard</a>, one of the "gentleman": <a href="https://en.wikipedia.org/wiki/User:Zazpot">https://en.wikipedia.org/wiki/User:Zazpot</a>. Please append the following block into the section <b>Platforms</b> on that page:</p>
-<p class="block">
-In 2018, Sevenuc Consulting released a free cryptograph utility named Guard7 
-on [[Mac App Store]] that make the daily work with GnuPG easy and simple on [[macOS]], 
-it is a graphical frontend for GPG with some additional features, 
-e.g. organise contacts into group, switch between different keyrings. 
-Guard7 seamlessly integrated with the built-in Mail app of macOS to send and receive message conveniently, 
-and can easily organise dozens of recipients for email message. 
-Encrypt or decrypt file just require dragging the file from Finder into Guard7, 
-it is very convenient and simple. 
-<ref>{{cite web|url=http://www.sevenuc.com/en/guard.html|title=GUI frontend of GNU Privacy Guard on macOS}}</ref>
-</p>
-<p class="warning">The more they reject this software, the more their bad intention are exposed, and the more affirmation of this software.</p>
-
-<p><b>Wikipedia in fact a cheat advertise game heavily controlled by only a few shameless guys!</b><br><br>
-<span class="note">Note: </span>&nbsp;&nbsp; You can do a little thing for justice and liberty, that is, tell this story to others, they viciously remove text from special Wikipedia page and block editing! Tell everyone you know how bad they do on Wikipedia! <br>
-Break their mask!<br>
-Thank you!<br>
-</p>
-
-
 <h2>Feedback</h2>
 <p>Your help will drive us to improve it to better, please kindly report your feature request or issue on Github:<br></b><a href="https://github.com/chengdu/Guard7" target="_blank"> → https://github.com/chengdu/Guard7</a>, thanks.</p>
 
@@ -322,22 +287,32 @@ Thank you!<br>
 <p><br></p>
 <p><audio autoplay loop preload="none"><source src="../audio/bamboo.mp3" type="audio/mpeg" /></audio></p>
 
-</div>
-</div>
-</section>
-</div>
+<p><br></p>
 
 
-<!-- FOOTER  -->
-<div id="footer_wrap" class="outer">
- <footer class="inner">
-   <a href="http://www.sevenuc.com"><img src="http://www.sevenuc.com/images/logo.svg" class="logo"></a><span><p class="copyright">
+
+<footer>
+    <div class="row">
+        <div class="col-md-6">
+            <p>
+            <a href="http://www.sevenuc.com"><img src="http://www.sevenuc.com/images/logo.svg" class="logo"></a><span><p class="copyright">
    <span class="copyright"> © 2006-2020 Sevenuc Consulting <br>All rights reserved.</span>
-      <a href="http://www.sevenuc.com/en/about.html"> About </a>|
-      <a href="http://www.sevenuc.com/en/apps.html"> Apps </a>|
-      <a href="http://www.sevenuc.com/en/service.html"> Service </a>|
-      <a href="http://www.sevenuc.com/en/contact.html"> Contact </a></p></span>
- </footer>
-</div>
-</body></html>
-
+            </p>
+        </div>
+        <div class="col-md-6 text-md-right">
+            <a href="http://www.sevenuc.com/en/about.html" class="text-dark">About</a> 
+            <span class="text-muted mx-2">|</span> 
+            <a href="http://www.sevenuc.com/en/apps.html" class="text-dark">Apps</a>
+                <span class="text-muted mx-2">|</span>
+                <a href="http://www.sevenuc.com/en/service.html" class="text-dark">Service</a>
+                <span class="text-muted mx-2">|</span>
+                <a href="http://www.sevenuc.com/en/contact.html" class="text-dark">Contact</a>
+                
+        </div>
+    </div>
+</footer>
+	
+	
+</div><!-- container-fluid -->
+</body>
+</html>

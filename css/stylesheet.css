@@ -5,21 +5,14 @@
 * http://www.sevenuc.com
 *
 */
+
 @charset "UTF-8";
 
-
-body {background: #000000;font-family:  'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic ProN', sans-serif, Helvetica Neue, Helvetica, Meiryo, 'MS PGothic', Arial, Tahoma, Verdana, Lucida Grande;margin-left: auto;margin-right: auto;margin-bottom: 50px;font-size: small; color: #ffffff;line-break: auto;}
-.outer { margin-left: auto; margin-right: auto; margin-bottom: 0px;background:#000000; padding:4px 4px 4px 4px; border-radius: 4px;line-break: auto;max-width:32rem;}
-h1, h2, h3, h4, h5, h6 { font-weight: 700; text-shadow: 1px 1px #444; color: #687E91;}
-#project_tagline { color: #007f00;}
-a { color: #FFFF00; text-decoration: none;}
-a:focus { color: #5f7333; }
-a:hover  { text-decoration: underline; }
-a:visited { color: #FF00FF; }
-.logo {height:42px;width:auto;float:left;vertical-align:middle;margin-top:4px;margin-right:10px;border: 1px rgba(255,255,255,0.6) solid;}
+h1, h2, h3, h4, h5, h6 { font-weight: 700; text-shadow: 1px 1px #444; color: #687E91; display: block;}
+.logo {height:42px;width:auto;vertical-align:middle;margin-top:4px;margin-right:10px;border: 1px rgba(255,255,255,0.6) solid;}
 .logo:hover  { border: 1px #FFFFFF solid; }
 .headerimg { padding: 10px 10px 10px 10px;background: #f0f0f0;border: 1px rgba(255,255,255,0.6) solid; border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px;}
-pre { max-width:100%; padding:4px 4px 4px 4px;line-break: auto;}
+pre { background: #e9ecef;max-width:100%; padding:4px 4px 4px 4px;line-break: auto;}
 lt {color:#007f00;}
 .none {  padding:0;  margin: 0; }
 .dark {color:#b397db;/*#303000*/ font-size: 12px;}
@@ -36,20 +29,18 @@ ltab { margin-left: 20px; }
 .floatright {float:right; margin-top:0.2em;margin-left:0.5em;margin-bottom:0.5em;}
 .smallicon { height:32px; width:auto; vertical-align:middle;margin-right:10px;}
 .treasure { color: rgba(255, 0, 255, 0.5); font-size: 11px;font-style: italic; font-weight: bold; background: none; }
-b, strong, .hilight {color: #80FF80;font-weight: bold;}
-.warning {color:#cce619; font-weight: bold;}
+b, strong, .hilight {font-weight: bold;}
+.warning {color:red; font-weight: bold;}
 i, em {font-style: italic; }
-img { background: rgba(0, 0, 0, 0);border-width: 0px;}
+img { background: rgba(0, 0, 0, 0);border-width: 0px;max-width: 100%;}
 hr { margin-bottom: 5px; border: 1px dotted #9fa8b5; }
-.screenshots { max-width:100%; height:auto;}
+.screenshots { max-width:100%; height:auto;margin-left: 10px; margin-right: 10px;}
 .tips { width:auto; height: 22px;}
 .videobox {background:#111160;}
-.smallscreen { max-width:16rem; }
-.mainscreen { max-width:32rem;}
 .screen {width:320px; height:auto;max-width:100%;}
 .note {color:#ffffff; background:#FF4081; border-radius: 4px; padding:2px 2px 2px 2px;}
 .button { width: auto; height: 16pt; vertical-align:middle;padding: 2px 2px 2px 2px;background: #f0f0f0;}
-.block { background:#333333; font-style: italic; padding:10px 10px 10px 10px; border-radius: 4px; }
+.block { background:#e9ecef; font-style: italic; padding:10px 10px 10px 10px; border-radius: 4px; }
 .small { font-style: italic; font-size: small; padding:4px 4px 4px 4px; border-radius: 2px; }
 .appstore_download_link { display: block; float: left; width:224px; height:70px; text-indent: -5000px; overflow: hidden; margin-left: 0px; background: url(../images/appstore.png) no-repeat bottom right; }
 .appstore_download_link:hover { background: url(../images/appstore.png) no-repeat top right; }
@@ -58,8 +49,10 @@ th { text-align: center;font-family: 'Lucida Grande', 'Helvetica Neue', Helvetic
 table td { max-width:200px; text-align: left; padding:10px; border: 1px solid #9fa8b5; vertical-align:top;}
 table img { display: block; width:auto;max-width:100%;}
 form { background: #f2f2f2; padding: 10px; }
-footer { color:#687E91;border-top:1px solid #9fa8b5;font-size:small; }
+.carousel .carousel-indicators li { width: 10px; height: 10px; border-radius: 100%; }
+.icon { margin: 0 1em 1em 0;width:96px;height:auto;padding: 4px 4px 4px 4px;border-radius: 4px;-moz-border-radius: 4px;-webkit-border-radius: 4px; vertical-align:center;}
+.small { font-style: italic; font-size: small; color:#000000; padding:4px 4px 4px 4px; border-radius: 2px; }
+footer { color:#687E91;border-top:1px solid #9fa8b5;font-size:small; margin-bottom:40px;}
 footer img { padding-top: 4px; background: #111160;}
-/*Small Device Styles*/
-@media screen and (max-width: 480px) {.bigtitle { font-size: 11.0em;} body { max-width: 32rem; margin-left: 10px;margin-right: 10px;}}
+
 
