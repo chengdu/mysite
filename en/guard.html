@@ -36,7 +36,7 @@
 
     <div class="jumbotron">
         <p><img src="../images/guard/guard7_logo.png" style="width: 120px;" /></p>
-        <h1>Guard7<br><em>Version 1.1 </em></h1>
+        <h1>Guard7<br><em>Version 1.2</em></h1>
         <p class="lead"><b>Guard7</b> is a general purpose cryptography tool that used to encrypt or decrypt email, file, sign and verify files. It is the graphical frontend for the GNU Privacy Guard (GnuPG or GPG, <a href="http://www.gnupg.org">http://www.gnupg.org</a>) on macOS (previously Mac OS X) with additional features. Guard7 is an encryption and decryption system based on industry standard that can ensure the complete security of business negotiations or personal messages. It was developed to make the daily work with GnuPG on <a href="https://www.apple.com/mac/">macOS</a> easy and simple.</p>
     </div>
     
@@ -69,7 +69,7 @@
 
 <ol><li><b>Generate a key pair for yourself.</b><br>
 Click <img src="../images/guard/keys.png" class="icon" /> and the system will generate a public and private key pair for you. You should send the public key to others who can then encrypt message for you. The private key is used to decrypt message and must be keeping for yourself. You SHOULD NOT send your private key to anybody, but keep it for yourself VERY CAREFULLY.<br><br>
-<b>Note: </b>This operation is very time-consuming, please wait about 30 seconds.<br><br>
+<b>Note: </b>This operation is very time-consuming, please wait a while with patient.<br><br>
 </li>
 
 <li><b>Distribute your public key.</b><br>
@@ -256,7 +256,56 @@ You need to import keyring from other system, e.g. Linux, and when backup or cha
 <p><b>Note:</b>  edit key is not necessary in daily usage scenario.</p>
 
 <hr><br>
+<h2>Simple Demonstration Session</h2>
+<p>The following steps emulate a session between two person on a same machine, here assume the two person are Tom and Mary, the steps can help you get an overview understanding of how <b>"Public Key Cryptography"</b> works.</p>
 
+<p><b>Step 1.</b> Create keypair for Tom and Mary:<br><br>
+
+    <b>a.</b> Click <b>"GenKeys"</b> on toolbar to generate a key pair for Tom. <br>
+    <b>b.</b> Select the created key and export Tom's public key and private key. <br>
+    <b>c.</b> Click <b>"GenKeys"</b> on toolbar to generate a key pair for Mary. <br>
+    <b>d.</b> Select the created key and export Mary's public key and private key. <br>
+    Please give the key pair an easily remember password for test only. <br> <br>    
+
+    Now, you have four key files: <br>
+    <em>Tom@compnay_pubkey.asc <br>
+    Tom@compnay_privkey.asc <br>
+    Mary@compnay_pubkey.asc <br>
+    Mary@compnay_privkey.asc </em><br><br>
+
+
+<b>Step 2.</b> Tom create a crypted file with Mary's public key: <br><br>
+
+    <b>a.</b> Right click Tom's public key and then select <b>"Edit Key"</b>,
+       input password and on the prompt dialog select <b>"Primary"</b>,
+       check on <b>"set as your primary key"</b> and click <b>"Set and primary key"</b>. <br>
+    <b>b.</b> Remove all key of Mary from the left side tree view. <br>
+    <b>c.</b> Drag Mary@compnay_pubkey.asc into the left side tree view 
+       to emulate import Mary's public key. <br>
+    <b>d.</b> Drag the Mary's public key imported in the previous step 
+       from left side to the right side table as a <b>Recipients</b>. <br>
+    <b>e.</b> Drag a sample file from Finder into the right side table
+       and then click <b>"Encrypt"</b> on the toolbar to crypt it, 
+       the output file will be a compressed file with a ".gpg" extension name. <br><br>
+
+
+<b>Step 3.</b> Mary decrypt the file with her private key: <br><br>
+
+    <b>a.</b> Remove all key from the left side tree view. <br>
+    <b>b.</b> Drag Mary@compnay_pubkey.asc into the left side tree view 
+       to import Mary's public key. <br>
+    <b>c.</b> Drag Mary@compnay_privkey.asc into the left side tree view 
+       to import Mary's private key. <br>
+    <b>d.</b> Right click Mary's public key and then select <b>"Edit Key"</b>,
+       input password and on the prompt dialog select <b>"Primary"</b>,
+       check on <b>"set as your primary key"</b> and click <b>"Set and primary key"</b>. <br>
+    <b>e.</b> Drag the crypted file output from step 2 and then click <b>"Decrypt"</b> 
+       on the toolbar to decrypt it. <br><br>
+
+</p>
+
+
+<hr><br>
 <h2>Guard7 on Apple App Store</h2>
 <p>This cryptography tool is one of the top best-sales security app on App Store from 2018, thousands of copy have been downloaded from that time and people across the planet use it to protect their confidential information everyday.</p>
 <p><b class="warning">Note: </b> One thing you must know is, they do very bad things on Apple App Store, these gentlemen leaves bad comments on the "rate and comment" of some good apps or vice versa to mislead people, so please judge one app's value by yourself instead of what they said.<br><br>
@@ -284,6 +333,7 @@ You need to import keyring from other system, e.g. Linux, and when backup or cha
   <li>GNU Privacy Guard, <a href="http://www.gnupg.org">http://www.gnupg.org</a>.</li>
   <li>Public key cryptography on Wikipedia, <a href="https://en.wikipedia.org/wiki/Public-key_cryptography">Public-key Cryptography</a>.</li>
 </ol>
+
 
 
 <p><br></p>
