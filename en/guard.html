@@ -271,9 +271,9 @@ You need to import keyring from other system, e.g. Linux, and when backup or cha
 
 <hr><br>
 <h2>Simple Demonstration Session</h2>
-<p>The following steps emulate a session between two person on a same machine, here assume the two person are Tom and Mary, the steps can help you get an overview understanding of how <b>"Public Key Cryptography"</b> works.</p>
+<p>The following steps emulate a session between two person on a same machine, here assume they're Tom and Mary, the steps can help you get an overview understanding of how <b>"Public Key Cryptography"</b> works.</p>
 
-<p><b>Step 1.</b> Create keypair for Tom and Mary:<br><br>
+<p><b>Step 1.</b> Create key pair for Tom and Mary:<br><br>
 
     <b>a.</b> Click <b>"GenKeys"</b> on toolbar to generate a key pair for Tom. <br>
     <b>b.</b> Select the created key and export Tom's public key and private key. <br>
@@ -288,7 +288,7 @@ You need to import keyring from other system, e.g. Linux, and when backup or cha
     Mary@compnay_privkey.asc </em><br><br>
 
 
-<b>Step 2.</b> Tom create a crypted file with Mary's public key: <br><br>
+<b>Step 2.</b> Tom create an encrypted file with Mary's public key: <br><br>
 
     <b>a.</b> Right click Tom's public key and then select <b>"Edit Key"</b>,
        input password and on the prompt dialog select <b>"Primary"</b>,
@@ -299,11 +299,11 @@ You need to import keyring from other system, e.g. Linux, and when backup or cha
     <b>d.</b> Drag the Mary's public key imported in the previous step 
        from left side to the right side table as a <b>Recipients</b>.<br>
     <b>e.</b> Drag a sample file from Finder into the right side table
-       and then click <b>"Encrypt"</b> on the toolbar to crypt it, 
+       and then click <b>"Encrypt"</b> on the toolbar to encrypt it, 
        a compressed file with ".gpg" extension name will be created. <br><br>
 
 
-<b>Step 3.</b> Mary decrypt the file with her private key: <br><br>
+<b>Step 3.</b> Mary decrypt the file with her own private key: <br><br>
 
     <b>a.</b> Remove all key from the left side tree view.<br>
     <b>b.</b> Drag Mary@compnay_pubkey.asc into the left side tree view 
@@ -313,9 +313,8 @@ You need to import keyring from other system, e.g. Linux, and when backup or cha
     <b>d.</b> Right click Mary's public key and then select <b>"Edit Key"</b>,
        input password and on the prompt dialog select <b>"Primary"</b>,
        check on <b>"set as your primary key"</b> and click <b>"Set as primary key"</b> button. <br>
-    <b>e.</b> Drag the crypted file output from step 2 and then click <b>"Decrypt"</b> 
+    <b>e.</b> Drag the encrypted file that output from the step 2 and then click <b>"Decrypt"</b> 
        on the toolbar to decrypt it. <br><br>
-
 </p>
 
 
