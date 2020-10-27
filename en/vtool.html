@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta property="og:title" content="vTool, the small GUI frontend of FFmpeg for macOS.">
+<meta property="og:type" content="product">
+<meta property="og:url" content="http://www.sevenuc.com/">
+<meta property="og:image" content="http://www.sevenuc.com/favicon.ico">
+<meta property="og:site_name" content="Sevenuc Consulting">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1,shrink-to-fit=no">
+<meta name="description" content="vTool, the small GUI frontend of FFmpeg for macOS.">
+<meta name="service" content="Product development and independent consulting services">
+<meta name="author" content="http://www.sevenuc.com/">
+<meta name="keywords" content="ffmpeg,video manipulate,mp4,m4v,mov,mkv,avi,vp8,vp9,mpg,mp3,mp2,aac,ogg,aac,opus,amr,gsm">
+<title>vTool</title>
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/stylesheet.css">
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+<div class="container-fluid">
+    <div class="jumbotron">
+        <p><img src="../images/vtool/logo.png" style="width: 120px;" /></p>
+        <h1>vTool<br><em>Version 1.0</em></h1>
+        <p class="greenbig"><em>The small GUI frontend of FFmpeg for macOS.</em></p>
+        <p class="lead">A small GUI frontend of <a href="https://ffmpeg.org" target="_blank">FFmpeg</a> for macOS. <b>vTool</b> is a small util developed to help end user deal with all kinds of video files in daily life easy and simple. With help of it, extract audio from video, scale video, crop video, merge multiple viedo files together and more, such common video handling tasks vTool only requires you several clicks. vTool can handle common video files including MP4, M4V, MOV, MKV, AVI, VP8, VP9, MPG, and GIF etc, and common audio formats such as MP2, MP3, Ogg, AAC, Opus, Speex, AMR, GSM, Wavpack, and WAV etc. </p>
+    </div>
+
+<p class="greenbig">It's free!</p>
+
+<h2>Common Video Manipulating Tasks</h2>
+<p><ul>
+<li>Fetch video information, such as format, resolution, duration, etc.</li>
+<li>Extract audio from vidio file.</li>
+<li>Extract video segment by start and end time stamp.</li>
+<li>Remove audio from video file.</li>
+<li>Scale video.</li>
+<li>Crop video by offset.</li>
+<li>Merge video segments together.</li>
+<li>Combine video with audio.</li>
+<li>Convert video format.</li>
+<li>Split video into images.</li>
+<li>Convert images into a video.</li>
+<li>Add photo or banner to video.</li>
+<li>Increase or reduce video playback speed.</li>
+<li>...</li>
+</ul></p>
+
+
+<h2>Screenshot</h2>
+<p>
+<a href="../images/vtool/1.png" target="_blank"><img src="../images/vtool/1.png" class="screenshots"/></a><br><br>
+</p>
+
+
+<h2>Flexbility of vTool</h2>
+<p>vTool developed as a simple wrapper of the excellent video handling library - FFmpeg, it can handle arbiregate commands that FFmpeg supported.
+</p>
+
+
+<h2>Configration of FFmpeg</h2>
+<p><pre>
+External libraries:
+appkit                  libdav1d                libmysofa               libspeex                libwebp                 libzvbi
+avfoundation            libfdk_aac              libopencore_amrnb       libtheora               libx264                 securetransport
+bzlib                   libfreetype             libopencore_amrwb       libtwolame              libx265                 zlib
+coreimage               libfribidi              libopenjpeg             libvmaf                 libxavs
+iconv                   libgsm                  libopus                 libvo_amrwbenc          libxml2
+libaom                  libmodplug              librubberband           libvorbis               libxvid
+libbluray               libmp3lame              libsoxr                 libvpx                  libzimg
+
+External libraries providing hardware acceleration:
+audiotoolbox            videotoolbox
+
+Libraries:
+avcodec                 avformat                postproc                swscale
+avfilter                avutil                  swresample
+
+Programs:
+ffmpeg
+
+Enabled decoders:
+aac                     h261                    libopenjpeg             mp3adufloat             png                     webp
+ac3                     h263                    libopus                 mp3float                theora                  wmalossless
+ac3_at                  h263i                   libspeex                mp3on4                  vc1                     wmapro
+ac3_fixed               h263p                   libvorbis               mp3on4float             vp3                     wmav1
+amrnb                   h264                    libvpx_vp8              mpeg1video              vp4                     wmav2
+amrwb                   hevc                    libvpx_vp9              mpeg2video              vp5                     wmavoice
+av1                     libaom_av1              mp2                     mpeg4                   vp6                     wmv1
+flv                     libdav1d                mp2_at                  mpegvideo               vp6a                    wmv2
+g723_1                  libfdk_aac              mp2float                msmpeg4v1               vp6f                    wmv3
+g729                    libgsm                  mp3                     msmpeg4v2               vp7                     wmv3image
+gif                     libopencore_amrnb       mp3_at                  msmpeg4v3               vp8
+gsm                     libopencore_amrwb       mp3adu                  opus                    vp9
+
+Enabled encoders:
+aac                     libgsm                  libspeex                libwebp                 mp2                     png
+h263                    libmp3lame              libtwolame              libx264                 mp2fixed                prores_ks
+h264_videotoolbox       libopencore_amrnb       libvorbis               libx265                 mpeg1video              qtrle
+libaom_av1              libopenjpeg             libvpx_vp8              libxavs                 mpeg4                   vorbis
+libfdk_aac              libopus                 libvpx_vp9              libxvid                 opus                    wavpack
+
+Enabled hwaccels:
+h263_videotoolbox       h264_videotoolbox       hevc_videotoolbox       mpeg1_videotoolbox      mpeg2_videotoolbox      mpeg4_videotoolbox
+
+Enabled parsers:
+aac                     g729                    h263                    mpegaudio               vc1                     webp
+ac3                     gif                     h264                    mpegvideo               vorbis
+av1                     gsm                     mjpeg                   opus                    vp8
+g723_1                  h261                    mpeg4video              png                     vp9
+
+Enabled demuxers:
+aac                     av1                     g726                    image2                  libmodplug              mpegts
+amr                     avi                     g726le                  image2pipe              m4v                     mpegtsraw
+amrnb                   concat                  g729                    image_bmp_pipe          matroska                mpegvideo
+amrwb                   flv                     h261                    image_jpeg_pipe         mov                     ogg
+asf                     g722                    h263                    image_png_pipe          mp3                     vc1
+asf_o                   g723_1                  h264                    image_ppm_pipe          mpegps                  wav
+
+Enabled muxers:
+adts                    g722                    h264                    mov                     mpeg2video              wav
+amr                     g723_1                  image2                  mp2                     mpegts                  webp
+asf                     g726                    image2pipe              mp3                     ogg
+avi                     g726le                  latm                    mp4                     opus
+
+Enabled protocols:
+concat                  file                    pipe
+
+Enabled filters:
+aformat                 channelsplit            copy                    hflip                   remap                   thumbnail
+alphaextract            chromakey               crop                    join                    reverse                 transpose
+alphamerge              chromashift             cropdetect              libvmaf                 rotate                  trim
+anull                   color                   crossfeed               loop                    scale                   vflip
+atrim                   colorkey                fifo                    null                    split                   volume
+channelmap              concat                  format                  overlay                 threshold               volumedetect
+
+Enabled bsfs:
+aac_adtstoasc           extract_extradata       hevc_mp4toannexb        vp9_superframe
+av1_frame_merge         h264_mp4toannexb        null                    vp9_superframe_split
+</pre>
+</p>
+
+<h2>Feedback</h2>
+<p>Please kindly report your feature request or issue on Github: <br>
+<img src="../images/github-logo.png" class="button"> &nbsp;&nbsp; <a href="https://github.com/chengdu/vTool" target="_blank">https://github.com/chengdu/vTool</a>.
+</p>
+
+
+<p><br><br><br><br></p>
+</div>
+
+
+
+<footer>
+    <div class="row">
+        <div class="col-md-6">
+            <p>
+            <a href="http://www.sevenuc.com"><img src="http://www.sevenuc.com/images/logo.svg" class="logo"></a><span><p class="copyright">
+   <span class="copyright"> © 2006-2020 Sevenuc Consulting <br>All rights reserved.</span>
+            </p>
+        </div>
+        <div class="col-md-6 text-md-right">
+            <a href="http://www.sevenuc.com/en/about.html" class="text-dark">About</a> 
+            <span class="text-muted mx-2">|</span> 
+            <a href="http://www.sevenuc.com/en/apps.html" class="text-dark">Apps</a>
+                <span class="text-muted mx-2">|</span>
+                <a href="http://www.sevenuc.com/en/service.html" class="text-dark">Service</a>
+                <span class="text-muted mx-2">|</span>
+                <a href="http://www.sevenuc.com/en/contact.html" class="text-dark">Contact</a>
+                
+        </div>
+    </div>
+</footer>
+	
+	
+</div><!-- container-fluid -->
+</body>
+</html>
