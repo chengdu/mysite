@@ -28,7 +28,7 @@
         <p><img src="../images/vtool/logo.png" style="width: 120px;" /></p>
         <h1>vTool<br><em>Version 1.0</em></h1>
         <p class="greenbig"><em>The small video manipulating tool.</em></p>
-        <p class="lead">A small GUI frontend of <a href="https://ffmpeg.org" target="_blank">FFmpeg</a> for macOS. <b>vTool</b> is a small util developed to help end user deal with all kinds of video files in daily life easy and simple. With help of it, extract audio from video, scale video, crop video, merge multiple video files together, and more such common video handling tasks, can be accomplished by several clicks. vTool can handle common video files including MP4, M4V, MOV, MKV, AVI, VP8, VP9, MPG, and GIF etc, and common audio formats such as MP2, MP3, Ogg, AAC, Opus, Speex, AMR, GSM, Wavpack, and WAV etc.</p>
+        <p class="lead">A small GUI frontend of <a href="https://ffmpeg.org" target="_blank">FFmpeg</a> for macOS. <b>vTool</b> is a small util developed to help people deal with all kinds of video files in daily life easy and simple. With help of it, extract audio from video, scale video, crop video, merge multiple video files together, and more such common video handling tasks, can be accomplished by several clicks. vTool can handle common video files including MP4, M4V, MOV, MKV, FLV, WMV, AVI, VP8, VP9, MPEG, and GIF etc, and common audio formats such as MP2, MP3, Ogg, FLAC, AAC, Opus, Speex, AMR, GSM, Wavpack, and WAV etc.</p>
     </div>
 
 <p class="greenbig">It's free!</p>
@@ -62,14 +62,16 @@
 
 <h2>Configration of FFmpeg</h2>
 <p><pre>
+
+
 External libraries:
-appkit                  libdav1d                libmysofa               libspeex                libwebp                 libzvbi
-avfoundation            libfdk_aac              libopencore_amrnb       libtheora               libx264                 securetransport
-bzlib                   libfreetype             libopencore_amrwb       libtwolame              libx265                 zlib
-coreimage               libfribidi              libopenjpeg             libvmaf                 libxavs
-iconv                   libgsm                  libopus                 libvo_amrwbenc          libxml2
-libaom                  libmodplug              librubberband           libvorbis               libxvid
-libbluray               libmp3lame              libsoxr                 libvpx                  libzimg
+appkit                  libdav1d                libmp3lame              libsoxr                 libvorbis               libxml2
+avfoundation            libfdk_aac              libmysofa               libspeex                libvpx                  libxvid
+bzlib                   libfreetype             libopencore_amrnb       libtheora               libwebp                 libzimg
+coreimage               libfribidi              libopencore_amrwb       libtwolame              libx264                 libzvbi
+iconv                   libgsm                  libopenjpeg             libuavs3d               libx265                 securetransport
+libaom                  libilbc                 libopus                 libvmaf                 libxavs                 zlib
+libbluray               libmodplug              librubberband           libvo_amrwbenc          libxavs2
 
 External libraries providing hardware acceleration:
 audiotoolbox            videotoolbox
@@ -82,63 +84,81 @@ Programs:
 ffmpeg
 
 Enabled decoders:
-aac                     h261                    libopenjpeg             mp3adufloat             png                     webp
-ac3                     h263                    libopus                 mp3float                theora                  wmalossless
-ac3_at                  h263i                   libspeex                mp3on4                  vc1                     wmapro
-ac3_fixed               h263p                   libvorbis               mp3on4float             vp3                     wmav1
-amrnb                   h264                    libvpx_vp8              mpeg1video              vp4                     wmav2
-amrwb                   hevc                    libvpx_vp9              mpeg2video              vp5                     wmavoice
-av1                     libaom_av1              mp2                     mpeg4                   vp6                     wmv1
-flv                     libdav1d                mp2_at                  mpegvideo               vp6a                    wmv2
-g723_1                  libfdk_aac              mp2float                msmpeg4v1               vp6f                    wmv3
-g729                    libgsm                  mp3                     msmpeg4v2               vp7                     wmv3image
-gif                     libopencore_amrnb       mp3_at                  msmpeg4v3               vp8
-gsm                     libopencore_amrwb       mp3adu                  opus                    vp9
+aac                     avs                     libfdk_aac              mp1float                msmpeg4v1               wavpack
+ac3                     bmp                     libgsm                  mp2                     msmpeg4v2               webp
+ac3_at                  flac                    libgsm_ms               mp2_at                  msmpeg4v3               wmalossless
+ac3_fixed               flv                     libilbc                 mp2float                opus                    wmapro
+adpcm_g722              g723_1                  libopencore_amrnb       mp3                     pcm_s16le               wmav1
+adpcm_g726              g729                    libopencore_amrwb       mp3_at                  png                     wmav2
+adpcm_g726le            gif                     libopenjpeg             mp3adu                  theora                  wmavoice
+adpcm_ima_qt            gsm                     libopus                 mp3adufloat             vc1                     wmv1
+adpcm_ima_qt_at         h261                    libspeex                mp3float                vp3                     wmv2
+adpcm_ima_wav           h263                    libuavs3d               mp3on4                  vp4                     wmv3
+adpcm_ms                h263i                   libvorbis               mp3on4float             vp5                     wmv3image
+adpcm_psx               h263p                   libvpx_vp8              mpc7                    vp6                     zlib
+adpcm_swf               h264                    libvpx_vp9              mpc8                    vp6a
+adpcm_yamaha            hevc                    libzvbi_teletext        mpeg1video              vp6f
+amrnb                   jpeg2000                mjpeg                   mpeg2video              vp7
+amrwb                   libaom_av1              mp1                     mpeg4                   vp8
+av1                     libdav1d                mp1_at                  mpegvideo               vp9
 
 Enabled encoders:
-aac                     libgsm                  libspeex                libwebp                 mp2                     png
-h263                    libmp3lame              libtwolame              libx264                 mp2fixed                prores_ks
-h264_videotoolbox       libopencore_amrnb       libvorbis               libx265                 mpeg1video              qtrle
-libaom_av1              libopenjpeg             libvpx_vp8              libxavs                 mpeg4                   vorbis
-libfdk_aac              libopus                 libvpx_vp9              libxvid                 opus                    wavpack
+aac                     libfdk_aac              libspeex                libx264                 mp2                     prores_ks
+bmp                     libgsm                  libtwolame              libx265                 mp2fixed                qtrle
+h263                    libmp3lame              libvorbis               libxavs                 mpeg1video              vorbis
+h264_videotoolbox       libopencore_amrnb       libvpx_vp8              libxvid                 mpeg4                   wavpack
+jpeg2000                libopenjpeg             libvpx_vp9              ljpeg                   opus
+libaom_av1              libopus                 libwebp                 mjpeg                   png
 
 Enabled hwaccels:
 h263_videotoolbox       h264_videotoolbox       hevc_videotoolbox       mpeg1_videotoolbox      mpeg2_videotoolbox      mpeg4_videotoolbox
 
 Enabled parsers:
-aac                     g729                    h263                    mpegaudio               vc1                     webp
-ac3                     gif                     h264                    mpegvideo               vorbis
-av1                     gsm                     mjpeg                   opus                    vp8
-g723_1                  h261                    mpeg4video              png                     vp9
+aac                     avs3                    gif                     jpeg2000                opus                    vp3
+aac_latm                bmp                     gsm                     mjpeg                   png                     vp8
+ac3                     flac                    h261                    mpeg4video              pnm                     vp9
+av1                     g723_1                  h263                    mpegaudio               vc1                     webp
+avs2                    g729                    h264                    mpegvideo               vorbis
 
 Enabled demuxers:
-aac                     av1                     g726                    image2                  libmodplug              mpegts
-amr                     avi                     g726le                  image2pipe              m4v                     mpegtsraw
-amrnb                   concat                  g729                    image_bmp_pipe          matroska                mpegvideo
-amrwb                   flv                     h261                    image_jpeg_pipe         mov                     ogg
-asf                     g722                    h263                    image_png_pipe          mp3                     vc1
-asf_o                   g723_1                  h264                    image_ppm_pipe          mpegps                  wav
+aac                     avs2                    gif                     image_jpegls_pipe       matroska                mpegvideo
+ac3                     avs3                    h261                    image_pbm_pipe          mjpeg                   mpjpeg
+amr                     concat                  h263                    image_pcx_pipe          mjpeg_2000              ogg
+amrnb                   flac                    h264                    image_pgm_pipe          mov                     rawvideo
+amrwb                   flv                     image2                  image_pgmyuv_pipe       mp3                     swf
+asf                     g722                    image2pipe              image_png_pipe          mpc                     vc1
+asf_o                   g723_1                  image_bmp_pipe          image_ppm_pipe          mpc8                    wav
+av1                     g726                    image_gif_pipe          image_webp_pipe         mpegps                  xwma
+avi                     g726le                  image_j2k_pipe          libmodplug              mpegts                  yuv4mpegpipe
+avs                     g729                    image_jpeg_pipe         m4v                     mpegtsraw
 
 Enabled muxers:
-adts                    g722                    h264                    mov                     mpeg2video              wav
-amr                     g723_1                  image2                  mp2                     mpegts                  webp
-asf                     g726                    image2pipe              mp3                     ogg
-avi                     g726le                  latm                    mp4                     opus
+adts                    g726                    mjpeg                   mpeg1vcd                mpegts                  smjpeg
+amr                     g726le                  mov                     mpeg1video              mpjpeg                  wav
+asf                     h264                    mp2                     mpeg2dvd                ogg                     webp
+avi                     image2                  mp3                     mpeg2svcd               opus                    yuv4mpegpipe
+g722                    image2pipe              mp4                     mpeg2video              segment
+g723_1                  latm                    mpeg1system             mpeg2vob                singlejpeg
 
 Enabled protocols:
 concat                  file                    pipe
 
 Enabled filters:
-aformat                 channelsplit            copy                    hflip                   remap                   thumbnail
-alphaextract            chromakey               crop                    join                    reverse                 transpose
-alphamerge              chromashift             cropdetect              libvmaf                 rotate                  trim
-anull                   color                   crossfeed               loop                    scale                   vflip
-atrim                   colorkey                fifo                    null                    split                   volume
-channelmap              concat                  format                  overlay                 threshold               volumedetect
+acopy                   amerge                  color                   fps                     nullsink                thumbnail
+adelay                  anull                   colorkey                framepack               nullsrc                 transpose
+aecho                   aresample               concat                  framerate               overlay                 trim
+aemphasis               areverse                copy                    framestep               remap                   vflip
+afade                   atrim                   crop                    hflip                   reverse                 volume
+afifo                   channelmap              cropdetect              join                    rotate                  volumedetect
+aformat                 channelsplit            crossfeed               libvmaf                 scale
+alphaextract            chromakey               fifo                    loop                    split
+alphamerge              chromashift             format                  null                    threshold
 
 Enabled bsfs:
 aac_adtstoasc           extract_extradata       hevc_mp4toannexb        vp9_superframe
 av1_frame_merge         h264_mp4toannexb        null                    vp9_superframe_split
+
+
 </pre>
 </p>
 
