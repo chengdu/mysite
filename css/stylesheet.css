@@ -46,6 +46,7 @@ hr { margin-bottom: 5px; border: 1px dotted #9fa8b5; }
 .appstore_download_link:hover { background: url(../images/appstore.png) no-repeat top right; }
 table { border: 1px solid #9fa8b5; margin-bottom: 10px; text-align: left; border-spacing: 0; border-collapse: collapse;}
 th { text-align: center;font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif; padding: 10px; border: 1px solid #9fa8b5;}
+table { max-width: 100%;}
 table td { max-width:200px; text-align: left; padding:10px; border: 1px solid #9fa8b5; vertical-align:top;}
 table img { display: block; width:auto;max-width:100%;}
 form { background: #f2f2f2; padding: 10px; }
