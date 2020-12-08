@@ -30,7 +30,7 @@ ltab { margin-left: 20px; }
 .smallicon { height:32px; width:auto; vertical-align:middle;margin-right:10px;}
 .treasure { color: rgba(255, 0, 255, 0.5); font-size: 11px;font-style: italic; font-weight: bold; background: none; }
 b, strong, .hilight {font-weight: bold;}
-.warning {color:red; font-weight: bold;}
+.warning {color:#ffc8c8; font-weight: bold;}
 i, em {font-style: italic; }
 img { background: rgba(0, 0, 0, 0);border-width: 0px;max-width: 100%;}
 hr { margin-bottom: 5px; border: 1px dotted #9fa8b5; }
