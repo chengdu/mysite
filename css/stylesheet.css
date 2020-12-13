@@ -7,17 +7,19 @@
 */
 
 @charset "UTF-8";
-
-h1, h2, h3, h4, h5, h6 { font-weight: 700; text-shadow: 1px 1px #444; color: #687E91; display: block;}
+body { background:#1a2024; }
+html, body, button, input, select, textarea{font-family: sans-serif;font-size: 14px;color: #5f5c52}
+h1, h2, h3, h4, h5, h6 { font-weight: 700; text-shadow: 1px 1px #444; color: #423f37; display: block;}
 .logo {height:42px;width:auto;vertical-align:middle;margin-top:4px;margin-right:10px;border: 1px rgba(255,255,255,0.6) solid;}
 .logo:hover  { border: 1px #FFFFFF solid; }
 .headerimg { padding: 10px 10px 10px 10px;background: #f0f0f0;border: 1px rgba(255,255,255,0.6) solid; border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px;}
 pre { background: #e9ecef;max-width:100%; padding:4px 4px 4px 4px;line-break: auto;}
 lt {color:#007f00;}
 .none {  padding:0;  margin: 0; }
-.dark {color:#b397db;/*#303000*/ font-size: 12px;}
+.dark {color:#7577a0;/*#303000*/ font-size: 12px;} /* #b397db */
 .red {color:#cce619;}
-.greenbig {color: #007f00;font-size:1.2em;}
+.greenbig {color: #007f00;font-weight: 600;}
+.hilight {color: #b397db;font-weight: 600;}
 .green, gr, lt { color: #007f00;font-weight: bold;} /*rgb(0,255,0);*/
 ltab { margin-left: 20px; }
 .donate { font-style: italic; font-size: small; color:#007f00;}
@@ -40,8 +42,8 @@ hr { margin-bottom: 5px; border: 1px dotted #9fa8b5; }
 .screen {width:320px; height:auto;max-width:100%;}
 .note {color:#ffffff; background:#FF4081; border-radius: 4px; padding:2px 2px 2px 2px;}
 .button { width: auto; height: 16pt; vertical-align:middle;padding: 2px 2px 2px 2px;background: #f0f0f0;}
-.block { background:#e9ecef; font-style: italic; padding:10px 10px 10px 10px; border-radius: 4px; }
-.small { font-style: italic; font-size: small; padding:4px 4px 4px 4px; border-radius: 2px; }
+pre, .block { background:#22293c; color:#7577a0; font-style: italic; padding:10px 10px 10px 10px; border-radius: 4px; }
+.small { font-style: italic; font-size: small; padding:4px 4px 4px 4px; border-radius: 2px; color:#7577a0;}
 .appstore_download_link { display: block; float: left; width:224px; height:70px; text-indent: -5000px; overflow: hidden; margin-left: 0px; background: url(../images/appstore.png) no-repeat bottom right; }
 .appstore_download_link:hover { background: url(../images/appstore.png) no-repeat top right; }
 table { border: 1px solid #9fa8b5; margin-bottom: 10px; text-align: left; border-spacing: 0; border-collapse: collapse;}
@@ -52,7 +54,6 @@ table img { display: block; width:auto;max-width:100%;}
 form { background: #f2f2f2; padding: 10px; }
 .carousel .carousel-indicators li { width: 10px; height: 10px; border-radius: 100%; }
 .icon { margin: 0 1em 1em 0;width:96px;height:auto;padding: 4px 4px 4px 4px;border-radius: 4px;-moz-border-radius: 4px;-webkit-border-radius: 4px; vertical-align:center;}
-.small { font-style: italic; font-size: small; color:#000000; padding:4px 4px 4px 4px; border-radius: 2px; }
 footer { color:#687E91;border-top:1px solid #9fa8b5;font-size:small; margin-bottom:40px;}
 footer img { padding-top: 4px; background: #111160;}
 
