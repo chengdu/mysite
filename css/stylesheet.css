@@ -22,6 +22,7 @@ lt {color:#007f00;}
 .hilight {color: #b397db;font-weight: 600;}
 .green, gr, lt { color: #007f00;font-weight: bold;} /*rgb(0,255,0);*/
 ltab { margin-left: 20px; }
+a:link { color: #6799ff; }
 .donate { font-style: italic; font-size: small; color:#007f00;}
 .bigtitle { font-size: 17.0em;}
 .strike {text-decoration: line-through;}
