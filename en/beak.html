@@ -26,14 +26,23 @@
 
     <div class="jumbotron">
         <p><img src="../images/beak/beak_logo.png" style="width: 120px;" /></p>
-        <h1>Beak <br><em>Version 1.1 </em></h1>
+        <h1>Beak <br><em>Version 1.2</em></h1>
         <p class="lead">
+The small C and C++ Obfuscator.<br>
 <b>Beak</b> is a small tool that can be used to lose weight of your source code, and generate obfuscated C and C++ source code by default. It was originally developed to reduce binary size of software used in embedded system but has an expected result made it became to a security tool that can hide symbol names in your software. All user defined symbols can be hidden and replaced by very short tokens results that the compiled final binary will be smaller than its normal compiling. The symbol names includes namespace, class name, function definitions etc. Beak is very small and the obfuscator itself was written with ANSI C (C89) from scratch, cross-platform, operation system and processor independent.</p>
     </div>
     
+<h2>General features</h2>
+<ul>
+<li>Parse all macros, global variables, constants, structure and member, class, and function definitions, and replace them with very short tokens.</li>
+<li>The generated source code will still be located in its original line so that comparing to the original source code line by line become very easy.</li>
+<li>All comments kept in its original position to improve the readability.</li>
+<li>High performance, fast parse large projects that contains hundreds of source code files.</li>
+</ul>
+
 
 <h2>Result</h2>
-<ul><li>Smaller binary</li>
+<ul><li>Smaller binary.</li>
 <li>Hide symbol names in binary, function call, API call in binary, hide the concrete implementation, and what techniques used in your software.</li>
 <li>Improve difficulty for reverse engineering (decompile).</li></ul>
 
@@ -52,13 +61,6 @@
      <li>When the process completed, all replaced symbols will be listed in tokens.txt under the target directory.</li>
 </ol>
 
-<h2>General features</h2>
-<ul>
-<li>Parse all macros, global variables, constants, structure and member, class, and function definitions.</li>
-<li>The generated source code will still be located in its original line so that comparing to the original source code line by line become very easy.</li>
-<li>All comments kept in its original position to improve the readability.</li>
-<li>Fast parse large projects that have hundreds of files.</li>
-</ul>
 
 <h2>Example</h2>
 <p>Here, minimising the compiled size of SQLite as an example:<br>
@@ -78,6 +80,7 @@ Platform: macOS Sierra</p>
 <p><a href="https://itunes.apple.com/us/app/beak/id1337625630?mt=12" target="_blank" class="appstore_download_link"><img src="../images/available_on_macappstore.png" > </a></p><br><br><br><br><br><br>
 <p>If you can't open the link above, please launch App Store and found Beak by searching.</p>
 <br>
+
 
 <h2>Advanced Usage</h2>
 <!-- If you need to filter a large number of predefined symbols of a huge system (e.g Linux kernel) but can't handled by the current version -->
