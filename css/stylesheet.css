@@ -35,7 +35,7 @@ a:link { color: #6799ff; }
 b, strong, .hilight {font-weight: bold;}
 .warning {color:#ffc8c8; font-weight: bold;}
 i, em {font-style: italic; }
-img { background: rgba(0, 0, 0, 0);border-width: 0px;max-width: 100%;}
+img { background-color: transparent;border-width: 0px;max-width: 100%;}
 hr { margin-bottom: 5px; border: 1px dotted #9fa8b5; }
 .screenshots { max-width:100%; height:auto;margin-left: 10px; margin-right: 10px;}
 .tips { width:auto; height: 22px;}
