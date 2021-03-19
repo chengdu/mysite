@@ -17,6 +17,9 @@
 <title>Beak, the ultra small C and C++ obfuscator.</title>
 <link rel="stylesheet" href="../css/bootstrap.min.css">
 <link rel="stylesheet" href="../css/stylesheet.css">
+<style type="text/css">
+table, p, pre, li { max-width: 714px; }
+</style>
 <script src="../js/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 </head>
@@ -26,12 +29,12 @@
 
     <div class="jumbotron">
         <p><img src="../images/beak/beak_logo.png" style="width: 120px;" /></p>
-        <h1>Beak <br><em>Version 1.2</em></h1>
+        <h1>Beak<br><em>Version 1.2</em></h1>
         <p class="lead">
-The small C and C++ Obfuscator.<br>
-<b>Beak</b> is a small tool that can be used to lose weight of your source code, and generate obfuscated C and C++ source code by default. It was originally developed to reduce binary size of software used in embedded system but has an expected result made it became to a security tool that can hide symbol names in your software. All user defined symbols can be hidden and replaced by very short tokens results that the compiled final binary will be smaller than its normal compiling. The symbol names includes namespace, class name, function definitions etc. Beak is very small and the obfuscator itself was written with ANSI C (C89) from scratch, cross-platform, operation system and processor independent.</p>
+<span class="green">The small C and C++ Obfuscator.</span><br>
+<b>Beak</b> is a small tool that can be used to lose weight of your source code, and generate obfuscated C and C++ source code by default. It was originally developed to reduce binary size of software running in embedded systems. All user defined symbols can be replaced by very short tokens results that the compiled final binary will be smaller than its normal compiling. Beak is very small and the obfuscator itself was written with ANSI C (C89) from scratch, cross-platform, operation system and processor independent.</p>
     </div>
-    
+
 <h2>General features</h2>
 <ul>
 <li>Parse all macros, global variables, constants, structure and member, class, and function definitions, and replace them with very short tokens.</li>
@@ -44,22 +47,91 @@ The small C and C++ Obfuscator.<br>
 <h2>Result</h2>
 <ul><li>Smaller binary.</li>
 <li>Hide symbol names in binary, function call, API call in binary, hide the concrete implementation, and what techniques used in your software.</li>
-<li>Improve difficulty for reverse engineering (decompile).</li></ul>
+<li>Add difficulty for reverse engineering (decompile).</li></ul>
+
+<h2>Support Languages</h2>
+<p>Beak was designed as a C and C++ Obfuscator, and for the programming languages that suitable be used in embedded systems including: <br>
+Ada, Lisp, Lua, Forth, Tcl, Basic, Erlang, Ruby, Rust, Python, JavaScript, Java, C#. <br><br>
+Beak can also deal with the following common programming languages, and be used to obfuscate source code files but not for binary size reducing in most situations:<br>
+Asm, Asp, AWK,  CMake, COBOL, Cuda, D, DosBatch, Eiffel,  Fortran, F#, Go, Html, Matlab, Objective-C, OCaml, PHP,  Pascal, Perl, Perl6, PostScript, Prolog,  R, Rexx, Rst, SQL, Scheme, Shell, Slang, SystemVerilog, TypeScript, VHDL,  Vera, Verilog.
+<br><br>
+</p>
+
 
 <h2>Screenshots:</h2>
-<p><a href="../images/beak/screenshot.png" target="_blank"><img src="../images/beak/screenshot.png" class="screenshots"></a></p>
+<p><a href="../images/beak/screenshot.png" target="_blank"><img src="../images/beak/screenshot.png" class="screenshots" style="width: 480px;"></a></p>
+
 
 <h2>Convert Source Code</h2>
 <ol>
-     <li>Drag your project folder into <b>Beak</b> from Finder.</li>
-     <li>Click the folder icon to select a target directory where the output files will be placed in it. E.g:<br>
-      <b>Target directory</b>: /Users/username/Desktop.<br>
-      <b>Output directory</b>: /Users/username/Desktop/projectname-lt (lt means lite).
+     <li>Drag your project folder into <b>Beak</b> from Finder or open your souce code folder from menu "Open..." or "Open Recent".</li>
+     <li>Click <b>"Target Folder"</b> button to select a target directory, the output files will be placed there. E.g:<br>
+      Target directory: /Users/username/Desktop<br>
+      Output directory: /Users/username/Desktop/projectname-lt (lt means lite)
      </li>
      <li>Select one of the programming languages from the toolbar for your source code.</li>
-     <li>Click the <b>"Start"</b> button on the toolbar to start the conversion.</li>
+     <li>(Optional) click menu <b>"Append Symbols"</b>: open a palin text file that contains symbold difinitions these will be appened for replacing.</li>
+     <li>(Optional) click menu <b>"Exluded Symbols"</b>: open a palin text file that contains symbold difinitions these will be exluded for replacing.</li>
+     <li>Click the <b>"Start"</b> button on the toolbar to start the converting process.</li>
      <li>When the process completed, all replaced symbols will be listed in tokens.txt under the target directory.</li>
 </ol>
+<p><b>Extranal Symbol Files</b>:<br>
+On Step 4 and Step 5, the file content written line by line, each line holding one symbol, and line starts with "#" will be ignored (comment line).<br><br>
+<b>Checking source code</b>: Sometime the generated C or C++ code can't be directly compiled after above steps, e.g some symbols defined in Makefile required to replace with the short tokens generated in tokens.txt, and some C and C++ macros can't be found, so in such situation, these macro names should be replaced with the short tokens in tokens.txt manually when complier say they're "undeclared identifier".
+</p>
+
+
+<h2>Add a new file type for symbol parser</h2>
+<p>
+Open "/Applications/Beak.app/Contents/Resources/FileExtensions.plist", and carefully add the file extension name in it, e.g let Beak parse all .mli as Ocaml source code file:<br>
+<pre>
+  &lt;key&gt;F# - OCaml&lt;/key&gt;
+  &lt;array&gt;
+  &lt;string&gt;ml&lt;/string&gt;
+  &lt;string&gt;<span class="warning">mli</span>&lt;/string&gt;
+  &lt;/array&gt;
+</pre>
+</p>
+
+<p>
+By default, Beak only parse file types defined in FileExtensions.plist by file extensions for the selected programming language, you can append more file types for a language by this approach.
+</p>
+
+
+<h2>C and C++ Standards</h2>
+<p>
+C: C89, C90, C99, C11.<br>
+C++: C++98, C++11, C++14, C++17, C++20.
+</p>
+
+<h2>Inside the C and C++ Obfuscator</h2>
+<p>
+Step 1: generate all user defined symbols in the source code directory.<br>
+Step 2: generate shorter tokens for the user defined symbols.<br>
+Step 3: replace user defined symbols with the generated shorter tokens in source code files.<br>
+Step 4: report all replaced tokens.<br>
+</p>
+
+<h2>Built-in token database</h2>
+<p>It's seems very simple at the first glance of the obfuscator, but it's inside is complex actually. When scan source code files, Beak must detect the parsed token is whether a keeping keyword (token) or not, and ignore it by query a built-in token database, the database was created by very time-consuming works that described as the following sections.
+</p>
+
+
+<p><b>Content of the built-in token database</b>:<br>
+The built-in token database of Beak includes several part of tokens generated from different sources.<br>
+1: C and C++ keywords for the language standards: e.g. auto, break, case, const, default, do, while, else ...<br>
+2: C and C++ preprocessor keywords: <br>
+such as __cplusplus, DEBUG, NDEBUG, RELEASE, __MACH__, __x86_64, __PIC__, __SSE2__, __weak__attribute__, __GNUC__, __VERSION__, __INT_MAX__, _M_IX86, __INT16_MAX__, __APPLE__, __clang__, __OBJC__, __FILE__, __LINE__, __FUNCTION__, __DATE__, __TIME__, ... <br>
+3: Standard library functions, including stdlib, glib, libcxx, openmp, libunwind, STL, Boost etc: <br>
+INT_MAX, INT_MIN, int32_t, stderr , atan, ceilf, atol, feof, fflush, fgetc, gets, ftell, memset, rand, qsort, strtok, vsprintf , tmpnam, wcscpy, time, tm, ...<br>
+4: Compilers' tokens.<br>
+5: System tokens used by operation system.
+</p>
+
+
+<h2>Short tokens generation algorithm</h2>
+<p>Beak uses a very special algorithm to generate very short token to replace user defined symbols, the algorithm referred URL shorting algorithm but these algorithms were not adopted directly.
+</p>
 
 
 <h2>Example</h2>
@@ -68,7 +140,7 @@ SQLite version: 3.20.1<br>
 Executable: 64-bit x86_64<br>
 Platform: macOS Sierra</p>
 
-<table style="width: 100%;">
+<table>
 <tr><th>Version</th><th>Source size</th><th>Complied size</th><th>Note</th></tr>
 <tr><td>1</td><td>9.3 MB</td><td>1.4 MB</td><td>original version, shell executable without TCL extension.</td></tr>
 <tr><td>2</td><td>1.7 MB</td><td>741 KB</td><td>with C API wrapper, without TCL extension, without FTS, rtree, rbu, icu, session.</td></tr>
@@ -83,10 +155,10 @@ Platform: macOS Sierra</p>
 
 
 <h2>Advanced Usage</h2>
-<!-- If you need to filter a large number of predefined symbols of a huge system (e.g Linux kernel) but can't handled by the current version -->
-<p>If you need to support a new programming language, please contact us.</p>
-<p><br></p>
+<p>Please drop us a message if your software required high security or your source code needs to be obfuscated, or you requires Beak to support a new programming language.
+</p>
 
+<p><br></p>
 
 
 <footer>
