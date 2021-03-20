@@ -36,7 +36,7 @@ b, strong, .hilight {font-weight: bold;}
 .warning {color:#ffc8c8; font-weight: bold;}
 i, em {font-style: italic; }
 img { background-color: transparent;border-width: 0px;max-width: 100%;}
-hr { margin-bottom: 5px; border: 1px dotted #9fa8b5; }
+hr { margin-bottom: 5px; border: 1px dotted #9fa8b5; max-width: 714px; margin: 0 0 0 0;}
 .screenshots { max-width:100%; height:auto;margin-left: 10px; margin-right: 10px;}
 .tips { width:auto; height: 22px;}
 .videobox {background:#111160;}
@@ -55,6 +55,8 @@ table img { display: block; width:auto;max-width:100%;}
 form { background: #f2f2f2; padding: 10px; }
 .carousel .carousel-indicators li { width: 10px; height: 10px; border-radius: 100%; }
 .icon { margin: 0 1em 1em 0;width:96px;height:auto;padding: 4px 4px 4px 4px;border-radius: 4px;-moz-border-radius: 4px;-webkit-border-radius: 4px; vertical-align:center;}
+.jumbotron, .lead { margin: 0 0 0 0; padding: 0 0 1em 0}
+h1, h2, p, pre, li, .block, .block2 { max-width: 714px; }
 footer { color:#687E91;border-top:1px solid #9fa8b5;font-size:small; margin-bottom:40px;}
 footer img { padding-top: 4px; background: #111160;}
 
