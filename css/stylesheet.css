@@ -1,15 +1,24 @@
 /*!
-* stylesheet.css v0.0.2
+* stylesheet.css v1.0.21
 *
-* Copyright 2006 Sevenuc Consulting
+* Copyright 2006-2021 Sevenuc Consulting
 * http://www.sevenuc.com
 *
 */
 
+/*************************************************************************************/
+/***  Copyright Notice                                                             ***/
+/***  This colour scheme was originally created by Sevenuc Consulting              ***/
+/***                                                                               ***/
+/***  THIS FILE IS PART OF THE WEBSITE SEVENUC.COM, WITHOUT THE WRITTEN PERMISSION ***/
+/***  OF THE AUTHOR THIS FILE MAY NOT BE USED FOR ANY COMMERCIAL PRODUCT.          ***/
+/*************************************************************************************/
+
+
 @charset "UTF-8";
 body { background:#1a2024; }
-html, body, button, input, select, textarea{font-family: sans-serif;font-size: 14px;color: #5f5c52}
-h1, h2, h3, h4, h5, h6 { font-weight: 700; text-shadow: 1px 1px #444; color: #423f37; display: block;}
+html, body, button, input, select, textarea{font-family: sans-serif;font-size: 14px;color: #9aaeb5}
+h1, h2, h3, h4, h5, h6 { font-weight: 700; text-shadow: 1px 1px #444; color: #6799ff; display: block;}
 .logo {height:42px;width:auto;vertical-align:middle;margin-top:4px;margin-right:10px;border: 1px rgba(255,255,255,0.6) solid;}
 .logo:hover  { border: 1px #FFFFFF solid; }
 .headerimg { padding: 10px 10px 10px 10px;background: #f0f0f0;border: 1px rgba(255,255,255,0.6) solid; border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px;}
@@ -22,7 +31,7 @@ lt {color:#007f00;}
 .hilight {color: #b397db;font-weight: 600;}
 .green, gr, lt { color: #007f00;font-weight: bold;} /*rgb(0,255,0);*/
 ltab { margin-left: 20px; }
-a:link { color: #6799ff; }
+.footer-link, a:link { color: #604dac; }
 .donate { font-style: italic; font-size: small; color:#007f00;}
 .bigtitle { font-size: 17.0em;}
 .strike {text-decoration: line-through;}
@@ -56,7 +65,7 @@ form { background: #f2f2f2; padding: 10px; }
 .carousel .carousel-indicators li { width: 10px; height: 10px; border-radius: 100%; }
 .icon { margin: 0 1em 1em 0;width:96px;height:auto;padding: 4px 4px 4px 4px;border-radius: 4px;-moz-border-radius: 4px;-webkit-border-radius: 4px; vertical-align:center;}
 .jumbotron, .lead { margin: 0 0 0 0; padding: 0 0 1em 0}
-h1, h2, p, pre, li, .block, .block2 { max-width: 714px; }
+h1, h2, p, pre, li, .block, .block2, .carousel { max-width: 714px; }
 footer { color:#687E91;border-top:1px solid #9fa8b5;font-size:small; margin-bottom:40px;}
 footer img { padding-top: 4px; background: #111160;}
 
