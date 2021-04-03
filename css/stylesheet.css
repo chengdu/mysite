@@ -21,6 +21,10 @@ html, body, button, input, select, textarea{font-family: sans-serif;font-size: 1
 h1, h2, h3, h4, h5, h6 { font-weight: 700; text-shadow: 1px 1px #444; color: #6799ff; display: block;}
 .logo {height:42px;width:auto;vertical-align:middle;margin-top:4px;margin-right:10px;border: 1px rgba(255,255,255,0.6) solid;}
 .logo:hover  { border: 1px #FFFFFF solid; }
+a:link { color: #604dac; }
+/*a:hover { text-decoration: none; }*/
+/*a:focus { text-decoration: underline; }*/
+a:visited { color: #336699; }
 .headerimg { padding: 10px 10px 10px 10px;background: #f0f0f0;border: 1px rgba(255,255,255,0.6) solid; border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px;}
 pre { background: #e9ecef;max-width:100%; padding:4px 4px 4px 4px;line-break: auto;}
 lt {color:#007f00;}
