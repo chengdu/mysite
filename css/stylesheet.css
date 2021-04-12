@@ -49,8 +49,8 @@ b, strong, .hilight {font-weight: bold;}
 .warning {color:#ffc8c8; font-weight: bold;}
 i, em {font-style: italic; }
 img { background-color: transparent;border-width: 0px;max-width: 100%;}
-hr { margin-bottom: 5px; border: 1px dotted #9fa8b5; max-width: 714px; margin: 0 0 0 0;}
-.screenshots { max-width:100%; height:auto;margin-left: 10px; margin-right: 10px;}
+hr { border: 1px dotted #9fa8b5; max-width: 714px; margin-left: 0px;}
+.screenshots { max-width:100%; height:auto;margin-left: 10px; margin: 0 0 10 0; }
 .tips { width:auto; height: 22px;}
 .videobox {background:#111160;}
 .screen {width:320px; height:auto;max-width:100%;}
