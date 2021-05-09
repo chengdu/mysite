@@ -183,6 +183,67 @@ b. Click menu: "Command" → "Syntax Checking &amp; Run".<br>
 </p>
 
 
+<h2>Add a New Colour Scheme</h2>
+&nbsp;&nbsp;&nbsp;&nbsp;scheme boilerplate:<br>
+<div class="block">
+# 1. file must be UTF-8 encoding<br>
+# 2. line starts with character '#' is comment<br>
+# 3. colour string must be a valid hex value of HTML colour<br>
+#&nbsp;&nbsp;&nbsp;&nbsp;and starts with character '#' and a ':'(colon) following the keyword<br>
+# 4. file extension must be 'txt'<br>
+# 5. line ending must be '\n'<br><br>
+
+text: #abb2bf<br>
+background: #282c34<br>
+current line: #dcc6e0<br>
+selection: #61aeee<br>
+invisibles: #c0c0c0<br>
+cursor: #d08770<br>
+attributes: #98c379<br>
+variables: #d19a66<br>
+comments: #5c6370<br>
+strings: #98c379<br>
+keywords: #c678dd<br>
+tags: #e06c75<br>
+predefined: #e6c07b<br>
+blocks: #a3be8c<br>
+tree view background: #282c34<br>
+tree view text: #abb2bf<br>
+number: #abb2bf<br>
+</div>
+</p>
+
+<p>Please save the above content as a plain text file, e.g schemeX.txt, and directly edit the colour values to fit a new style, and then put it under the following directory:<br>
+<lt>~/Library/Application Scripts/com.sevenuc.spearepro/colorschemes/</lt><br>
+<span>Please create the directory if it does not exists.</span><br><br>
+</p>
+
+
+<h2>Code Formatter/Code Beautifier</h2>
+<p><b>Supported languages</b>:<br>
+a. C, C++, Objective‑C, C#, Java (built-in support).<br>
+b. Ruby, Lua, Python, Perl, PHP, Tcl, Swift, JavaScript, Shell scripts, Dart, Go and Rust.<br>
+  (located in the formatters directory, and requires some configuration to let them correctly working)<br><br>
+<b>Location of formatters:</b><br>
+<lt>~/Library/Application Scripts/com.sevenuc.SpeareHelper/formatters/</lt><br>
+<span>Please create the directory if it does not exists.</span><br><br>
+
+<i>Ensure the formatters can be correctly working, you should take a look at above directory, the built-in formatters:<br>
+<lt>a. js.sh:</lt> check Node.js installed and can be accessed from command line.<br>
+<lt>b. go.sh:</lt> check Go installed and can be accessed from command line.<br>
+<lt>c. php.sh:</lt> check PHP installed and can be accessed from command line.<br>
+<lt>d. rust.sh:</lt> check Rust and rustfmt installed and can be accessed from command line.<br>
+<lt>e. tcl.sh:</lt> check Tcl installed and can be accessed from command line.<br>
+<lt>f. dart.sh:</lt> check Dart and dartfmt installed and can be accessed from command line.<br><br>
+
+
+<b><i>Note: </i></b><br>
+a. Python code formatter alternative:  <a href="https://github.com/psf/black" target="_blank"> https://github.com/psf/black</a><br>
+b. JavaScript and TypeScript code formatter alternative: <a href="https://github.com/prettier/prettier" target="_blank"> https://github.com/prettier/prettier</a>, it also can format CSS, SCSS, Markdown, HTML, JSON, YAML, JSX, Flow, Less, Angular, Vue, and GraphQL. <br>
+c. <i>The selected code block is complete or has logical begin and end border then the formatter can generate better output.</i>
+</p>
+
+
 <h2>Integrated development environment</h2>
 <p>Speare code editor can easily integrate building tools, code analysis tools and continue deploy tools. You can run different tasks in Speare code editor instantly, such as automatic compile (run makefile, CMake, Ant tasks etc), building and packing, or run static code analysis tools (source code analyzer, such as PC-Lint, clang-analyzer, PHPLint, OCLint, SwiftLint, and PMD etc), unit testing tools, memory leak detection tools such as Valgrind, performance analysis tools, code style check tools, and any other tasks. Speare code editor provides you complete freedom to extend the editor to satisfy special requirements of your development environment. 
 </p>
