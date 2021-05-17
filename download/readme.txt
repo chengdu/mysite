@@ -2,7 +2,7 @@ Speare Debug Server v1.0
 (c) http://sevenuc.com
 
 This is the Lua debugger for Speare code editor:
-http://sevenuc.com/en/Speare.html
+http://sevenuc.com/en/speare.html
 
 Package source: 
 http://sevenuc.com/download/debugger.tar.gz

@@ -9,11 +9,9 @@
 # BE USED FOR ANY COMMERCIAL PRODUCT.
 # 
 # More info: 
-#    http://sevenuc.com/en/Speare.html
-# Contact:
-#    Sevenuc support <info@sevenuc.com>
-# Issue report and requests pull:
-#    https://github.com/chengdu/Speare
+#    http://sevenuc.com/en/speare.html
+# 
+
 
 
 # This script convert all C and C++ source code files under a special directory 

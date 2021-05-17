@@ -1,7 +1,7 @@
 #.speareignore
 
-# The folder and files defined in this file will not be displayed
-# in the left side TreeView (Source Explorer) of Speare code editor.
+# The folder and files defined in this file will not 
+# displayed in the workspace of Speare code editor.
 
 # 1. exclude directories by folder name (must end with /)
 # someFoler/
