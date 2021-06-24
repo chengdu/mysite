@@ -37,7 +37,7 @@ w {color:#ffc8c8; font-weight: bold;}
 
 <h2 class="dark">What's new</h2>
 <p class="dark">1. Highlighting files that has no extension name by recognise it's Shebang, i.e. the first line of the text file.<br>
-2. Fast editing arbitrary files in parallel text views. "Parallel Editing" allows user stick one file in the bottom view and switch different files in the top view. 
+2. Fast editing arbitrary files in parallel text views. "Parallel Editing" is a productive feature that allows user stick one file in the bottom view and switch different files in the top view.
 </p>
 
 <!--p class="greenbig">It's free!</p-->
@@ -57,7 +57,7 @@ w {color:#ffc8c8; font-weight: bold;}
 <p><ul>
 <li>Ultra lightweight.</li>
 <li>Well designed workspace management. Intuitive and concise.</li>
-<li>High performance when managing large amount of files and big files.</li>
+<li>High performance when managing large amount of files.</li>
 <li>Fast search and replace in current document, selected folder, opened files and entire project.</li>
 <li>Smoothly edit multiple files that written in different programming languages simultaneously.</li>
 <li>Supports 90+ programming languages syntax highlighting and parsing.</li>
@@ -86,10 +86,8 @@ Screenshot of <a href="https://sqlite.org/" target="_blank">SQLite</a> source co
 <h2>Fast edit several files separately</h2>
 <p>Just drag the file one by one from Finder and drop into workspace, edit them and then right-click to "Remove All".</p>
 
-
 <h2>Fast edit several files in big folder</h2>
 <p>Just drag the folder into workspace never mind how big it is and then edit several files never mind what the programming language they were written, fast editing them with the <b>"Auto-completion"</b> feature provided by Speare code editor.</p>
-
 
 <h2>Code editor on iPad</h2>
 <p>If you want to edit source code files on iPad, or review code on iPad, please refer another app developed by me, <a href="powerreader.html">iCodeEditor</a>, an integrated code editor for iPad. Sorry, it's not free.</p>
@@ -97,7 +95,6 @@ Screenshot of <a href="https://sqlite.org/" target="_blank">SQLite</a> source co
 <h2>Code editor and IDE on macOS</h2>
 <p class="small">Terminal based on text editors such as GNU Emacs and Vim, although they are very cool, but their limitations are also obvious, the elephant in the room. As a programmer, so many text editor I've used in the past years, such as the bulky cargos, Visual Studio Code, Atom, Android Studio, Eclipse, ActiveState Komodo, Xcode, NetBeans, Eclipse, and some light cargos, e.g Textadept, CotEditor and TextMate. I never like desktop applications that built with NodeJS, React and Electron, Eclipse and Java or .NET and C# based big stuffs. Speare code editor is a small, free and friendly code editor which implements the most important missing features in common code editors, e.g bookmark management, parallel editing, instant diff and fast locate code lines between multiple files, code block live parsing etc.
 </p>
-
 
 <table><tr><td>No.</td><td> Name </td><td> Size </td> <td>No.</td><td> Name </td><td> Size </td>  </tr>
 <tr><td>1</td><td>Speare    1.2.56 </td><td> 5.6MB </td> <td>7</td> <td>Visual Studio Code (bare system) 1.36.1 </td><td> 211MB </td></tr>
@@ -107,7 +104,6 @@ Screenshot of <a href="https://sqlite.org/" target="_blank">SQLite</a> source co
 <tr><td>5</td><td>Lazarus (without FreePascal compiler and source packages) 2.0.8</td><td>200.9MB</td> <td>11</td><td>Eclipse IDE   4.12 </td><td>400MB ~ 5GB</td></tr>
 <tr><td>6</td><td>ZeroBraneStudio  6.0</td><td> 602.1MB </td> <td>12</td><td>Xcode      10.0 </td><td> 12GB</td></tr>
 </table>
-
 
 <h2>The technology choices to make a code editor and IDE on macOS</h2>
 <table><tr><th>No.</th><th>Name</th><th>Pros</th><th>Cons</th></tr>
@@ -121,7 +117,6 @@ Screenshot of <a href="https://sqlite.org/" target="_blank">SQLite</a> source co
 <tr><td>8</td><td>Native Cocoa</td><td>Mature, reliable, high performance</td><td>Best frameworks to build macOS app</td></tr>
 </table>
 <p>Speare code editor was developing based on the native pure Cocoa frameworks with leveraging several C library results a very small footprint, high performance, small memory and storage runtime consuming, and ultra small distribution. Only 1.1MB executable!</p>
-
 
 <h2>Why not big software?</h2>
 <p>Waste time to maintain, wast big storage and runtime memory, waste energy, waste time to upload and download. It's waste people's life! Every desktop developer should known one thing, the embedded system developers sometime even fighting for one byte of storage in some situation. They never think about memory and storage like embedded system developers, so more and more big monster there. In today's software industry, Unix philosophy has been throw away completely!</p>
@@ -153,13 +148,12 @@ Screenshot of <a href="https://sqlite.org/" target="_blank">SQLite</a> source co
 2. Use "Functions" to fast find the location of function definitions.<br>
 3. Use "Bookmarks" to fast find the bookmarks placed for editing locations.<br>
 4. Search symbol references and fast find the location of the reference points.<br>
-5. Use parallel editing to fast edit files.<br>
+5. Use "Parallel Editing" to fast edit files.<br>
 6. Drag file or folder in the workspace to re-arrange their positions.<br>
 7. Search items in the workspace.<br>
 8. Use "Jump To Definition" to find the reference points, and click "Go Back" to return to jump point.<br>
 9. Use "Changes" to fast find file changes.
 </p>
-
 
 <h2>Fast Editing</h2>
 <p>Speare developed as an ultra light code editor that completely leverage "Keyboard shortcuts" for fast editing. Keyboard shortcuts instead of "moving mouse and click" can notably improve code editing experience. Real programmer use keyboard shortcuts as a habit constantly. Real programmer use and write command line applications as a habit constantly. Keyboard shortcuts can help people fast move focus between workspace and text editor, and fast switch between running apps such as Debug Server, Fossil, Web browser and Speare. 
@@ -212,9 +206,7 @@ number: #abb2bf<br>
 </div>
 </p>
 
-<p>Please save the above content as a plain text file, e.g schemeX.txt, and directly edit the colour values to fit a new style, and then put it under the following directory:<br>
-<lt>~/Library/Application Scripts/com.sevenuc.spearepro/colorschemes/</lt><br>
-<span>Please create the directory if it does not exists.</span><br><br>
+<p>Please save the above content as a plain text file, e.g schemeX.txt, and directly edit the colour values to fit a new style.
 </p>
 
 <h2>Code Formatter/Code Beautifier</h2>
@@ -222,9 +214,6 @@ number: #abb2bf<br>
 a. C, C++, Objective‑C, C#, Java (built-in support).<br>
 b. Ruby, Lua, Python, Perl, PHP, Tcl, Swift, JavaScript, Shell scripts, Dart, Go and Rust.<br>
   (located in the formatters directory, and requires some configuration to let them correctly working)<br><br>
-<b>Location of formatters:</b><br>
-<lt>~/Library/Application Scripts/com.sevenuc.SpeareHelper/formatters/</lt><br>
-<span>Please create the directory if it does not exists.</span><br><br>
 
 <i>Ensure the formatters can be correctly working, you should take a look at above directory, the built-in formatters:<br>
 <lt>js.sh:</lt> check Node.js installed and can be accessed from command line.<br>
@@ -233,11 +222,6 @@ b. Ruby, Lua, Python, Perl, PHP, Tcl, Swift, JavaScript, Shell scripts, Dart, Go
 <lt>rust.sh:</lt> check Rust and rustfmt installed and can be accessed from command line.<br>
 <lt>tcl.sh:</lt> check Tcl installed and can be accessed from command line.<br>
 <lt>dart.sh:</lt> check Dart and dartfmt installed and can be accessed from command line.<br><br>
-
-<b><i>Note: </i></b><br>
-a. Python code formatter alternative:  <a href="https://github.com/psf/black" target="_blank"> https://github.com/psf/black</a><br>
-b. JavaScript and TypeScript code formatter alternative: <a href="https://github.com/prettier/prettier" target="_blank"> https://github.com/prettier/prettier</a>, it also can format CSS, SCSS, Markdown, HTML, JSON, YAML, JSX, Flow, Less, Angular, Vue, and GraphQL. <br>
-c. <i>The selected code block is complete or has logical begin and end border then the formatter can generate better output.</i>
 </p>
 
 <h2>Integrated development environment</h2>
