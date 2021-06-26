@@ -18,7 +18,7 @@
 @charset "UTF-8";
 
 html { height: 100%;}
-body { background:#1a2024; margin-left: auto; margin-right: auto; margin-bottom: 50px; }
+body { background: #1a2024; color: #fff; margin-left: auto; margin-right: auto; margin-bottom: 50px; }
 html, body, button, input, select, textarea { font-family: sans-serif; font-size: 14px;color: #9aaeb5}
 h1, h2, h3, h4, h5, h6 { font-weight: 700; text-shadow: 1px 1px #444; color: #6799ff; display: block;}
 .logo {height:42px;width:auto;vertical-align:middle;margin-top:4px;margin-right:10px;border: 1px rgba(255,255,255,0.6) solid;}
