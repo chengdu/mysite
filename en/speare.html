@@ -36,8 +36,8 @@ w {color:#ffc8c8; font-weight: bold;}
     </div>
 
 <h2 class="dark">What's new</h2>
-<p class="dark">1. Highlighting files that has no extension name by recognise it's Shebang, i.e. the first line of the text file.<br>
-2. Fast editing arbitrary files in parallel text views. "Parallel Editing" is a productive feature that allows user stick one file in the bottom view and switch different files in the top view.
+<p class="dark">1. Highlighting files that has no extension name by recognising it's Shebang.<br>
+2. Parallel editing mode: fast editing arbitrary files in parallel text views, most important feature.
 </p>
 
 <!--p class="greenbig">It's free!</p-->
@@ -79,8 +79,10 @@ w {color:#ffc8c8; font-weight: bold;}
 
 
 <h2>Screenshot</h2>
-<p><a href="../images/speare/debug_sqlite_with_speare_code_editor.png" target="_blank"><img src="../images/speare/debug_sqlite_with_speare_code_editor.png" class="screenshots"/></a><br>
-Screenshot of <a href="https://sqlite.org/" target="_blank">SQLite</a> source code "Parallel Editing" in Speare code editor.
+<p><a href="../images/speare/debug_sqlite_with_speare_code_editor.png" target="_blank"><img src="../images/speare/debug_sqlite_with_speare_code_editor.png" class="screenshots"/></a><br><br>
+Screenshot of <a href="https://sqlite.org/" target="_blank">SQLite</a> source code "Parallel Editing" in Speare code editor, "Parallel Editing" mode allows user stick one file in the bottom view and switch different files in the top view.<br><br>
+
+Using .diff files with the help of "Parallel Editing" mode has obvious advantage, copy code blocks in the bottom text view and fast switch different files in the top text view can efficiently edit files very fast, and Speare can index .diff files for big file changes very well comparing to other code editor and IDEs.
 </p>
 
 <h2>Fast edit several files separately</h2>
@@ -155,6 +157,7 @@ Screenshot of <a href="https://sqlite.org/" target="_blank">SQLite</a> source co
 9. Use "Changes" to fast find file changes.
 </p>
 
+
 <h2>Fast Editing</h2>
 <p>Speare developed as an ultra light code editor that completely leverage "Keyboard shortcuts" for fast editing. Keyboard shortcuts instead of "moving mouse and click" can notably improve code editing experience. Real programmer use keyboard shortcuts as a habit constantly. Real programmer use and write command line applications as a habit constantly. Keyboard shortcuts can help people fast move focus between workspace and text editor, and fast switch between running apps such as Debug Server, Fossil, Web browser and Speare. 
 </p>
@@ -206,7 +209,7 @@ number: #abb2bf<br>
 </div>
 </p>
 
-<p>Please save the above content as a plain text file, e.g schemeX.txt, and directly edit the colour values to fit a new style.
+<p>Please save the above content as a plain text file, e.g schemeX.txt, and directly edit the colour values to fit a new style, then put it under the colorschemes directory.
 </p>
 
 <h2>Code Formatter/Code Beautifier</h2>
@@ -217,10 +220,10 @@ b. Ruby, Lua, Python, Perl, PHP, Tcl, Swift, JavaScript, Shell scripts, Dart, Go
 
 <i>Ensure the formatters can be correctly working, you should take a look at above directory, the built-in formatters:<br>
 <lt>js.sh:</lt> check Node.js installed and can be accessed from command line.<br>
-<lt>go.sh:</lt> check Go installed and can be accessed from command line.<br>
 <lt>php.sh:</lt> check PHP installed and can be accessed from command line.<br>
 <lt>rust.sh:</lt> check Rust and rustfmt installed and can be accessed from command line.<br>
 <lt>tcl.sh:</lt> check Tcl installed and can be accessed from command line.<br>
+<lt>go.sh:</lt> check Go installed and can be accessed from command line.<br>
 <lt>dart.sh:</lt> check Dart and dartfmt installed and can be accessed from command line.<br><br>
 </i></p>
 
