@@ -78,7 +78,7 @@ Watches used to evaluate variable or expression and their values can be real-tim
 <h2>Debugger Architecture</h2>
 <a href="../images/speare/debugger.png" target="_blank"><img src="../images/speare/debugger.png" class="screenshots"/></a><br>
 <p><lt><i>A free small IDE for C, C++, Ruby, mruby, Lua, Python, PHP, Perl and Tcl.</i></lt></p>
-<p>Proposed debugging environment support in Speare code editor are: GDB, LLDB, Ruby, mruby, Lua, Python, Perl, PHP, Tcl, Node.js, Java, Dart, AWK and shell. Speare code editor provides very concise and simple interface to add new programming language in it, end user can very easily write a new programming language parser, syntax highlighting, code formatter and debugger for it.</p>
+<p>Proposed debugging environment support in Speare code editor are: GDB, LLDB, Ruby, mruby, Lua, Python, Perl, PHP, Tcl, Node.js, Dart, AWK and shell. Speare code editor provides very concise and simple interface to add new programming language in it, end user can very easily write a new programming language parser, syntax highlighting, code formatter and debugger for it.</p>
 
 <h2>Debugging code with Speare code editor</h2>
 <p>Speare code editor provides an intuitive debugging environment allows adding breakpoints and the execution flow can be viewed and controlled and has the abilities that an IDE debugger will give you over trace execution in code, view the call stack at any point in time, giving you a context for your current stack frame, step into libraries or sub modules that you want to tracing the debug symbols, and change variable values while the program is running. It provides simple interfaces that can be integrated with any command line tools without boring configuration, giving you the flexibility you need to debug code at hand. The debuggers of Speare code editor, the source-level debuggers, helps you step through the code line by line and observe the runtime behaviour of your program and got a better understanding of your code.
@@ -86,13 +86,23 @@ Watches used to evaluate variable or expression and their values can be real-tim
 
 <p>
 <a href="../images/speare/debug_wordpress_in_speare_code_editor.png" target="_blank"><img src="../images/speare/debug_wordpress_in_speare_code_editor.png" class="screenshots"/></a><br>
-Speare code editor is a small PHP IDE well-supported all kinds of PHP development, the above is a screenshot of debugging <a href="https://wordpress.org/" target="_blank">WordPress</a> in Speare code editor.
+Speare code editor is a small PHP IDE that well support all kinds of PHP development, from PHP 5.x to PHP 7.x, framework based on big projects or common command line applications, the above is a screenshot of debugging <a href="https://wordpress.org/" target="_blank">WordPress</a> in Speare code editor.
 </p>
 
-<h2>Ruby Debuggers</h2>
-<p>Speare supports debugging all kinds of Ruby development, mruby/c and mruby, Ruby and Ruby on Rails, please refer this document <a href="http://www.sevenuc.com/download/Small_IDE_for_Ruby_development.pdf" target="_blank">http://www.sevenuc.com/download/Small_IDE_for_Ruby_development.pdf</a>.<br><br>
 
-<b>mruby debuggers for <a href="https://mruby.org/" target="_blank">mruby</a></b>, the lightweight implementation of the Ruby programming language:<br>
+<h2>Lua Debugger</h2>
+<p>Speare code editor provides an ultra lightweight debugging environment for C, C++ and <a href="https://www.lua.org/" target="_blank">Lua</a>. As a small but productive Lua IDE, Speare well supports all kinds of Lua development with concise and intuitive user interface, and can seamlessly debug C and C++ modules with Lua code in the same environment. The Lua debugger of Speare supports all common versions of Lua and LuaJIT, and you can directly replace the Lua interpreter with your self-compiled version, the version range includes from 5.1.4 and 5.1.5 to 5.2.4, 5.3.5, 5.3.6, and 5.4.2, the download link is here:<br>
+
+<a href="http://www.sevenuc.com/download/lua_debugger.tar.gz">http://www.sevenuc.com/download/lua_debugger.tar.gz (801KB)</a><br>
+(SHA256: b43ccdb91b86ec9e479670f1b2916e9e9c49eb7a6cc5192f2ba87525f751b861)<br><br>
+
+Speare code editor support various game engine and frameworks, such as the LÖVE 2D, Moai open source game engine, the Gideros mobile game platform, the Corona 2D game engine, the Marmalade game engine, the Cocos2d and cocos2d-x game engine, the OpenResty Nginx web server and the Lapis web framework, the high performance Prosody instant message server, the Torch machine learning framework, and the Redis open source database etc.
+<br><br></p>
+
+
+<h2>Ruby Debugger</h2>
+<p>Speare supports debugging all kinds of Ruby development, mruby/c and mruby, Ruby and Ruby on Rails, please refer this document <a href="http://www.sevenuc.com/download/Small_IDE_for_Ruby_development.pdf" target="_blank">http://www.sevenuc.com/download/Small_IDE_for_Ruby_development.pdf</a>.
+The built-in mruby debugger of Speare full supports <a href="https://mruby.org/" target="_blank">mruby</a> development, the lightweight implementation of the Ruby programming language.<br><br>
 <a href="http://www.sevenuc.com/download/mruby_debugger_2.0.1.tar.gz">mruby_debugger_2.0.1.tar.gz</a> (362KB) for mruby 2.0.1<br>
 (SHA256: 203cab73bd11a4996c6909be2ce5ceae7e3c6cc61708b4bef362ca0586495c45)<br>
 <a href="http://www.sevenuc.com/download/mruby_debugger_2.1.0.tar.gz">mruby_debugger_2.1.0.tar.gz</a> (370KB) for mruby 2.1.0<br>
@@ -104,6 +114,20 @@ Speare code editor is a small PHP IDE well-supported all kinds of PHP developmen
 </p>
 
 
+<div style="display:none;">
+<h2>Python Debugger</h2>
+<p>The Python debugger of Speare code editor supports Python version 2.5, 2.6, 2.7 and 3.x, and MicroPython. You can enjoy debugging Python scripts as same as debugging web applications that based on web frameworks such as Flask and Django under the lightweight environment of Speare code editor.<br><br>
+<gr>Switch Python Interpreter</gr><br>
+You can directly switch CPython interpreter to MicroPython or your own self-compiled version of Python, or others such as PyPy, Jython and IronPython.
+</p>
+
+
+<h2>Tcl Debugger</h2>
+<p>The Tcl debugger of Speare code editor supports all kinds of Tcl development, from embedded systems to common desktop app to web applications, you can debug Tcl code and C and C++ modules for Tcl in the same lightweight debugging environment with efficient code editing and debugging capability.
+</p>
+</div>
+
+<br><br>
 <h2>About Software Industry</h2>
 <p>They obviously know a technology is garbage, a project shouldn't be started, but they don’t have enough courage to admit the mistake, correct the mistake, cancel the project and abandon that technology.
 On the contrary, they not only want to recover their cost, they even drag customers into big mud puddle and even promote their big lies to make money.<br>
