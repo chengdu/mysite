@@ -27,6 +27,7 @@ a:link { color: #604dac; }
 /*a:hover { text-decoration: none; }*/
 /*a:focus { text-decoration: underline; }*/
 a:visited { color: #336699; }
+/*.jumbotron img { float: left; margin-right:1em; } */
 .headerimg { padding: 10px 10px 10px 10px;background: #f0f0f0;border: 1px rgba(255,255,255,0.6) solid; border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px;}
 pre { background: #e9ecef;max-width:100%; padding:4px 4px 4px 4px;line-break: auto;}
 lt {color:#007f00;}
