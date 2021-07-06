@@ -26,26 +26,26 @@
 
     <div class="jumbotron">
         <p><img src="../images/Tungsyu/logo.png" style="width: 120px;" /></p>
-        <h1>Tungsyu<br><em>Version 1.3.7 </em></h1>
+        <h1>Tungsyu<br><em>Version 1.3.7</em></h1>
         <p class="greenbig">Tungsyu, the Calendar of Yangtze River.</p>
     </div>
 
-<p>Tungsyu was developed with an ultra small lunar calendar engine especially designed for deeply embedded systems, it's only 72KB binary without any other dependencies except C standard library. It was completely developed with ANSI C from scratch and can be compiled with C89 or C99. The engine is a full range calendar (means thousands of years) that can fast calulate julian calendar and gregorian calendar to lunar calendar or vice versa. It can be used in microprocessor based on embedded system and desktop apps. Please contact us if you want to use it in your product. The following is a screenshot of the engine.</p>
+<p>Tungsyu was developed with an ultra small lunar calendar engine especially designed for deeply embedded systems, it's only 72KB binary without any extra data and dependencies except C standard library. It was completely developed with ANSI C from scratch and can be compiled with C89 or C99. The engine is a full range calendar (means thousands of years) that can fast calulate julian calendar and gregorian calendar to lunar calendar or vice versa. It can be used in microprocessor based on embedded system and desktop apps. Please contact us if you want to use it in your product. The following is a screenshot of the engine.</p>
 <p><!--img src="../images/Tungsyu/lunar_calendar.png" class="screenshots"/-->
 <pre class="block">
  % ./calendar
-   2021年 觜火猴(土)  肖牛    辛丑    四月 心月狐(土)
- 1 星期四 木曜日 井木犴 建日 牧羊座 2021年二月二十 辛卯月己卯日
- 2 星期五 金曜日 鬼金羊 除日 牧羊座 2021年二月廿一 辛卯月庚辰日
- 3 星期六 土曜日 柳土獐 滿日 牧羊座 2021年二月廿二 辛卯月辛巳日
- 4 星期日 日曜日 星日馬 滿日 牧羊座 2021年二月廿三 辛卯月壬午日 清明
- 5 星期一 月曜日 張月鹿 平日 牧羊座 2021年二月廿四 辛卯月癸未日
- 6 星期二 火曜日 翼火蛇 定日 牧羊座 2021年二月廿五 辛卯月甲申日 寒食
- 7 星期三 水曜日 軫水蚓 執日 牧羊座 2021年二月廿六 辛卯月乙酉日
- 8 星期四 木曜日 角木蛟 破日 牧羊座 2021年二月廿七 辛卯月丙戌日
- 9 星期五 金曜日 亢金龍 危日 牧羊座 2021年二月廿八 辛卯月丁亥日
-10 星期六 土曜日 氐土貉 成日 牧羊座 2021年二月廿九 辛卯月戊子日
-11 星期日 日曜日 房日兔 收日 牧羊座 2021年二月三十 辛卯月己丑日
+2021年 觜火猴(土)  肖牛    辛丑    四月 心月狐(土)
+ 1 星期四 木曜日 井木犴 閉日 牧羊座 2021年二月二十 辛卯月己卯日
+ 2 星期五 金曜日 鬼金羊 建日 牧羊座 2021年二月廿一 辛卯月庚辰日
+ 3 星期六 土曜日 柳土獐 除日 牧羊座 2021年二月廿二 辛卯月辛巳日
+ 4 星期日 日曜日 星日馬 除日 牧羊座 2021年二月廿三 辛卯月壬午日 清明
+ 5 星期一 月曜日 張月鹿 滿日 牧羊座 2021年二月廿四 辛卯月癸未日
+ 6 星期二 火曜日 翼火蛇 平日 牧羊座 2021年二月廿五 辛卯月甲申日 寒食
+ 7 星期三 水曜日 軫水蚓 定日 牧羊座 2021年二月廿六 辛卯月乙酉日
+ 8 星期四 木曜日 角木蛟 執日 牧羊座 2021年二月廿七 辛卯月丙戌日
+ 9 星期五 金曜日 亢金龍 破日 牧羊座 2021年二月廿八 辛卯月丁亥日
+10 星期六 土曜日 氐土貉 危日 牧羊座 2021年二月廿九 辛卯月戊子日
+11 星期日 日曜日 房日兔 成日 牧羊座 2021年二月三十 辛卯月己丑日
 12 星期一 月曜日 心月狐 開日 牧羊座 2021年三月初一 壬辰月庚寅日
 13 星期二 火曜日 尾火虎 閉日 牧羊座 2021年三月初二 壬辰月辛卯日
 14 星期三 水曜日 箕水豹 建日 牧羊座 2021年三月初三 壬辰月壬辰日
@@ -54,51 +54,35 @@
 17 星期六 土曜日 女土蝠 平日 牧羊座 2021年三月初六 壬辰月乙未日
 18 星期日 日曜日 虛日鼠 定日 牧羊座 2021年三月初七 壬辰月丙申日
 19 星期一 月曜日 危月燕 執日 牧羊座 2021年三月初八 壬辰月丁酉日
-20 星期二 火曜日 室火豬 破日 金牛座 2021年三月初九 壬辰月戊戌日 穀雨
-21 星期三 水曜日 壁水貐 危日 金牛座 2021年三月初十 壬辰月己亥日
-22 星期四 木曜日 奎木狼 成日 金牛座 2021年三月十一 壬辰月庚子日
-23 星期五 金曜日 婁金狗 收日 金牛座 2021年三月十二 壬辰月辛丑日
-24 星期六 土曜日 胃土雉 開日 金牛座 2021年三月十三 壬辰月壬寅日
-25 星期日 日曜日 昴日雞 閉日 金牛座 2021年三月十四 壬辰月癸卯日
-26 星期一 月曜日 畢月烏 建日 金牛座 2021年三月十五 壬辰月甲辰日
-27 星期二 火曜日 觜火猴 除日 金牛座 2021年三月十六 壬辰月乙巳日
-28 星期三 水曜日 參水猿 滿日 金牛座 2021年三月十七 壬辰月丙午日
-29 星期四 木曜日 井木犴 平日 金牛座 2021年三月十八 壬辰月丁未日
-30 星期五 金曜日 鬼金羊 定日 金牛座 2021年三月十九 壬辰月戊申日
+20 星期二 火曜日 室火豬 執日 金牛座 2021年三月初九 壬辰月戊戌日 穀雨
+21 星期三 水曜日 壁水貐 破日 金牛座 2021年三月初十 壬辰月己亥日
+22 星期四 木曜日 奎木狼 危日 金牛座 2021年三月十一 壬辰月庚子日
+23 星期五 金曜日 婁金狗 成日 金牛座 2021年三月十二 壬辰月辛丑日
+24 星期六 土曜日 胃土雉 收日 金牛座 2021年三月十三 壬辰月壬寅日
+25 星期日 日曜日 昴日雞 開日 金牛座 2021年三月十四 壬辰月癸卯日
+26 星期一 月曜日 畢月烏 閉日 金牛座 2021年三月十五 壬辰月甲辰日
+27 星期二 火曜日 觜火猴 建日 金牛座 2021年三月十六 壬辰月乙巳日
+28 星期三 水曜日 參水猿 除日 金牛座 2021年三月十七 壬辰月丙午日
+29 星期四 木曜日 井木犴 滿日 金牛座 2021年三月十八 壬辰月丁未日
+30 星期五 金曜日 鬼金羊 平日 金牛座 2021年三月十九 壬辰月戊申日
 </pre></p>
 
 
 <p><a href="https://itunes.apple.com/us/app/tungsyu/id1457444475?mt=12" target="_blank" class="appstore_download_link" ><img src="../images/available_on_macappstore.png" style="margin-left:1em;"> </a></p><br><br><br><br>
 <p>If you can't open the link above, please launch App Store and found Tungsyu by searching.</p>
 
-<p><img src="../images/Tungsyu/Yangtze_River.jpg" class="screenshots"/></p>
+<p><img src="../images/Tungsyu/Yangtze_River.jpg" class="screenshots"/><br>
+The map of Yangtze River.
+</p>
 
 <h2>Screenshots</h2>
 <p>
 <a href="../images/Tungsyu/0422.png" target="_blank"><img src="../images/Tungsyu/0422.png" class="screenshots"></a><br>
 </p>
 
-<p class="lead"><i><b>「通書」</b> 一個為提供農曆相關資訊查詢而特意開發的工具軟體。 <br>
-使用該工具可非常便捷地進行西曆和農曆之對照，及農曆相關資訊查詢。</i></p>
-
-
-<h2><i>查詢</i></h2>
-<p><i>1. 系統默認顯示今日之農曆資訊。</i></p>
-<p><i>2. 逐月、逐年及按特定年月查詢:<br>
-<ul><li>點擊 <img src="../images/Tungsyu/m-.png" class="button" /> 可逐月返回上一月之農曆資訊，若達正月，則返回上一年十二月。</li>
-<li>點擊 <img src="../images/Tungsyu/m+.png" class="button" /> 可逐月返回下一月之農曆資訊，若達十二月，則返回下一年正月。</li>
-<li>點擊 <img src="../images/Tungsyu/y-.png" class="button" /> 可逐年返回上一年該月之農曆資訊。</li>
-<li>點擊 <img src="../images/Tungsyu/y+.png" class="button" /> 可逐年返回下一年該月之農曆資訊。</li>
-<li>點擊 <img src="../images/Tungsyu/home.png" class="button" /> 可回至今日，系統會自動選上並輸出今日之資訊。</li>
-<li>輸入特定年月，則可直接對特定年月進行查詢。</li>
-</ul></i></p>
-<p><i>3. 點擊特定日，系統則更新該日之詳細資訊。</i></p>
-<p><i>4. 點擊"列印"，系統則將所選月之農曆資訊列印至一張卡片。</i></p>
-<p><i>5. 右鍵點擊  → 有節日之日，則可查看該節日之描述。</i></p>
-
-
-<h2><i>引用</i></h2>
-<p><i><a href="taihaa.html">Taihaa「睇哈」</a>, 娛樂性質的嚴肅命理分析工具。 (High accuracy fate telling app, a serious app developed just for fun.)</i></p>
+<p><br><br></p>
+<h2><i>References</i></h2>
+<p><i><a href="taihaa.html">Taihaa</a>, the high accuracy fate telling app, a serious app developed just for fun.</i></p>
 
 <p><audio autoplay loop preload="none"><source src="../audio/bamboo.mp3" type="audio/mpeg" /></audio></p>
 
