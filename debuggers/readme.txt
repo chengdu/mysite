@@ -53,7 +53,7 @@ Debugging Android Application
 3. Run your app inside the emulator, a message will prompt and say:
    "is waiting for the debugger to attach".
 
-4. $ java -jar sds.1.0.0.jar -sourcepath "/Users/username/path/to/project/src" -attach localhost:8700
+4. $ java -jar sds.jar -sourcepath "/Users/username/path/to/project/src" -attach localhost:8700
    INSTALL_FAILED_INSUFFICIENT_STORAGE
    To increase the size available to app, the emulator must be started with the
    “-partition-size” parameter. This command reserves 100MB for apps:
