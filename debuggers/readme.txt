@@ -36,8 +36,8 @@ Start Java debugging session:
      (using jar file directly)
 
    Launch approach B: 
-   # start JVM and attach debug server to it (suitable for server and GUI applications).
-   $ java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=localhost:7001 -cp $CLASSPATH com.z.y.x.mainClass
+   # start JVM and attach debug server to it (suitable for server, Android, and GUI applications).
+   $ java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=localhost:7001 -cp $CLASSPATH com/z/y/x/mainClass
    $ java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=localhost:7001 -cp $CLASSPATH -jar libx.jar
    $ java -jar sds.jar -sourcepath "/Users/username/full/path/of/project/src" -attach localhost:7001
 
