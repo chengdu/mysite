@@ -18,9 +18,14 @@
 @charset "UTF-8";
 
 html { height: 100%;}
-body { background: #1a2024; color: #fff; margin-left: auto; margin-right: auto; margin-bottom: 50px; }
-html, body, button, input, select, textarea { font-family: sans-serif; font-size: 14px;color: #9aaeb5}
-h1, h2, h3, h4, h5, h6 { font-weight: 700; text-shadow: 1px 1px #444; color: #6799ff; display: block;}
+body { margin-bottom: 50px; background: #0d1116;/*#1a2024;*/ color: #bebebe;/*#fff;*/ }
+html, body, button, input, select, textarea { font-family: sans-serif; font-size: 14px; /*color: #9aaeb5; */}
+h1, h2, h3, h4, h5, h6 { font-weight: 700; text-shadow: 1px 1px #444;  display: block; color: #6799ff;}
+h1, h2, p, pre, li, .block, .block2, .carousel { max-width: 64rem; }
+.jumbotron { background: #0d1116; }
+.jumbotron pre{ color: #c990ff; }
+.jumbotron, .lead { margin: 0 0 0 0; padding: 0 0 1em 0}
+.container-fluid { max-width: 64rem; margin-left:0px; margin-right:auto;}
 .logo {height:42px;width:auto;vertical-align:middle;margin-top:4px;margin-right:10px;border: 1px rgba(255,255,255,0.6) solid;}
 .logo:hover  { border: 1px #FFFFFF solid; }
 a:link { color: #604dac; }
@@ -28,12 +33,12 @@ a:link { color: #604dac; }
 /*a:focus { text-decoration: underline; }*/
 a:visited { color: #336699; }
 /*.jumbotron img { float: left; margin-right:1em; } */
-.headerimg { padding: 10px 10px 10px 10px;background: #f0f0f0;border: 1px rgba(255,255,255,0.6) solid; border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px;}
-pre { background: #e9ecef;max-width:100%; padding:4px 4px 4px 4px;line-break: auto;}
+.headerimg { padding: 10px 10px 10px 10px;border: 1px rgba(255,255,255,0.6) solid; border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px;background: #f0f0f0;}
+pre { max-width:100%; padding:4px 4px 4px 4px;line-break: auto; background: #e9ecef; }
 lt {color:#007f00;}
 .none {  padding:0;  margin: 0; }
-.dark {color:#7577a0;/*#303000*/ font-size: 12px;} /* #b397db */
-.red {color:#cce619;}
+.dark { color:#7577a0;/*#303000*/ font-size: 12px;} /* #b397db */
+.red { color:#f35252;}
 .greenbig {color: #007f00;font-weight: 600;}
 .hilight {color: #b397db;font-weight: 600;}
 .green, gr, lt { color: #007f00;font-weight: bold;} /*rgb(0,255,0);*/
@@ -49,11 +54,11 @@ ltab { margin-left: 20px; }
 .smallicon { height:32px; width:auto; vertical-align:middle;margin-right:10px;}
 .treasure { color: rgba(255, 0, 255, 0.5); font-size: 11px;font-style: italic; font-weight: bold; background: none; }
 b, strong, .hilight {font-weight: bold;}
-.warning {color:#ffc8c8; font-weight: bold;}
+.warning {color: #ff7f75; font-weight: bold;}
 i, em {font-style: italic; }
-img { background-color: transparent;border-width: 0px;max-width: 100%;}
-hr { border: 1px dotted #9fa8b5; max-width: 714px; margin-left: 0px;}
-.screenshots { max-width:100%; height:auto;margin-left: 0px; margin: 0 0 10 0; }
+img { background-color: transparent;border-width: 0px; max-width: 100%;}
+hr { border: 1px dotted #9fa8b5; margin-left: 0px; /*max-width: 714px;*/}
+.screenshots { max-width:64rem; height:auto;margin-left: 0px; margin: 0 0 10 0; }
 .tips { width:auto; height: 22px;}
 .videobox {background:#111160;}
 .screen {width:320px; height:auto;max-width:100%;}
@@ -70,10 +75,6 @@ table td { max-width:200px; text-align: left; padding:10px; border: 1px solid #9
 table img { display: block; width:auto;max-width:100%;}
 form { background: #f2f2f2; padding: 10px; }
 .carousel .carousel-indicators li { width: 10px; height: 10px; border-radius: 100%; }
-.icon { margin: 0 1em 1em 0;width:96px;height:auto;padding: 4px 4px 4px 4px;border-radius: 4px;-moz-border-radius: 4px;-webkit-border-radius: 4px; vertical-align:center;}
-.jumbotron, .lead { margin: 0 0 0 0; padding: 0 0 1em 0}
-h1, h2, p, pre, li, .block, .block2, .carousel { max-width: 714px; }
-footer { color:#687E91;border-top:1px solid #9fa8b5;font-size:small; font-style: italic;margin-bottom:40px;}
-footer img { padding-top: 4px; background: #111160;}
-
-
+.icon { margin: 0 1em 1em 0; padding: 2px 2px 2px 2px;/*4px 4px 4px 4px;*/ border-radius: 4px;-moz-border-radius: 4px;-webkit-border-radius: 4px; vertical-align:center; height:22px; width: auto; background: #f0f0f0; }
+footer { border-top:1px solid #9fa8b5;font-size:small; font-style: italic; margin-bottom:40px; width: 100%; padding-left: 15px; padding-right: 15px; color: #bebebe; /*#687E91;*/}
+footer img { padding-top: 4px; background: #0d1116;}
