@@ -15,13 +15,7 @@
 <meta name="author" content="http://www.sevenuc.com/">
 <meta name="keywords" content="Chinese text segmentation,Chinese Word segmentation,Chinese Text Tokenisation,Chinese Linguistics,Strategy Consultant,McKinsey,Bain,Boston Consulting Group,BCG,Booz,Oliver Wyman,A.T.Kearney,L.E.K. Consulting,PwC Consulting,Deloitte,Roland Berger,Accenture,Andersen Consulting,Gartner,BearingPoint,KPMG Consulting,Gallup,MYON Management &amp; Consultancy,HP,SAP,Clarkston,Newzoo,Hiragana,Katakana,Pebble,Samsung,Optical Character Recognition,OCR,Arabic,Persian,Khmer,Thai,Tibetan,Tamil,Devanagari,Pali,Sanskrit,Literacy,Machine Translation,Computational Linguistics,Grammar,Pronunciation,Romanisation,Text to Speech,TTS,Canto,Chinese,Cantonese,Yale,Jyutping,Speech Synthesis,Chinese Speech Synthesis,Text Classification,Text Categorisation,Data Mining,ASR,Chinese word segmentation,Morphological Analyzer,Automatic Speech Recognition,Natural Language Understanding,NLU,NLP,Natural Language Processing,Intelligent Information Retrieval,Machine Learning,Animation Synthesis,Knowledge Translation,Dictionary,AI,Robot,Artificial Intelligence,iPhone,iPad,Android,iOS,Embedded Linux,Real Time System,RTOS,JVM,単語分割エンジン,単語分割,斷詞,分詞,中文斷詞,中文分詞,文本分類,人工智能,人工智慧,模式識別,機器學習,機械学習,自然語言處理,自然言語処理,機器翻譯,機械翻訳,動畫合成,語音合成,音聲合成,語音識別,音聲認識,Embedded System,RTOS,eCos,μC/OS-II,VxWorks,QNX,FreeRTOS,NuttX,ThreadX,RTEMS">
 <title>Beak, the ultra small C and C++ obfuscator.</title>
-<link rel="stylesheet" href="../css/bootstrap.min.css">
 <link rel="stylesheet" href="../css/stylesheet.css">
-<style type="text/css">
-/* table, p, pre, li { max-width: 714px; } */
-</style>
-<script src="../js/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
 </head>
 <body>
 
@@ -121,9 +115,9 @@ Step 4: report all replaced tokens.<br>
 The built-in token database of Beak includes several part of tokens generated from different sources.<br>
 1: C and C++ keywords for the language standards: e.g. auto, break, case, const, default, do, while, else ...<br>
 2: C and C++ preprocessor keywords: <br>
-such as __cplusplus, DEBUG, NDEBUG, RELEASE, __MACH__, __x86_64, __PIC__, __SSE2__, __weak__attribute__, __GNUC__, __VERSION__, __INT_MAX__, _M_IX86, __INT16_MAX__, __APPLE__, __clang__, __OBJC__, __FILE__, __LINE__, __FUNCTION__, __DATE__, __TIME__, ... <br>
+such as <small> __cplusplus, DEBUG, NDEBUG, RELEASE, __MACH__, __x86_64, __PIC__, __SSE2__, __weak__attribute__, __GNUC__, __VERSION__, __INT_MAX__, _M_IX86, __INT16_MAX__, __APPLE__, __clang__, __OBJC__, __FILE__, __LINE__, __FUNCTION__, __DATE__, __TIME__, ... </small><br>
 3: Standard library functions, including stdlib, glib, libcxx, openmp, libunwind, STL, Boost etc: <br>
-INT_MAX, INT_MIN, int32_t, stderr , atan, ceilf, atol, feof, fflush, fgetc, gets, ftell, memset, rand, qsort, strtok, vsprintf , tmpnam, wcscpy, time, tm, ...<br>
+<small>INT_MAX, INT_MIN, int32_t, stderr , atan, ceilf, atol, feof, fflush, fgetc, gets, ftell, memset, rand, qsort, strtok, vsprintf , tmpnam, wcscpy, time, tm, ...</small><br>
 4: Compilers' tokens.<br>
 5: System tokens used by operation system.
 </p>
