@@ -22,7 +22,7 @@
 <div class="container-fluid">
 
     <div class="jumbotron">
-        <p><pre>
+        <p><pre class="banner">
    ____
   / __/ __  ___ ___  ___ ___
   _\ \/ _ \/ -_) _ `/ __/ -_)
@@ -72,9 +72,9 @@ You can set the socket communication port number both used by Debug Server and t
 Watches used to evaluate variable or expression and their values can be real-time showing in stack-view when debugging session paused, the nodes normally has a green colour and always placed on the top of stack-view.
 </p>
 
-<span><b>Caution:</b></span><br>
-<ul><li><span>Please ensure all source files have been dragged in the workspace before start a debug session, because macOS app can't be allowed to access files outside of its sandbox.</span></li>
-<li><span>When your source code file moved to another folder, debugging source code operation requires to drag the project folder in Speare again then the debugging can correctly work.</span></li></ul>
+<b><span class="warning">Caution:</span></b><br>
+<ul><li class="small"><span class="warning">Please ensure all source files have been dragged in the workspace before start a debug session, because macOS app can't be allowed to access files outside of its sandbox.</span></li>
+</ul>
 
 <h2>Debugger Architecture</h2>
 <a href="../images/speare/debugger.png" target="_blank"><img src="../images/speare/debugger.png" class="screenshots"/></a><br>

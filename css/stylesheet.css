@@ -6,22 +6,38 @@
 *
 */
 
+/********************************************************************************/
+/***  Copyright Notice                                                        ***/
+/***  This colour scheme was originally created by Sevenuc Consulting         ***/
+/***                                                                          ***/
+/***  THIS FILE IS PART OF SEVENUC WEBSITE WITHOUT THE WRITTEN PERMISSION     ***/
+/***  OF THE AUTHOR THIS FILE MAY NOT BE USED FOR ANY COMMERCIAL PRODUCT.     ***/
+/********************************************************************************/
+
 @charset "UTF-8";
 
 html { height: 100%;}
-body { font-family: sans-serif;}
+body { font-family: sans-serif; background: #22293c;/*#113c61;*/ color: #8a9eb1;}
 .container-fluid { max-width:64rem; }
-pre, .block { background: #22293c; color: #fff; font-style: italic; font-size: small; border-radius: 4px; }
+h1, h2, h3, h4, h5, h6 { font-weight: 700; text-shadow: 1px 1px #d0a053; display: block; color: #ae8441;}
+pre, .block { background: rgba(0,0,0,0.1); color: #333333; font-style: italic; font-size: small; border-radius: 4px; }
 pre, .block { font-family: monospace; max-width:100%; padding: 8px 8px 8px 8px; line-break: auto; }
 .icon { height:32px; width:auto; vertical-align:middle;margin-right:10px;}
+.banner { color: #c990ff; background:#22293c; max-width: 64rem;}
 .treasure { color: rgba(255, 0, 255, 0.5); font-size: 11px;font-style: italic; font-weight: bold; background: none; }
-b, strong, .hilight {font-weight: bold;}
-.warning { font-weight: bold;}
+a { text-decoration: none; }
+a:link { color: hsl(211, 67%, 50%); }
+a:hover { text-decoration: underline; }
+a:visited { color: #b397db; }
+b, strong, .hilight {font-weight: bold; color: #6b849b; }
+.warning, .red { font-weight: bold; color: #ae8441; /*#cce619; #dbb36e;*/ }
 i, em {font-style: italic; }
+lt, .green, gr { color: #ae8441; }
 w {color:#ffc8c8; font-weight: bold;}
 hr { border: 0; border-top: 1px solid #9fa8b5; height: 1px; }
 .tips { width:auto; height: 22px;}
-.videobox { background:#ffffff; }
+.videobox { background:#73879a; }
+pre, .block { background:#73879a; }
 img { max-width: 100%;}
 .extraimg { max-width: 320px; margin-left:0;}
 .screen { width:320px; height:auto;max-width:100%;}
