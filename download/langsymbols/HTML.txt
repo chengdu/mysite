@@ -1,3 +1,9 @@
+# HTML, CSS and Markdown built-in symbols
+# http://www.sevenuc.com/en/speare.html
+# append built-in symbols, provide static candidates for auto-completion,
+# should be put in the directory:
+# /Users/username/Library/Application Scripts/com.sevenuc.speareeditor/langsymbols/
+
 !important
 -moz-appearance
 -moz-border-radius
