@@ -173,6 +173,36 @@ Spear enable people to write unlimited shell extension to do anything they want.
 </p>
 <p class="green"><i>Crafting software as small as possible.  →  <a href="debugger.html#whyc" target="_blank">Why C is the returned king of programming languages.</a></i></p>
 
+<h2>Version management in Speare</h2>
+<p>
+<span class="green">Speare code editor support directly run shell scripts and arbitrary shell command within editor!</span><br>
+The following content is a simple shell script used to detect changes of repository that has not been committed, you can directly modify the content and run it without leave editor. And, with the help of the built-in web browser, you can closely view large number of file changes (view diff of history revisions for your repository) in the split views of the editor.<br>
+<pre>
+#!/bin/bash
+
+# 1. the location of repository
+repository="/full/path/of/repository/projX"
+echo "enter: $repository"
+echo ""
+cd $repository
+
+# show uncommitted changes
+# 2a. changes
+echo "edited and deleted files:"
+# fossil status --missing
+fossil status --edited
+
+# 2b. changes
+# echo ""
+# echo "added files:"
+# fossil extras
+
+# 2c. changes
+# fossil diff -tk "relative/path/of/file.c"
+</pre><br>
+
+Speare strong recommend using <a href="https://www.fossil-scm.org/" target="_blank" >Fossil</a> as your version management system despite so many SCM already exists there,  because it was written with C, small and efficient, you can conveniently do version control without leave Speare, such as view changes of repository, do commit, view file diff and history, associate tickets, and write wiki etc.
+</p>
 
 <h2>Debug Mode</h2>
 <p>
