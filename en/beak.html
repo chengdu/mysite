@@ -41,7 +41,7 @@
 <h2>Result</h2>
 <ul><li>Smaller binary.</li>
 <li>Hide symbol names in binary, function call, API call in binary, hide the concrete implementation, and what techniques used in your software.</li>
-<li>Add difficulty for reverse engineering (decompile).</li></ul>
+<li>Improve difficulty for reverse engineering (decompile).</li></ul>
 
 <h2>Support Languages</h2>
 <p>Beak was designed as a C and C++ Obfuscator, and for the programming languages that suitable be used in embedded systems including: <br>
@@ -58,18 +58,18 @@ Asm, Asp, AWK,  CMake, COBOL, Cuda, D, DosBatch, Eiffel,  Fortran, F#, Go, Html,
 
 <h2>Convert Source Code</h2>
 <ol>
-     <li>Drag your project folder into <b>Beak</b> from Finder or open your souce code folder from menu "Open..." or "Open Recent".</li>
+     <li>Drag your project folder into <b>Beak</b> from Finder or open your source code folder from menu "Open..." or "Open Recent".</li>
      <li>Click <b>"Target Folder"</b> button to select a target directory, the output files will be placed there. E.g:<br>
       Target directory: /Users/username/Desktop<br>
       Output directory: /Users/username/Desktop/projectname-lt (lt means lite)
      </li>
      <li>Select one of the programming languages from the toolbar for your source code.</li>
-     <li>(Optional) click menu <b>"Append Symbols"</b>: open a palin text file that contains symbold difinitions these will be appened for replacing.</li>
-     <li>(Optional) click menu <b>"Exluded Symbols"</b>: open a palin text file that contains symbold difinitions these will be exluded for replacing.</li>
+     <li>(Optional) click menu <b>"Append Symbols"</b>: open a plain text file that contains symbol definitions these will be appended for replacing.</li>
+     <li>(Optional) click menu <b>"Excluded Symbols"</b>: open a plain text file that contains symbol definitions these will be excluded for replacing.</li>
      <li>Click the <b>"Start"</b> button on the toolbar to start the converting process.</li>
      <li>When the process completed, all replaced symbols will be listed in tokens.txt under the target directory.</li>
 </ol>
-<p><b>Extranal Symbol Files</b>:<br>
+<p><b>External Symbol Files</b>:<br>
 On Step 4 and Step 5, the file content written line by line, each line holding one symbol, and line starts with "#" will be ignored (comment line).<br><br>
 <b>Checking source code</b>: Sometime the generated C or C++ code can't be directly compiled after above steps, e.g some symbols defined in Makefile required to replace with the short tokens generated in tokens.txt, and some C and C++ macros can't be found, so in such situation, these macro names should be replaced with the short tokens in tokens.txt manually when complier say they're "undeclared identifier".
 </p>
